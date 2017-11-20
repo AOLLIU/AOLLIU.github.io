@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2014/8 | AOLLIU的博客</title>
+  <title>UIButton | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2014/08/index.html">
+  <meta name="description" content="说说UIButton的几种常见的状态:高亮状态(UIControlStateHighlighted): 就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;  如何知道按钮是不是高亮状态?  其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIButton">
+<meta property="og:url" content="http://yoursite.com/2014/08/22/UIButton/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="说说UIButton的几种常见的状态:高亮状态(UIControlStateHighlighted): 就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;  如何知道按钮是不是高亮状态?  其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设">
+<meta property="og:updated_time" content="2017-11-20T02:55:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="UIButton">
+<meta name="twitter:description" content="说说UIButton的几种常见的状态:高亮状态(UIControlStateHighlighted): 就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;  如何知道按钮是不是高亮状态?  其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,36 +158,57 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-UIButton" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/08/22/UIButton/" class="archive-article-date">
-  	<time datetime="2014-08-22T11:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/08/22/UIButton/">UIButton</a>
+    <h1 class="article-title" itemprop="name">
+      UIButton
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2014/08/22/UIButton/" class="archive-article-date">
+  	<time datetime="2014-08-22T11:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="说说UIButton的几种常见的状态"><a href="#说说UIButton的几种常见的状态" class="headerlink" title="说说UIButton的几种常见的状态:"></a>说说UIButton的几种常见的状态:</h3><h4 id="高亮状态-UIControlStateHighlighted"><a href="#高亮状态-UIControlStateHighlighted" class="headerlink" title="高亮状态(UIControlStateHighlighted):"></a>高亮状态(UIControlStateHighlighted):</h4><ul>
+<li>就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;</li>
+</ul>
+<p><strong>如何知道按钮是不是高亮状态?</strong></p>
+<ul>
+<li>其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设置了为NO,那么就算在外面设置了highlighted = YES;也不是高亮状态.</li>
+</ul>
+<p><strong>在开发中有时候我们需要取消按钮的高亮状态,可以通过两个方法来实现:</strong></p>
+<ul>
+<li><p>1.重写set highlight方法 ,在这个方法中什么也不做,覆盖系统的做法</p>
+</li>
+<li><p>2,重写is highlight方法返回NO</p>
+</li>
+</ul>
+<h4 id="不可用-UIControlStateDisabled"><a href="#不可用-UIControlStateDisabled" class="headerlink" title="不可用(UIControlStateDisabled ):"></a>不可用(UIControlStateDisabled ):</h4><ul>
+<li>设置按钮属性enable = NO; 按钮不会接受点击的事件<br>enabled = NO; 状态变为disabled<br>userinteractionEnabled = NO;按钮不能点击了 但是不会改变按钮的状态</li>
+</ul>
+<h4 id="选中状态-UIControlStateSelected"><a href="#选中状态-UIControlStateSelected" class="headerlink" title="选中状态(UIControlStateSelected):"></a>选中状态(UIControlStateSelected):</h4><ul>
+<li>设置按钮的属性selected = YES; 按钮可以接受点击事件</li>
+</ul>
+<h4 id="普通状态-UIControlStateNormal-最值得注意"><a href="#普通状态-UIControlStateNormal-最值得注意" class="headerlink" title="普通状态(UIControlStateNormal):最值得注意"></a>普通状态(UIControlStateNormal):最值得注意</h4><ul>
+<li>看是这个状态没有什么,再普通不过了,但是却不是这样的,如果你同时设置了按钮的状态为选中状态和不可用状态,其实按钮不会按你设置的那样真的选中再不可用,而是普通状态(UIControlStateNormal),所以UIControlStateNormal是除开前面3中以外的状态 比如两个状态同时设置</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,57 +224,116 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2014/08/22/UIButton/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/08/19/VPN/" class="archive-article-date">
-  	<time datetime="2014-08-19T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2014/08/19/VPN/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VPN</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/08/19/VPN/">VPN</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Quote</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <div id="SOHUCS" sid="UIButton" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -271,8 +356,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
