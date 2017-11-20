@@ -6,19 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>3DTouch | AOLLIU的博客</title>
+  <title>React Native 之 安装配置 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签">
-<meta name="keywords" content="iOS开发,OC">
+  <meta name="description" content="前言: 2015年3月React Native for iOS发布,同年9月React Native for Android发布,React Native真正的可以实现了跨平台开发,代码多端复用,实时热部署. ReactNative需要安装配置很多依赖的工具，相对比较麻烦。所以这里主要环境的配置问题.">
+<meta name="keywords" content="跨平台开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3DTouch">
-<meta property="og:url" content="http://yoursite.com/2015/11/20/3DTouch/index.html">
+<meta property="og:title" content="React Native 之 安装配置">
+<meta property="og:url" content="http://yoursite.com/2016/08/01/React-Native-之-安装配置/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使">
-<meta property="og:updated_time" content="2017-11-20T04:12:01.000Z">
+<meta property="og:description" content="前言: 2015年3月React Native for iOS发布,同年9月React Native for Android发布,React Native真正的可以实现了跨平台开发,代码多端复用,实时热部署. ReactNative需要安装配置很多依赖的工具，相对比较麻烦。所以这里主要环境的配置问题.">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-56aa0d45e6fd7a30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-95d510dee5fa4a65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-fa20fb54068075c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-5ec98c7dfc4dbdef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-c8c8d1f730e99138.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-c1e71edd34bc1a8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-20T07:45:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3DTouch">
-<meta name="twitter:description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使">
+<meta name="twitter:title" content="React Native 之 安装配置">
+<meta name="twitter:description" content="前言: 2015年3月React Native for iOS发布,同年9月React Native for Android发布,React Native真正的可以实现了跨平台开发,代码多端复用,实时热部署. ReactNative需要安装配置很多依赖的工具，相对比较麻烦。所以这里主要环境的配置问题.">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1494773-56aa0d45e6fd7a30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -158,62 +165,78 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-3DTouch" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-React-Native-之-安装配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      3DTouch
+      React Native 之 安装配置
     </h1>
   
 
         
-        <a href="/2015/11/20/3DTouch/" class="archive-article-date">
-  	<time datetime="2015-11-20T12:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
+        <a href="/2016/08/01/React-Native-之-安装配置/" class="archive-article-date">
+  	<time datetime="2016-08-01T15:36:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="3D-Touch的三大模块"><a href="#3D-Touch的三大模块" class="headerlink" title="3D Touch的三大模块"></a>3D Touch的三大模块</h1><ul>
-<li>在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍</li>
-</ul>
-<h2 id="1-Home-Screen-Quick-Actions"><a href="#1-Home-Screen-Quick-Actions" class="headerlink" title="1.Home Screen Quick Actions"></a>1.Home Screen Quick Actions</h2><ul>
-<li>通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块</li>
-<li>iOS9为我们提供了两种屏幕标签,静态标签和动态标签<ul>
-<li>静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使用，并且排序会在动态标签的前面。</li>
-<li>动态标签:动态标签是我们在程序中，通过代码添加的，与之相关的类，主要有三个：<ul>
-<li>UIApplicationShortcutItem 创建3DTouch标签的类</li>
-<li>UIMutableApplicationShortcutItem 创建可变的3DTouch标签的类</li>
-<li>UIApplicationShortcutIcon 创建标签中图片Icon的类</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>具体实现:</li>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><ul>
+<li>2015年3月React Native for iOS发布,同年9月React Native for Android发布,React Native真正的可以实现了跨平台开发,代码多端复用,实时热部署.</li>
+<li>ReactNative需要安装配置很多依赖的工具，相对比较麻烦。所以这里主要环境的配置问题.</li>
 </ul>
 <a id="more"></a>
-<h3 id="APPIcon深按弹窗"><a href="#APPIcon深按弹窗" class="headerlink" title="APPIcon深按弹窗"></a>APPIcon深按弹窗</h3><ul>
-<li>1.appdelegate方法中实现设置和监听</li>
+<h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="1-Homebrew"><a href="#1-Homebrew" class="headerlink" title="1.Homebrew"></a>1.<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">Homebrew</a></h2><h3 id="废话提示"><a href="#废话提示" class="headerlink" title="废话提示:"></a>废话提示:</h3><ul>
+<li>本人安装时安装失败,按照网上某篇文章进行解决,没有考虑直接按文章在命令行输入命令,但是沙比了,电脑上所有的配置文件都没有了,后来看了下原来命令是删除所有的配置文件然后重新进行安装,拷,这不坑跌吗,由于之前没有进行备份处理,所有的应用都跟刚安装上一样,太坑了,由此希望大家引以为戒,第一,在遇到问题从网上找解决方案时一定要先仔细看下,到底是干什么的,是否真的能解决你遇到的问题,第二,一定要对数据进行备份,苹果自带的Time Machine就是一个很好的做备份的应用</li>
 </ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line"><span class="comment">//    设置图标长按时,弹出的样式</span></span><br><span class="line"><span class="comment">//    iconWithTypedef: 图标的类型 这里可以跳到头文件中看icon是可以自己通过图片生成的</span></span><br><span class="line">    <span class="built_in">UIApplicationShortcutIcon</span> * icon0 = [<span class="built_in">UIApplicationShortcutIcon</span> iconWithType:<span class="built_in">UIApplicationShortcutIconTypeAdd</span>];</span><br><span class="line">    <span class="built_in">UIApplicationShortcutIcon</span> * icon1 = [<span class="built_in">UIApplicationShortcutIcon</span> iconWithType:<span class="built_in">UIApplicationShortcutIconTypeLove</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     第一个参数:type,类型,一个字符串,可以随便写,到后面通过监听类型来做对应的事情</span></span><br><span class="line"><span class="comment">     第二个参数:标题</span></span><br><span class="line"><span class="comment">     第三个参数:子标题</span></span><br><span class="line"><span class="comment">     第四个参数:就是图标,可以自定义,也可以使用系统的</span></span><br><span class="line"><span class="comment">     第五个参数:就是想传出去的信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="built_in">UIApplicationShortcutItem</span> * item0 = [[<span class="built_in">UIApplicationShortcutItem</span> alloc]initWithType:<span class="string">@"type0"</span> localizedTitle:<span class="string">@"添加"</span> localizedSubtitle:<span class="string">@"真的添加"</span> icon:icon0 userInfo:@&#123;<span class="string">@"wenxiaoli"</span> : <span class="string">@"你叫什么名字"</span>&#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIApplicationShortcutItem</span> *item1 = [[<span class="built_in">UIApplicationShortcutItem</span> alloc]initWithType:<span class="string">@"type2"</span> localizedTitle:<span class="string">@"删除"</span> localizedSubtitle:<span class="string">@"真的删除"</span> icon:icon1 userInfo:@&#123;<span class="string">@"hahaha"</span> : <span class="string">@"管你什么事"</span>&#125;];</span><br><span class="line">    </span><br><span class="line">    application.shortcutItems = @[item0,item1];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听弹窗的点击</span></span><br><span class="line">- (<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application performActionForShortcutItem:(<span class="built_in">UIApplicationShortcutItem</span> *)shortcutItem completionHandler:(<span class="keyword">void</span> (^)(<span class="built_in">BOOL</span>))completionHandler&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([shortcutItem.type isEqualToString:<span class="string">@"type1"</span>]) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@ "</span>,shortcutItem.userInfo[<span class="string">@"liuwei"</span>]);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@ "</span>,shortcutItem.userInfo[<span class="string">@"liuwei"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="peak-and-pop"><a href="#peak-and-pop" class="headerlink" title="peak and pop"></a>peak and pop</h2><ul>
-<li>这个功能是一套全新的用户交互机制,在使用会有3个交互阶段<ul>
-<li>1.提示用户这里用3D Touch的交互,会使交互控件周围模糊</li>
-<li>2.继续深按,会出现预览试图</li>
-<li>3.通过试图上的交互控件进一步交互</li>
+<ul>
+<li>1.在终端输入命令<code>brew -v</code>,查看之前是否安装过.<br>如果安装过如下显示:</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-56aa0d45e6fd7a30.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_5.png"></p>
+<ul>
+<li>1.1,如果之前安装过最好在终端输入命令升级一下<code>brew update</code>,因为如果版本低,可能会影响后续软件的安装.</li>
+<li>2.如果没有安装在终端输入命令进行安装<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li>2.1再在终端输入命令<code>brew -v</code>查看如果有了版本号就说明安装成功</li>
+</ul>
+<p><a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">HomeBrew官网</a></p>
+<h2 id="2-Node-js"><a href="#2-Node-js" class="headerlink" title="2.Node.js "></a>2.<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js </a></h2><ul>
+<li><p>1.Node.js 安装需要首先安装nvm,有两种方式</p>
+<ul>
+<li>1)在终端输入命令:<br><code>$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.2/install.sh | bash</code></li>
+<li>2)利用Homebrew,在终端输入命令:<br><code>brew install nvm</code></li>
 </ul>
 </li>
+<li><p>2.安装Node.js,有两种方式</p>
+<ul>
+<li>1)在终端输入命令:<br><code>nvm install node &amp;&amp; nvm alias default node</code></li>
+<li>2)下载安装包安装:<br><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">下载地址</a></li>
 </ul>
-<h3 id="1-判断当前设备是否支持3DTouch-注册3DTouch"><a href="#1-判断当前设备是否支持3DTouch-注册3DTouch" class="headerlink" title="1.判断当前设备是否支持3DTouch,注册3DTouch"></a>1.判断当前设备是否支持3DTouch,注册3DTouch</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> * cellID = <span class="string">@"cell"</span>;</span><br><span class="line">    </span><br><span class="line">    LVHeroCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    1.判断是否支持3DTouch</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.traitCollection.forceTouchCapability == <span class="built_in">UIForceTouchCapabilityAvailable</span>) &#123;</span><br><span class="line"><span class="comment">//        注册cell,支持3DTouch,并设置预览代理</span></span><br><span class="line">        [<span class="keyword">self</span> registerForPreviewingWithDelegate:<span class="keyword">self</span> sourceView:cell];</span><br><span class="line">    &#125;</span><br><span class="line">    cell.heroModel = <span class="keyword">self</span>.heroes[indexPath.row];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-遵守协议实现代理方法"><a href="#2-遵守协议实现代理方法" class="headerlink" title="2.遵守协议实现代理方法"></a>2.遵守协议实现代理方法</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#pragma mark - 预览代理</span></span><br><span class="line"><span class="comment">//轻按,中按时调用</span></span><br><span class="line">- (<span class="built_in">UIViewController</span> *)previewingContext:(<span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerPreviewing</span>&gt;)previewingContext viewControllerForLocation:(<span class="built_in">CGPoint</span>)location&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    1.获取sourceView</span></span><br><span class="line">    LVHeroCell * sourceView = (LVHeroCell *)[previewingContext sourceView];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    2.设置弹出的位置</span></span><br><span class="line">    [previewingContext setSourceRect:sourceView.bounds];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    3.设置弹框的view</span></span><br><span class="line">    LVDetailViewController *detailVC = [[LVDetailViewController alloc]init];</span><br><span class="line">    detailVC.preferredContentSize = <span class="built_in">CGSizeMake</span>(<span class="number">0</span>, <span class="number">500</span>);</span><br><span class="line">    detailVC.heroModel = sourceView.heroModel;</span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">typeof</span>(detailVC) weakDetailVc = detailVC;</span><br><span class="line">    detailVC.toDetailVcBlock = ^()&#123;</span><br><span class="line">        [<span class="keyword">self</span>.navigationController pushViewController:weakDetailVc animated:<span class="literal">YES</span>];</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> detailVC;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//弹窗出现后继续重按时调用</span></span><br><span class="line">- (<span class="keyword">void</span>)previewingContext:(<span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerPreviewing</span>&gt;)previewingContext commitViewController:(<span class="built_in">UIViewController</span> *)viewControllerToCommit&#123;</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span> showViewController:viewControllerToCommit sender:<span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-设置控制器在弹窗时候-下面输出的数组-在需要弹出的控制器中"><a href="#3-设置控制器在弹窗时候-下面输出的数组-在需要弹出的控制器中" class="headerlink" title="3.设置控制器在弹窗时候,下面输出的数组,在需要弹出的控制器中"></a>3.设置控制器在弹窗时候,下面输出的数组,在需要弹出的控制器中</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置控制器在弹窗的情况,下面输出的数组</span></span><br><span class="line">- (<span class="built_in">NSArray</span>&lt;<span class="keyword">id</span>&lt;<span class="built_in">UIPreviewActionItem</span>&gt;&gt; *)previewActionItems&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIPreviewAction</span> *action1 = [<span class="built_in">UIPreviewAction</span> actionWithTitle:<span class="string">@"进入"</span> style:<span class="built_in">UIPreviewActionStyleDefault</span> handler:^(<span class="built_in">UIPreviewAction</span> * _Nonnull action, <span class="built_in">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//        因为当前控制器不能自己push自己,那么就得是他的父控制器知道什么时候push他,给她定义一个block属性,在父控制器中拿到block属性设置,在这里调用block</span></span><br><span class="line">        LVDetailViewController *detailVc = (LVDetailViewController *)previewViewController;</span><br><span class="line">        detailVc.toDetailVcBlock();</span><br><span class="line"><span class="comment">//        </span></span><br><span class="line"><span class="comment">//        LVDetailViewController *vc = [[LVDetailViewController alloc]init];</span></span><br><span class="line"><span class="comment">//        [self presentViewController:vc animated:true completion:nil];</span></span><br><span class="line">        </span><br><span class="line">    &#125;];</span><br><span class="line">    <span class="built_in">UIPreviewAction</span> *action2 = [<span class="built_in">UIPreviewAction</span> actionWithTitle:<span class="string">@"取消"</span> style:<span class="built_in">UIPreviewActionStyleDestructive</span> handler:^(<span class="built_in">UIPreviewAction</span> * _Nonnull action, <span class="built_in">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"取消"</span>);</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> @[action1,action2];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Force-properties-新的交互参数-力度-通过检测力度值-来做对应的交互处理"><a href="#Force-properties-新的交互参数-力度-通过检测力度值-来做对应的交互处理" class="headerlink" title="Force properties :新的交互参数:力度,通过检测力度值,来做对应的交互处理"></a>Force properties :新的交互参数:力度,通过检测力度值,来做对应的交互处理</h2><ul>
-<li>暂未总结</li>
+</li>
+<li><p>3.在终端分别输入命令<code>node -v</code>和<code>npm -v</code>,如果显示下图表示安装成功</p>
+</li>
 </ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-95d510dee5fa4a65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_6.png"></p>
+<h2 id="3-安装-watchman-和-flow"><a href="#3-安装-watchman-和-flow" class="headerlink" title="3.安装 watchman 和 flow"></a>3.安装 <a href="https://facebook.github.io/watchman/docs/install.html" target="_blank" rel="noopener">watchman</a> 和 <a href="https://www.flowtype.org/" target="_blank" rel="noopener">flow</a></h2><ul>
+<li>1.安装watchman,在终端输入<code>brew install watchman</code>,显示下图安装成功</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-fa20fb54068075c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_7.png"></p>
+<ul>
+<li>2.安装flow,在终端输入<code>brew install flow</code>,显示下图安装成功</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-5ec98c7dfc4dbdef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_8.png"></p>
+<h2 id="4-安装-React-Native"><a href="#4-安装-React-Native" class="headerlink" title="4.安装 React-Native"></a>4.安装 <a href="https://facebook.github.io/react-native/" target="_blank" rel="noopener">React-Native</a></h2><ul>
+<li>终端输入命令<code>npm install -g react-native-cli</code><br>如果显示失败显示下图,说明没有权限:</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-c8c8d1f730e99138.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_9.png"></p>
+<ul>
+<li>那么在终端输入命令<code>sudo npm install -g react-native-cli</code>获取权限安装<br>这个过程需要输入密码获取权限,如果显示下图则安装成功</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-c1e71edd34bc1a8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161014_10.png"></p>
+<p>相关文章链接:<br><a href="http://www.liaohuqiu.net/cn/posts/react-native-1/" target="_blank" rel="noopener">React Native: 配置和起步</a><br><a href="http://www.jianshu.com/p/cd2a8c5ee1c7" target="_blank" rel="noopener">React Native开发环境配置</a></p>
 
       
 
@@ -227,11 +250,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
         		</li>
       		
 		</ul>
@@ -287,7 +306,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2015/11/20/3DTouch/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/08/01/React-Native-之-安装配置/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -301,18 +320,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2016/08/01/Weex-和-React-Native/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/01/React组件化思想与Flux架构模式/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Weex 和 React Native
+          React组件化思想与Flux架构模式
         
       </div>
     </a>
   
   
-    <a href="/2015/09/20/cocoapods安装/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cocoapods安装</div>
+    <a href="/2016/08/01/Weex-和-React-Native/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Weex 和 React Native</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -342,7 +361,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="3DTouch" ></div> 
+  <div id="SOHUCS" sid="React-Native-之-安装配置" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

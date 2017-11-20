@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>3DTouch | AOLLIU的博客</title>
+  <title>Weex 和 React Native | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签">
-<meta name="keywords" content="iOS开发,OC">
+  <meta name="description" content="写在前面 目前主流的应用大体分成三类：Native App, Web App, Hybrid App.">
+<meta name="keywords" content="跨平台开发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3DTouch">
-<meta property="og:url" content="http://yoursite.com/2015/11/20/3DTouch/index.html">
+<meta property="og:title" content="Weex 和 React Native">
+<meta property="og:url" content="http://yoursite.com/2016/08/01/Weex-和-React-Native/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使">
-<meta property="og:updated_time" content="2017-11-20T04:12:01.000Z">
+<meta property="og:description" content="写在前面 目前主流的应用大体分成三类：Native App, Web App, Hybrid App.">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-e34c5f726703fbd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-598d03580d959973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-b0456449011ffa04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-20T07:42:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3DTouch">
-<meta name="twitter:description" content="3D Touch的三大模块 在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍  1.Home Screen Quick Actions 通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块 iOS9为我们提供了两种屏幕标签,静态标签和动态标签 静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使">
+<meta name="twitter:title" content="Weex 和 React Native">
+<meta name="twitter:description" content="写在前面 目前主流的应用大体分成三类：Native App, Web App, Hybrid App.">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1494773-e34c5f726703fbd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -158,62 +162,117 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-3DTouch" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Weex-和-React-Native" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      3DTouch
+      Weex 和 React Native
     </h1>
   
 
         
-        <a href="/2015/11/20/3DTouch/" class="archive-article-date">
-  	<time datetime="2015-11-20T12:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
+        <a href="/2016/08/01/Weex-和-React-Native/" class="archive-article-date">
+  	<time datetime="2016-08-01T13:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="3D-Touch的三大模块"><a href="#3D-Touch的三大模块" class="headerlink" title="3D Touch的三大模块"></a>3D Touch的三大模块</h1><ul>
-<li>在我们app中使用3D Touch 功能,主要分为以下3个模块,在下面会一一介绍</li>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><ul>
+<li>目前主流的应用大体分成三类：Native App, Web App, Hybrid App. </li>
 </ul>
-<h2 id="1-Home-Screen-Quick-Actions"><a href="#1-Home-Screen-Quick-Actions" class="headerlink" title="1.Home Screen Quick Actions"></a>1.Home Screen Quick Actions</h2><ul>
-<li>通过主屏幕的icon,我们可以使用3D Touch呼出一个菜单,进行快速定位应用功能模块</li>
-<li>iOS9为我们提供了两种屏幕标签,静态标签和动态标签<ul>
-<li>静态标签:静态标签是我们在项目的配置plist文件中配置的标签，在用户安装程序后就可以使用，并且排序会在动态标签的前面。</li>
-<li>动态标签:动态标签是我们在程序中，通过代码添加的，与之相关的类，主要有三个：<ul>
-<li>UIApplicationShortcutItem 创建3DTouch标签的类</li>
-<li>UIMutableApplicationShortcutItem 创建可变的3DTouch标签的类</li>
-<li>UIApplicationShortcutIcon 创建标签中图片Icon的类</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>具体实现:</li>
-</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-e34c5f726703fbd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="三大主流的应用"></p>
 <a id="more"></a>
-<h3 id="APPIcon深按弹窗"><a href="#APPIcon深按弹窗" class="headerlink" title="APPIcon深按弹窗"></a>APPIcon深按弹窗</h3><ul>
-<li>1.appdelegate方法中实现设置和监听</li>
+<ul>
+<li>Native App特点:<ul>
+<li>性能好</li>
+<li>完美的用户体验</li>
+<li>开发成本高，无法跨平台</li>
+<li>升级困难(审核),维护成本高</li>
 </ul>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line"><span class="comment">//    设置图标长按时,弹出的样式</span></span><br><span class="line"><span class="comment">//    iconWithTypedef: 图标的类型 这里可以跳到头文件中看icon是可以自己通过图片生成的</span></span><br><span class="line">    <span class="built_in">UIApplicationShortcutIcon</span> * icon0 = [<span class="built_in">UIApplicationShortcutIcon</span> iconWithType:<span class="built_in">UIApplicationShortcutIconTypeAdd</span>];</span><br><span class="line">    <span class="built_in">UIApplicationShortcutIcon</span> * icon1 = [<span class="built_in">UIApplicationShortcutIcon</span> iconWithType:<span class="built_in">UIApplicationShortcutIconTypeLove</span>];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     第一个参数:type,类型,一个字符串,可以随便写,到后面通过监听类型来做对应的事情</span></span><br><span class="line"><span class="comment">     第二个参数:标题</span></span><br><span class="line"><span class="comment">     第三个参数:子标题</span></span><br><span class="line"><span class="comment">     第四个参数:就是图标,可以自定义,也可以使用系统的</span></span><br><span class="line"><span class="comment">     第五个参数:就是想传出去的信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="built_in">UIApplicationShortcutItem</span> * item0 = [[<span class="built_in">UIApplicationShortcutItem</span> alloc]initWithType:<span class="string">@"type0"</span> localizedTitle:<span class="string">@"添加"</span> localizedSubtitle:<span class="string">@"真的添加"</span> icon:icon0 userInfo:@&#123;<span class="string">@"wenxiaoli"</span> : <span class="string">@"你叫什么名字"</span>&#125;];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIApplicationShortcutItem</span> *item1 = [[<span class="built_in">UIApplicationShortcutItem</span> alloc]initWithType:<span class="string">@"type2"</span> localizedTitle:<span class="string">@"删除"</span> localizedSubtitle:<span class="string">@"真的删除"</span> icon:icon1 userInfo:@&#123;<span class="string">@"hahaha"</span> : <span class="string">@"管你什么事"</span>&#125;];</span><br><span class="line">    </span><br><span class="line">    application.shortcutItems = @[item0,item1];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//监听弹窗的点击</span></span><br><span class="line">- (<span class="keyword">void</span>)application:(<span class="built_in">UIApplication</span> *)application performActionForShortcutItem:(<span class="built_in">UIApplicationShortcutItem</span> *)shortcutItem completionHandler:(<span class="keyword">void</span> (^)(<span class="built_in">BOOL</span>))completionHandler&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([shortcutItem.type isEqualToString:<span class="string">@"type1"</span>]) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@ "</span>,shortcutItem.userInfo[<span class="string">@"liuwei"</span>]);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"%@ "</span>,shortcutItem.userInfo[<span class="string">@"liuwei"</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="peak-and-pop"><a href="#peak-and-pop" class="headerlink" title="peak and pop"></a>peak and pop</h2><ul>
-<li>这个功能是一套全新的用户交互机制,在使用会有3个交互阶段<ul>
-<li>1.提示用户这里用3D Touch的交互,会使交互控件周围模糊</li>
-<li>2.继续深按,会出现预览试图</li>
-<li>3.通过试图上的交互控件进一步交互</li>
+</li>
+<li><p>Web App特点:</p>
+<ul>
+<li>开发成本低,更新快,版本升级容易,自动升级 </li>
+<li>跨平台，Write Once , Run Anywhere</li>
+<li>无法调用系统级的API</li>
+<li>临时入口，用户留存度低</li>
+<li>性能差,体验差,设计受限制</li>
+<li>相比Native App，Web App体验中受限于以上5个因素：网络环境，渲染性能，平台特性，受限于浏览器，系统限制。</li>
+</ul>
+</li>
+<li><p>Hybrid App特点:</p>
+<ul>
+<li>Native App 和 Web App 折中的方案，保留了 Native App 和 Web App 的优点。</li>
+<li>但是还是性能差。页面渲染效率低，在Webview中绘制界面，实现动画，资源消耗都比较大,受限于技术,网速等因素</li>
 </ul>
 </li>
 </ul>
-<h3 id="1-判断当前设备是否支持3DTouch-注册3DTouch"><a href="#1-判断当前设备是否支持3DTouch-注册3DTouch" class="headerlink" title="1.判断当前设备是否支持3DTouch,注册3DTouch"></a>1.判断当前设备是否支持3DTouch,注册3DTouch</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">UITableViewCell</span> *)tableView:(<span class="built_in">UITableView</span> *)tableView cellForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> * cellID = <span class="string">@"cell"</span>;</span><br><span class="line">    </span><br><span class="line">    LVHeroCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    1.判断是否支持3DTouch</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.traitCollection.forceTouchCapability == <span class="built_in">UIForceTouchCapabilityAvailable</span>) &#123;</span><br><span class="line"><span class="comment">//        注册cell,支持3DTouch,并设置预览代理</span></span><br><span class="line">        [<span class="keyword">self</span> registerForPreviewingWithDelegate:<span class="keyword">self</span> sourceView:cell];</span><br><span class="line">    &#125;</span><br><span class="line">    cell.heroModel = <span class="keyword">self</span>.heroes[indexPath.row];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="2-遵守协议实现代理方法"><a href="#2-遵守协议实现代理方法" class="headerlink" title="2.遵守协议实现代理方法"></a>2.遵守协议实现代理方法</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#pragma mark - 预览代理</span></span><br><span class="line"><span class="comment">//轻按,中按时调用</span></span><br><span class="line">- (<span class="built_in">UIViewController</span> *)previewingContext:(<span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerPreviewing</span>&gt;)previewingContext viewControllerForLocation:(<span class="built_in">CGPoint</span>)location&#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">//    1.获取sourceView</span></span><br><span class="line">    LVHeroCell * sourceView = (LVHeroCell *)[previewingContext sourceView];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    2.设置弹出的位置</span></span><br><span class="line">    [previewingContext setSourceRect:sourceView.bounds];</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    3.设置弹框的view</span></span><br><span class="line">    LVDetailViewController *detailVC = [[LVDetailViewController alloc]init];</span><br><span class="line">    detailVC.preferredContentSize = <span class="built_in">CGSizeMake</span>(<span class="number">0</span>, <span class="number">500</span>);</span><br><span class="line">    detailVC.heroModel = sourceView.heroModel;</span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">typeof</span>(detailVC) weakDetailVc = detailVC;</span><br><span class="line">    detailVC.toDetailVcBlock = ^()&#123;</span><br><span class="line">        [<span class="keyword">self</span>.navigationController pushViewController:weakDetailVc animated:<span class="literal">YES</span>];</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> detailVC;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//弹窗出现后继续重按时调用</span></span><br><span class="line">- (<span class="keyword">void</span>)previewingContext:(<span class="keyword">id</span>&lt;<span class="built_in">UIViewControllerPreviewing</span>&gt;)previewingContext commitViewController:(<span class="built_in">UIViewController</span> *)viewControllerToCommit&#123;</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span> showViewController:viewControllerToCommit sender:<span class="keyword">self</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="3-设置控制器在弹窗时候-下面输出的数组-在需要弹出的控制器中"><a href="#3-设置控制器在弹窗时候-下面输出的数组-在需要弹出的控制器中" class="headerlink" title="3.设置控制器在弹窗时候,下面输出的数组,在需要弹出的控制器中"></a>3.设置控制器在弹窗时候,下面输出的数组,在需要弹出的控制器中</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置控制器在弹窗的情况,下面输出的数组</span></span><br><span class="line">- (<span class="built_in">NSArray</span>&lt;<span class="keyword">id</span>&lt;<span class="built_in">UIPreviewActionItem</span>&gt;&gt; *)previewActionItems&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIPreviewAction</span> *action1 = [<span class="built_in">UIPreviewAction</span> actionWithTitle:<span class="string">@"进入"</span> style:<span class="built_in">UIPreviewActionStyleDefault</span> handler:^(<span class="built_in">UIPreviewAction</span> * _Nonnull action, <span class="built_in">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//        因为当前控制器不能自己push自己,那么就得是他的父控制器知道什么时候push他,给她定义一个block属性,在父控制器中拿到block属性设置,在这里调用block</span></span><br><span class="line">        LVDetailViewController *detailVc = (LVDetailViewController *)previewViewController;</span><br><span class="line">        detailVc.toDetailVcBlock();</span><br><span class="line"><span class="comment">//        </span></span><br><span class="line"><span class="comment">//        LVDetailViewController *vc = [[LVDetailViewController alloc]init];</span></span><br><span class="line"><span class="comment">//        [self presentViewController:vc animated:true completion:nil];</span></span><br><span class="line">        </span><br><span class="line">    &#125;];</span><br><span class="line">    <span class="built_in">UIPreviewAction</span> *action2 = [<span class="built_in">UIPreviewAction</span> actionWithTitle:<span class="string">@"取消"</span> style:<span class="built_in">UIPreviewActionStyleDestructive</span> handler:^(<span class="built_in">UIPreviewAction</span> * _Nonnull action, <span class="built_in">UIViewController</span> * _Nonnull previewViewController) &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"取消"</span>);</span><br><span class="line">    &#125;];</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> @[action1,action2];</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Force-properties-新的交互参数-力度-通过检测力度值-来做对应的交互处理"><a href="#Force-properties-新的交互参数-力度-通过检测力度值-来做对应的交互处理" class="headerlink" title="Force properties :新的交互参数:力度,通过检测力度值,来做对应的交互处理"></a>Force properties :新的交互参数:力度,通过检测力度值,来做对应的交互处理</h2><ul>
-<li>暂未总结</li>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-598d03580d959973.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20161028_3.png"></p>
+<ul>
+<li>为了解决上述问题,一套高效率,高性能的跨平台方案成为了大家热衷的话题,也就有了下面要比较的weex和react native.</li>
 </ul>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><hr>
+<h2 id="weex"><a href="#weex" class="headerlink" title="weex"></a><a href="https://alibaba.github.io/weex/" target="_blank" rel="noopener">weex</a></h2><ul>
+<li>简介:<br>weex是阿里巴巴公司与2016年6月开源的一种用于构建移动跨平台的UI框架</li>
+<li>特点:<ul>
+<li>1.Lightweight:轻量级,语法简单,易于使用</li>
+<li>2.Extendable:可扩展,丰富内置组件,可扩展的API,</li>
+<li>3.High Performance:高性能</li>
+<li>核心理念:</li>
+<li>Write Once Run Everywhere</li>
+<li>基于JS开发框架:</li>
+<li>weex基于vue.js</li>
+</ul>
+</li>
+</ul>
+<h2 id="React-Native"><a href="#React-Native" class="headerlink" title="React Native"></a><a href="https://facebook.github.io/react-native/" target="_blank" rel="noopener">React Native</a></h2><ul>
+<li>简介:<ul>
+<li>Facebook在2015年3月在F8开发者大会上开源的跨平台UI框架</li>
+</ul>
+</li>
+<li>核心理念:LEARN ONCE, WRITE ANYWHERE</li>
+<li>基于JS开发框架:<ul>
+<li>React Native基于React</li>
+</ul>
+</li>
+</ul>
+<h3 id="知识拓展-vue-js和React"><a href="#知识拓展-vue-js和React" class="headerlink" title="知识拓展:vue.js和React"></a>知识拓展:vue.js和React</h3><h4 id="Vue"><a href="#Vue" class="headerlink" title="Vue:"></a><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue</a>:</h4><ul>
+<li>是一个构建数据驱动的 web 界面的库。Vue.js 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件.</li>
+</ul>
+<h4 id="React"><a href="#React" class="headerlink" title="React:"></a><a href="https://facebook.github.io/react/" target="_blank" rel="noopener">React</a>:</h4><ul>
+<li>基于HTML的前端界面开发正变得越来越复杂，其本质问题基本都可以归结于如何将来自于服务器端或者用户输入的动态数据高效的反映到复杂的用户界面上。而来自Facebook的React框架正是完全面向此问题的一个解决方案，按官网描述，其出发点为：用于开发数据不断变化的大型应用程序。相比传统型的前端开发，React开辟了一个相当另类的途径，实现了前端界面的高效率高性能开发。</li>
+</ul>
+<h4 id="Vue-js和React的异同"><a href="#Vue-js和React的异同" class="headerlink" title="Vue.js和React的异同:"></a>Vue.js和React的异同:</h4><p><a href="https://cn.vuejs.org/guide/comparison.html" target="_blank" rel="noopener">Vue和React的区别</a></p>
+<h1 id="Weex和React-Native的异同"><a href="#Weex和React-Native的异同" class="headerlink" title="Weex和React Native的异同"></a>Weex和React Native的异同</h1><h2 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h2><ul>
+<li>都采用Web的开发模式，使用JS开发；</li>
+<li>都可以直接在Chrome中调试JS代码；</li>
+<li>都支持跨平台的开发；</li>
+<li>都可以实现hot reload，边更新代码边查看效果；</li>
+</ul>
+<h2 id="不同点"><a href="#不同点" class="headerlink" title="不同点:"></a>不同点:</h2><h3 id="JS引擎"><a href="#JS引擎" class="headerlink" title="JS引擎"></a>JS引擎</h3><p><a href="https://zh.wikipedia.org/wiki/JavaScript%E5%BC%95%E6%93%8E" target="_blank" rel="noopener">什么是JS引擎</a></p>
+<h3 id="学习成本"><a href="#学习成本" class="headerlink" title="学习成本"></a>学习成本</h3><ul>
+<li>1.环境配置：<ul>
+<li>ReactNative需要按照文档安装配置很多依赖的工具，相对比较麻烦。 weex安装cli之后就可以使用</li>
+</ul>
+</li>
+<li>2.vue vs react:上面已经做过对比<ul>
+<li>react模板JSX学习使用有一定的成本 vue更接近常用的web开发方式，模板就是普通的html，数据绑定使用mustache风格，样式直接使用css</li>
+</ul>
+</li>
+</ul>
+<h3 id="社区支持"><a href="#社区支持" class="headerlink" title="社区支持"></a>社区支持</h3><ul>
+<li>Weex开源较晚，互联网上相关资料还比较少，社区规模较小；</li>
+<li>React Native社区则比较活跃，可以参考的项目和资料也比较丰富</li>
+</ul>
+<p><strong>一张图:从渲染时间,内存使用,CPU占用,帧率(图形处理器每秒钟能够刷新几次,高的帧率可以得到更流畅、更逼真的动画。每秒钟帧数 （fps） 愈多，所显示的动作就会愈流畅。)</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-b0456449011ffa04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="各种类型应用对比"></p>
+<h1 id="文章推荐"><a href="#文章推荐" class="headerlink" title="文章推荐"></a>文章推荐</h1><hr>
+<p><a href="https://yq.aliyun.com/articles/57996" target="_blank" rel="noopener">weex vs react-native</a><br><a href="http://awhisper.github.io/2016/07/22/Weex-ReactNative-JSPatch/" target="_blank" rel="noopener">Weex &amp; ReactNative &amp; JSPatch</a><br><a href="https://xiaomaer.gitbooks.io/compare-weex-to-react-native/content/compare.html" target="_blank" rel="noopener">Weex和react native对比</a><br><a href="http://div.io/topic/1478" target="_blank" rel="noopener">对无线电商动态化方案的思考（一）</a>系列文章</p>
 
       
 
@@ -227,11 +286,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
         		</li>
       		
 		</ul>
@@ -287,7 +342,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2015/11/20/3DTouch/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/08/01/Weex-和-React-Native/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -301,18 +356,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2016/08/01/Weex-和-React-Native/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/01/React-Native-之-安装配置/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Weex 和 React Native
+          React Native 之 安装配置
         
       </div>
     </a>
   
   
-    <a href="/2015/09/20/cocoapods安装/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">cocoapods安装</div>
+    <a href="/2015/11/20/3DTouch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">3DTouch</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -342,7 +397,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="3DTouch" ></div> 
+  <div id="SOHUCS" sid="Weex-和-React-Native" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
