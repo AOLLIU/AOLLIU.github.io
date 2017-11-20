@@ -476,23 +476,9 @@ var _hmt = _hmt || [];
 <ul>
 <li>其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设置了为NO,那么就算在外面设置了highlighted = YES;也不是高亮状态.</li>
 </ul>
-<p><strong>在开发中有时候我们需要取消按钮的高亮状态,可以通过两个方法来实现:</strong></p>
-<ul>
-<li><p>1.重写set highlight方法 ,在这个方法中什么也不做,覆盖系统的做法</p>
-</li>
-<li><p>2,重写is highlight方法返回NO</p>
-</li>
-</ul>
-<h4 id="不可用-UIControlStateDisabled"><a href="#不可用-UIControlStateDisabled" class="headerlink" title="不可用(UIControlStateDisabled ):"></a>不可用(UIControlStateDisabled ):</h4><ul>
-<li>设置按钮属性enable = NO; 按钮不会接受点击的事件<br>enabled = NO; 状态变为disabled<br>userinteractionEnabled = NO;按钮不能点击了 但是不会改变按钮的状态</li>
-</ul>
-<h4 id="选中状态-UIControlStateSelected"><a href="#选中状态-UIControlStateSelected" class="headerlink" title="选中状态(UIControlStateSelected):"></a>选中状态(UIControlStateSelected):</h4><ul>
-<li>设置按钮的属性selected = YES; 按钮可以接受点击事件</li>
-</ul>
-<h4 id="普通状态-UIControlStateNormal-最值得注意"><a href="#普通状态-UIControlStateNormal-最值得注意" class="headerlink" title="普通状态(UIControlStateNormal):最值得注意"></a>普通状态(UIControlStateNormal):最值得注意</h4><ul>
-<li>看是这个状态没有什么,再普通不过了,但是却不是这样的,如果你同时设置了按钮的状态为选中状态和不可用状态,其实按钮不会按你设置的那样真的选中再不可用,而是普通状态(UIControlStateNormal),所以UIControlStateNormal是除开前面3中以外的状态 比如两个状态同时设置</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2014/08/22/UIButton/#more">more >></a>
+        
       
 
       
