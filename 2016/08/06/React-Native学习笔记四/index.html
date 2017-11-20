@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | AOLLIU的博客</title>
+  <title>React Native学习笔记四 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="网络请求 在开发中,从网络上加载数据是重点难点,尤其是在做细节优化方面,在React Native中通常使用Ajax请求从服务器获取数据,然后在componenrDidMount方法中创建Ajax请求,等到请求成功,再调用this.setState方法重新渲染UI.  什么是fetch fetch目前还不是W3C规范.">
+<meta name="keywords" content="跨平台开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native学习笔记四">
+<meta property="og:url" content="http://yoursite.com/2016/08/06/React-Native学习笔记四/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="网络请求 在开发中,从网络上加载数据是重点难点,尤其是在做细节优化方面,在React Native中通常使用Ajax请求从服务器获取数据,然后在componenrDidMount方法中创建Ajax请求,等到请求成功,再调用this.setState方法重新渲染UI.  什么是fetch fetch目前还不是W3C规范.与Ajax不同的是,他的API不是事件机制,而是采用了目前流行的Promise方">
+<meta property="og:updated_time" content="2017-11-20T07:55:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="React Native学习笔记四">
+<meta name="twitter:description" content="网络请求 在开发中,从网络上加载数据是重点难点,尤其是在做细节优化方面,在React Native中通常使用Ajax请求从服务器获取数据,然后在componenrDidMount方法中创建Ajax请求,等到请求成功,再调用this.setState方法重新渲染UI.  什么是fetch fetch目前还不是W3C规范.与Ajax不同的是,他的API不是事件机制,而是采用了目前流行的Promise方">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,36 +158,76 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-React-Native学习笔记四" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React组件化思想与Flux架构模式/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:56:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React组件化思想与Flux架构模式/">React组件化思想与Flux架构模式</a>
+    <h1 class="article-title" itemprop="name">
+      React Native学习笔记四
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/06/React-Native学习笔记四/" class="archive-article-date">
+  	<time datetime="2016-08-06T13:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><ul>
+<li>在开发中,从网络上加载数据是重点难点,尤其是在做细节优化方面,在React Native中通常使用Ajax请求从服务器获取数据,然后在<br>componenrDidMount方法中创建Ajax请求,等到请求成功,再调用this.setState方法重新渲染UI.</li>
+</ul>
+<h2 id="什么是fetch"><a href="#什么是fetch" class="headerlink" title="什么是fetch"></a>什么是fetch</h2><ul>
+<li>fetch目前还不是W3C规范.与Ajax不同的是,他的API不是事件机制,而是采用了目前流行的Promise方法处理</li>
+</ul>
+<p><a href="https://segmentfault.com/a/1190000003810652" target="_blank" rel="noopener">fetch学习资料</a></p>
+<a id="more"></a>
+<h2 id="使用fetch"><a href="#使用fetch" class="headerlink" title="使用fetch"></a>使用fetch</h2><ul>
+<li>React Native提供了和web标准一致的Fetch API，用于满足开发者访问网络的需求。</li>
+</ul>
+<h2 id="发起网络请求"><a href="#发起网络请求" class="headerlink" title="发起网络请求"></a>发起网络请求</h2><ul>
+<li>要从任意地址获取内容的话，只需简单地将网址作为参数传递给fetch方法即可:<code>fetch(&#39;https://www.baidu.com&#39;)</code></li>
+<li>Fetch还有可选的第二个参数，可以用来定制HTTP请求一些参数。你可以指定header参数，或是指定使用POST方法，又或是提交数据等等;</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fetch(&apos;http://www.baidu.com&apos;,&#123;</span><br><span class="line">  method: &apos;POST&apos;,</span><br><span class="line">  header: &#123;</span><br><span class="line">    &apos;Accept&apos;:&apos;application/json&apos;,</span><br><span class="line">    &apos;Content-Type&apos;:&apos;application/json&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">  body:JSON.stringify(&#123;</span><br><span class="line">    firstParam:&apos;yourValue&apos;,</span><br><span class="line">    SecondParam:&apos;yourOtherValue&apos;,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>译注：如果你的服务器无法识别上面POST的数据格式，那么可以尝试传统的form格式，示例如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(&apos;http://www.baidu.com&apos;,&#123;</span><br><span class="line">  method:&apos;POST&apos;,</span><br><span class="line">  header:&#123;</span><br><span class="line">    &apos;Content-Type&apos;:&apos;application/x-www-form-urlencoded&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">  body:&apos;key1=value1&amp;key2=value2&apos;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="处理服务器的响应数据"><a href="#处理服务器的响应数据" class="headerlink" title="处理服务器的响应数据"></a>处理服务器的响应数据</h2><ul>
+<li>网络请求天然是一种异步操作,fetch方法会返回一个Promise,这中模式可以简化异步风格的代码.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">getMoviesFromApiAsync()&#123;</span><br><span class="line">  return fetch(&apos;http://http://facebook.github.io/react-native/movies.json&apos;)</span><br><span class="line">  .then((response) =&gt; response.json())</span><br><span class="line">  .then((responseJson) =&gt; &#123;</span><br><span class="line">    resultData.shopData = responseJson.data;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      dataSource:this.getDataSource(responseJson.data),</span><br><span class="line">    &#125;);</span><br><span class="line">    &lt;!--return responseJson.movies;--&gt;</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch((error) =&gt; &#123;</span><br><span class="line">    console.error(error);</span><br><span class="line">    resultData.shopData = undifined;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      dataSource:this.getDataSource([]),</span><br><span class="line">      isLoading:false</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  .done();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>也可以在React Native应用中使用async/await 语法:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//注意在这个方法前面有async关键字</span><br><span class="line"> async getMoviesFromApi()&#123;</span><br><span class="line">   try&#123;</span><br><span class="line">      //注意这里的await语句,器所在的函数必须有async关键字声明</span><br><span class="line">      let response = await fetch(&apos;http://http://facebook.github.io/react-native/movies.json&apos;);</span><br><span class="line">      let responseJson = await response.json();</span><br><span class="line">      return responseJson.movies;</span><br><span class="line">   &#125;catch(error)&#123;</span><br><span class="line">      console.error(error)</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在这里catch住fetch可能抛出的异常,不然出错的时候看不到任何的提示.</li>
+</ul>
+<h3 id="其他的网络库"><a href="#其他的网络库" class="headerlink" title="其他的网络库"></a>其他的网络库</h3><ul>
+<li>React Native中已经内置了XMLHttpRequest API(也就是俗称的ajax)。一些基于XMLHttpRequest封装的第三方库也可以使用，例如frisbee或是axios等。但注意不能使用jQuery，因为jQuery中还使用了很多浏览器中才有而RN中没有的东西（所以也不是所有web中的ajax库都可以直接使用）。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var request = new XMLHttpRequest();</span><br><span class="line">request.onreadystatechange = (e) =&gt; &#123;</span><br><span class="line">  if (request.readyState !== 4) &#123;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  if (request.status === 200) &#123;</span><br><span class="line">    console.log(&apos;success&apos;, request.responseText);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    console.warn(&apos;error&apos;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">request.open(&apos;GET&apos;, &apos;https://mywebsite.com/endpoint/&apos;);</span><br><span class="line">request.send();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意:安全机制与网页环境有所不同,在应用中你可以访问任何网站,没有跨域的限制.</li>
+</ul>
+<h3 id="WebSocket支持"><a href="#WebSocket支持" class="headerlink" title="WebSocket支持"></a>WebSocket支持</h3><ul>
+<li>React Native还支持WebSocket,这种协议可以在当个TCP连接上提供双工的通信信道.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  var ws = new WebSocket(&apos;ws://host.com/path&apos;);</span><br><span class="line">  ws.onopen = () =&gt; &#123;//打开一个链接</span><br><span class="line">    ws.send(&apos;something&apos;);//发送一条消息</span><br><span class="line">&#125;;</span><br><span class="line">  ws.onmessage = (e) =&gt; &#123;//接受到了一条消息</span><br><span class="line">    console.log(e.data);</span><br><span class="line">&#125;;</span><br><span class="line">  ws.onerror = (e) =&gt; &#123;//发生了一个错误</span><br><span class="line">    console.log(e.message);</span><br><span class="line">&#125;;</span><br><span class="line">  ws.onclose = (e) =&gt; &#123;//连接被关闭</span><br><span class="line">    console.log(e.code,e.reason);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,390 +239,124 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React-Native-之-安装配置/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:36:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React-Native-之-安装配置/">React Native 之 安装配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/Weex-和-React-Native/" class="archive-article-date">
-  	<time datetime="2016-08-01T13:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/Weex-和-React-Native/">Weex 和 React Native</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/20/3DTouch/" class="archive-article-date">
-  	<time datetime="2015-11-20T12:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/20/3DTouch/">3DTouch</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/08/06/React-Native学习笔记四/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/20/cocoapods安装/" class="archive-article-date">
-  	<time datetime="2015-09-20T14:53:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2016/08/12/React-Native学习笔记六/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          React Native学习笔记六
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/05/React-Native学习笔记三/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React Native学习笔记三</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/20/cocoapods安装/">cocoapods安装</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/01/load方法和initialize方法/" class="archive-article-date">
-  	<time datetime="2015-09-01T15:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/01/load方法和initialize方法/">load方法和initialize方法</a>
-    </h1>
+  <div id="SOHUCS" sid="React-Native学习笔记四" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/24/JS中面对对象-OOP-继承及原型链/" class="archive-article-date">
-  	<time datetime="2015-08-24T13:38:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/24/JS中面对对象-OOP-继承及原型链/">JS中面对对象(OOP)继承及原型链</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/20/Ajax网络请求与跨越问题/" class="archive-article-date">
-  	<time datetime="2015-08-20T13:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/20/Ajax网络请求与跨越问题/">Ajax网络请求与跨越问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/07/处世之道/" class="archive-article-date">
-  	<time datetime="2015-04-07T14:17:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/07/处世之道/">处世之道</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/20/CoreData/" class="archive-article-date">
-  	<time datetime="2015-03-20T13:20:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/20/CoreData/">CoreData</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -601,8 +380,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

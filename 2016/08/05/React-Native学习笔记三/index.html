@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | AOLLIU的博客</title>
+  <title>React Native学习笔记三 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="ScrollView ScrollView是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。ScrollView不仅可以垂直滚动，还能水平滚动（通过horizontal属性来设置）。 ScrollView适合用来显示数量不多的滚动元素。放置在ScollView中的所有组件都会被渲">
+<meta name="keywords" content="跨平台开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native学习笔记三">
+<meta property="og:url" content="http://yoursite.com/2016/08/05/React-Native学习笔记三/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="ScrollView ScrollView是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。ScrollView不仅可以垂直滚动，还能水平滚动（通过horizontal属性来设置）。 ScrollView适合用来显示数量不多的滚动元素。放置在ScollView中的所有组件都会被渲染，哪怕有些组件因为内容太长被挤出了屏幕外。如果你需要显示较长的滚动列表，那么应">
+<meta property="og:updated_time" content="2017-11-20T07:53:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="React Native学习笔记三">
+<meta name="twitter:description" content="ScrollView ScrollView是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。ScrollView不仅可以垂直滚动，还能水平滚动（通过horizontal属性来设置）。 ScrollView适合用来显示数量不多的滚动元素。放置在ScollView中的所有组件都会被渲染，哪怕有些组件因为内容太长被挤出了屏幕外。如果你需要显示较长的滚动列表，那么应">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,36 +158,89 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-React-Native学习笔记三" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React组件化思想与Flux架构模式/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:56:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React组件化思想与Flux架构模式/">React组件化思想与Flux架构模式</a>
+    <h1 class="article-title" itemprop="name">
+      React Native学习笔记三
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/05/React-Native学习笔记三/" class="archive-article-date">
+  	<time datetime="2016-08-05T12:27:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ScrollView"><a href="#ScrollView" class="headerlink" title="ScrollView"></a>ScrollView</h2><ul>
+<li>ScrollView是一个通用的可滚动的容器，你可以在其中放入多个组件和视图，而且这些组件并不需要是同类型的。ScrollView不仅可以垂直滚动，还能水平滚动（通过horizontal属性来设置）。</li>
+<li>ScrollView适合用来显示数量不多的滚动元素。放置在ScollView中的所有组件都会被渲染，哪怕有些组件因为内容太长被挤出了屏幕外。如果你需要显示较长的滚动列表，那么应该使用功能差不多但性能更好的ListView组件。</li>
+</ul>
+<a id="more"></a>
+<h2 id="ListView"><a href="#ListView" class="headerlink" title="ListView"></a>ListView</h2><ul>
+<li>ListView组件用于显示一个垂直的滚动列表，其中的元素之间结构近似而仅数据不同。</li>
+<li>ListView更适于长列表数据，且元素个数可以增删。和ScrollView不同的是，ListView并不立即渲染所有元素，而是优先渲染屏幕上可见的元素。</li>
+<li>ListView组件必须的两个属性是dataSource和renderRow。dataSource是列表的数据源，而renderRow则逐个解析数据源中的数据，然后返回一个设定好格式的组件来渲染。</li>
+<li>下面的例子创建了一个简单的ListView，并预设了一些模拟数据。首先是初始化ListView所需的dataSource，其中的每一项（行）数据之后都在renderRow中被渲染成了Text组件，最后构成整个ListView。</li>
+<li>rowHasChanged函数也是ListView的必需属性。这里我们只是简单的比较两行数据是否是同一个数据（===符号只比较基本类型数据的值，和引用类型的地址）来判断某行数据是否变化了。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class QRCodePay extends Component&#123;</span><br><span class="line">  // 初始化模拟数据</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    const ds = new ListView.DataSource(&#123;rowHasChanged: (r1, r2) =&gt; r1 !== r2&#125;);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      dataSource: ds.cloneWithRows([</span><br><span class="line">        &apos;John&apos;, &apos;Joel&apos;, &apos;James&apos;, &apos;Jimmy&apos;, &apos;Jackson&apos;, &apos;Jillian&apos;, &apos;Julie&apos;, &apos;Devin&apos;</span><br><span class="line">      ])</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;View style=&#123;&#123;flex:1,paddingTop:22&#125;&#125;&gt;</span><br><span class="line">          &lt;ListView dataSource = &#123;this.state.dataSource&#125;</span><br><span class="line">                    renderRow = &#123;(rowData)=&gt; &lt;Text&gt;&#123;rowData&#125;&lt;/Text&gt;&#125;</span><br><span class="line">                    style = &#123;&#123;height:40,backgroundColor:&apos;red&apos;,marginTop:5&#125;&#125;</span><br><span class="line">          /&gt;</span><br><span class="line">        &lt;/View&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="ListView-1"><a href="#ListView-1" class="headerlink" title="ListView"></a>ListView</h1><ul>
+<li>组件ListView组件是React Native核心组件之一,应用十分的广泛,主要是高效的展示列表数据</li>
+</ul>
+<h2 id="一-基本使用"><a href="#一-基本使用" class="headerlink" title="一.基本使用"></a>一.基本使用</h2><h3 id="1-首先创建一个ListView-DataSource数据源-然后给它传递一个普通的数据数组"><a href="#1-首先创建一个ListView-DataSource数据源-然后给它传递一个普通的数据数组" class="headerlink" title="1.首先创建一个ListView.DataSource数据源,然后给它传递一个普通的数据数组"></a>1.首先创建一个ListView.DataSource数据源,然后给它传递一个普通的数据数组</h3><ul>
+<li>因为数据源在初始化后会改变,所以放到getInitialState方法中,代码如下</li>
+</ul>
+<h3 id="2-使用数据源-dataSource-实例化一个ListView组件-定义一个renderRow回调函数-这个函数会接受数组中的每个数据作为参数-返回一个可渲染的组件-就是listView每一行的item"><a href="#2-使用数据源-dataSource-实例化一个ListView组件-定义一个renderRow回调函数-这个函数会接受数组中的每个数据作为参数-返回一个可渲染的组件-就是listView每一行的item" class="headerlink" title="2.使用数据源(dataSource)实例化一个ListView组件,定义一个renderRow回调函数,这个函数会接受数组中的每个数据作为参数,返回一个可渲染的组件(就是listView每一行的item)"></a>2.使用数据源(dataSource)实例化一个ListView组件,定义一个renderRow回调函数,这个函数会接受数组中的每个数据作为参数,返回一个可渲染的组件(就是listView每一行的item)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">var LVList = React.createClass(&#123;</span><br><span class="line"></span><br><span class="line">  // 初始化模拟数据</span><br><span class="line">  getInitialState: function() &#123;</span><br><span class="line">    </span><br><span class="line">    //创建数据源 DataSource是大写  返回新数据的条件是当且仅当两行数据不一样的时候返回新数据</span><br><span class="line">    var ds = new ListView.DataSource(&#123;rowHasChanged: (r1, r2) =&gt; r1 !== r2&#125;);</span><br><span class="line">     this.state = &#123;</span><br><span class="line">            //构造假数据 固定写法,传一个普通的数组</span><br><span class="line">            dataSource: ds.cloneWithRows([&apos;row 1&apos;, &apos;row 2&apos;,&apos;row 3&apos;]),</span><br><span class="line">        &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;View style=&#123;&#123;flex:1&#125;&#125;&gt;</span><br><span class="line">                &lt;ListView</span><br><span class="line">                    dataSource=&#123;this.state.dataSource&#125;</span><br><span class="line">                    renderRow=&#123;this.renderRow&#125;</span><br><span class="line">                /&gt;</span><br><span class="line">            &lt;/View&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;,</span><br><span class="line">        //返回每一行的组件</span><br><span class="line">    renderRow: function(rowData: string, sectionID: number, rowID: number) &#123;</span><br><span class="line">    return (</span><br><span class="line">        //添加点击事件</span><br><span class="line">        &lt;TouchableOpacity</span><br><span class="line">            onPress=&#123;()=&gt;&#123;alert(&apos;点击了第&apos;+sectionID+&apos;组的第&apos;+rowID+&apos;行&apos;)&#125;&#125;</span><br><span class="line">        &gt;</span><br><span class="line">            &lt;View style=&#123;styles.rowContainer&#125;&gt;</span><br><span class="line">                &lt;View style=&#123;styles.row&#125;&gt;</span><br><span class="line">                    &lt;Image style=&#123;styles.thumb&#125; source=&#123;&#123;uri:Imgs[0]&#125;&#125; /&gt;</span><br><span class="line">                    &lt;Text style=&#123;&#123;flex:1,fontSize:16,color:&apos;blue&apos;,marginLeft:50,&#125;&#125;&gt;</span><br><span class="line">                        &#123;rowData + &apos;测试~&apos;&#125;</span><br><span class="line">                    &lt;/Text&gt;</span><br><span class="line">                &lt;/View&gt;</span><br><span class="line">            &lt;/View&gt;</span><br><span class="line">        &lt;/TouchableOpacity&gt;</span><br><span class="line">    );</span><br><span class="line">&#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="二-常用属性"><a href="#二-常用属性" class="headerlink" title="二.常用属性"></a>二.常用属性</h2><ul>
+<li>1.ScrolView的相关属性样式都全部继承</li>
+<li>2.<code>dataSource</code>:ListViewDataSource设置ListView的数据源</li>
+<li>3.<code>initialListSize</code>:(number) 设置ListView组件刚刚加载的时候渲染的列表行数,用这个属性确认首页加载的数据数量,而不是花大量的时间渲染大量的数据,提高性能</li>
+<li>4.<code>onChangeVisiableRows</code>: (funtion) (visiableRows,changeRows)=&gt;Void 当可变的行发生变化时回调该方法.</li>
+<li>5.<code>onEndReachedThreshold</code>:(number) 当偏移量达到设置的临界值时调用<code>ononEndReached</code></li>
+<li>6.<code>ononEndReached</code>:(function) 当所有的数据行被渲染之后,并且列表往下进行滚动,一直滚动到距离底部<code>onEndReachedThreshold</code>设置的值进行回调该方法,原生的滚动时间进行传递(通过参数的形式)</li>
+<li>7.<code>pageSize</code>:(number) 每一次事件的循环渲染的行数</li>
+<li>8.<code>removeClippedSubviews</code>:(bool) 该属性用于提供大数据列表的滚动性能,该使用的时候需要给每一行(row)的布局挺添加over:<code>hidden</code>样式,该属性默认是开启状态.</li>
+<li>9.<code>renderFooter</code>:(function)方法 ()=&gt;renderable 在每次渲染过程中头和尾会重新进行渲染,如果发现该重新绘制的性能开销比较大的时候可以使用StaticContainer容器或者其他合适的组件.</li>
+<li>10,<code>renderHeader</code>:(function)方法 (rowData,sectionID,rowID,highlightRow)=&gt;renderable 该方法有四个参数,其中分别为数据源中的一条数据,分组id,行id,以及标记是否是高亮选中状态信息</li>
+<li>11.<code>renderScrollComponent</code>:(function)方法 (props)=&gt;renderable 该方法可以返回一个可以滚动的组件,默认返回一个ScrollView</li>
+<li>12.<code>renderSectionHeader</code>(function)方法 (sectionData,sectionID)=&gt;renderable 如果设置了该方法,这样会为每一个section渲染一个粘性的header试图,该试图粘性的效果是当刚刚被渲染开始的时候,该试图会处于对应的内容的顶部,然后开始滑动的时候,会跑到屏幕的顶部,知道滑动到下一个section的header,知道被替换</li>
+<li>13.<code>renderSeparator</code> (function)方法 (sectionID,rowID,adjacentRowHighlighted)=&gt;renderable 如果设置了该方法,会在被每一行的下面渲染一个组件作为分割,除了每一个section分组的头部试图前面的最后一行</li>
+<li>14,<code>scrollRenderAheadDistance</code>(number) 进行设置当改行进入屏幕多少像素之后就开始渲染</li>
+</ul>
+<h2 id="三-高级特性"><a href="#三-高级特性" class="headerlink" title="三.高级特性"></a>三.高级特性</h2><ul>
+<li>listView有一些高级特性,包括设置每一组的头部,支持设置列表的header以及footer试图,当数据列表滑动到最底部的时候支持<code>onEndReached</code>方法回调,设备屏幕列表可见的试图数据发生变化的时候回调<code>onChangeVisiableRows</code>以及一些性能方面的优化特性</li>
+<li>当需要动态加载非常多的数据的时候,可以使用下面的一些性能优化的方法,让滚动更加平滑:<ul>
+<li>1).只更新渲染数据变化的那一行,<code>rowHasChanged</code>方法会告诉ListView组件是否需要重新渲染当前那一行</li>
+<li>2).选择渲染的频率.默认情况下每一个event-loop(事件循环)只会渲染一行(可以同pageSize自定义属性设置),这样可以把大的工作量分割,提高整体的渲染性能.</li>
+</ul>
+</li>
+</ul>
+<h2 id="四-注意事项"><a href="#四-注意事项" class="headerlink" title="四.注意事项"></a>四.注意事项</h2><ul>
+<li>在React Native中ScrollView组件可以使用<code>stickyHeaderIndices</code>轻松实现sticky效果,而是用ListView时,使用不生效.</li>
+</ul>
+<h4 id="如何实现滚动时每个section-header会吸顶呢"><a href="#如何实现滚动时每个section-header会吸顶呢" class="headerlink" title="如何实现滚动时每个section header会吸顶呢"></a>如何实现滚动时每个section header会吸顶呢</h4><ul>
+<li>在ListView中要实现sticky,需要使用<code>cloneWithRowsAndSections</code>方法,将<code>dataBlob</code>(object),<code>sectionIDs</code>(array),rowIDs(array)三者传进去<ul>
+<li>1&gt;dataBlob 它包含ListView所需的所有的数据(section header 和rows),在listView渲染数据的时候,使用<code>getSectionData</code>和<code>getRowData</code>来渲染每一行的数据,dataBlob的key值包含 sectionID + rowID</li>
+<li>2&gt;sectionIDs:用于标识每组的seciton</li>
+<li>3&gt;rowIDs:用于描述每个section里面的每行数据的位置及是否需要渲染,在ListView渲染时,会先遍历rowIDs 获取到对应的dataBlob数据.</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,390 +252,124 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React-Native-之-安装配置/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:36:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React-Native-之-安装配置/">React Native 之 安装配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/Weex-和-React-Native/" class="archive-article-date">
-  	<time datetime="2016-08-01T13:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/Weex-和-React-Native/">Weex 和 React Native</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/20/3DTouch/" class="archive-article-date">
-  	<time datetime="2015-11-20T12:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/20/3DTouch/">3DTouch</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/08/05/React-Native学习笔记三/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/20/cocoapods安装/" class="archive-article-date">
-  	<time datetime="2015-09-20T14:53:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2016/08/06/React-Native学习笔记四/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          React Native学习笔记四
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/03/React-Native学习笔记二/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React Native学习笔记二</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/20/cocoapods安装/">cocoapods安装</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/01/load方法和initialize方法/" class="archive-article-date">
-  	<time datetime="2015-09-01T15:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/01/load方法和initialize方法/">load方法和initialize方法</a>
-    </h1>
+  <div id="SOHUCS" sid="React-Native学习笔记三" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/24/JS中面对对象-OOP-继承及原型链/" class="archive-article-date">
-  	<time datetime="2015-08-24T13:38:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/24/JS中面对对象-OOP-继承及原型链/">JS中面对对象(OOP)继承及原型链</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/20/Ajax网络请求与跨越问题/" class="archive-article-date">
-  	<time datetime="2015-08-20T13:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/20/Ajax网络请求与跨越问题/">Ajax网络请求与跨越问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/07/处世之道/" class="archive-article-date">
-  	<time datetime="2015-04-07T14:17:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/07/处世之道/">处世之道</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/20/CoreData/" class="archive-article-date">
-  	<time datetime="2015-03-20T13:20:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/20/CoreData/">CoreData</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -601,8 +393,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

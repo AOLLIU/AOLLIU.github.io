@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | AOLLIU的博客</title>
+  <title>React Native学习笔记九 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="一.延展操作符(…)RN是面向组件开发的,我们会在该组件的defaultProps中公开一些属性方便外界进行数据传递,如果只有几个props直接传递即可,但是当传递大量的props时会显得很乱,容易出错,那么...(延展操作符,取出参数对象的所有可遍历属性)来进行传递是一种很好的选择.  1.常规写法123456&am">
+<meta name="keywords" content="跨平台开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native学习笔记九">
+<meta property="og:url" content="http://yoursite.com/2016/08/20/React-Native学习笔记九/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="一.延展操作符(…)RN是面向组件开发的,我们会在该组件的defaultProps中公开一些属性方便外界进行数据传递,如果只有几个props直接传递即可,但是当传递大量的props时会显得很乱,容易出错,那么...(延展操作符,取出参数对象的所有可遍历属性)来进行传递是一种很好的选择.  1.常规写法123456&amp;lt;HomeNav  title = &amp;quot;首页&amp;quot;  subTit">
+<meta property="og:updated_time" content="2017-11-20T08:04:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="React Native学习笔记九">
+<meta name="twitter:description" content="一.延展操作符(…)RN是面向组件开发的,我们会在该组件的defaultProps中公开一些属性方便外界进行数据传递,如果只有几个props直接传递即可,但是当传递大量的props时会显得很乱,容易出错,那么...(延展操作符,取出参数对象的所有可遍历属性)来进行传递是一种很好的选择.  1.常规写法123456&amp;lt;HomeNav  title = &amp;quot;首页&amp;quot;  subTit">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,36 +158,66 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-React-Native学习笔记九" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React组件化思想与Flux架构模式/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:56:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React组件化思想与Flux架构模式/">React组件化思想与Flux架构模式</a>
+    <h1 class="article-title" itemprop="name">
+      React Native学习笔记九
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2016/08/20/React-Native学习笔记九/" class="archive-article-date">
+  	<time datetime="2016-08-20T07:38:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一-延展操作符-…"><a href="#一-延展操作符-…" class="headerlink" title="一.延展操作符(…)"></a>一.延展操作符(…)</h2><p>RN是面向组件开发的,我们会在该组件的defaultProps中公开一些属性方便外界进行数据传递,如果只有几个props直接传递即可,但是当传递大量的props时会显得很乱,容易出错,那么<code>...</code>(延展操作符,取出参数对象的所有可遍历属性)来进行传递是一种很好的选择.</p>
+<ul>
+<li>1.常规写法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;HomeNav</span><br><span class="line">  title = &quot;首页&quot;</span><br><span class="line">  subTitle = &quot;子标题&quot;</span><br><span class="line">  intro = &quot;首页简介&quot;</span><br><span class="line">  detail = &quot;首页详情介绍&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>2.使用延展符操作符写法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var params = &#123;</span><br><span class="line">  title = &quot;首页&quot;,</span><br><span class="line">  subTitle = &quot;子标题&quot;,</span><br><span class="line">  intro = &quot;首页简介&quot;,</span><br><span class="line">  detail = &quot;首页详情介绍&quot;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">return (</span><br><span class="line">  &lt;HomeNav &#123;...params&#125;/&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="二-真机调试"><a href="#二-真机调试" class="headerlink" title="二.真机调试"></a>二.真机调试</h2><h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS:"></a>iOS:</h3><ul>
+<li>1.让运行的手机和电脑的WIFI在同一个局域网,获取到电脑的IP地址</li>
+<li>2.打开Xcode,在AppDelegate中添加如下代码:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">NSURL *jsCodeLocation;</span><br><span class="line">    </span><br><span class="line">    [RCTBundleURLProvider sharedSettings].jsLocation  = @&quot;192.168.20.123&quot;;//ip 地址</span><br><span class="line">    </span><br><span class="line">    jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@&quot;index.ios&quot; fallbackResource:nil];</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation</span><br><span class="line">                                                        moduleName:@&quot;Project&quot;</span><br><span class="line">                                                 initialProperties:nil</span><br><span class="line">                                                     launchOptions:launchOptions];</span><br><span class="line">    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];</span><br><span class="line">    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];</span><br><span class="line">    UIViewController *rootViewController = [UIViewController new];</span><br><span class="line">    rootViewController.view = rootView;</span><br><span class="line">    self.window.rootViewController = rootViewController;</span><br><span class="line">    [self.window makeKeyAndVisible];</span><br><span class="line">    return YES;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>3.run即可</li>
+</ul>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android:"></a>Android:</h3><ul>
+<li>1.Android 5.0 以上版本,可以直接通过adb reverse运行调试;</li>
+<li>2.在Android设备上打开USB debugging并连接上电脑启动调试;</li>
+<li>3.打开终端,命令<code>react-native run-android</code>编译运行项目;</li>
+<li>4.保证手机电脑在同一局域网(摇一摇 - Dev Setting - Debug server host for device - 输入当前电脑ip地址 = 点击Reload JS)</li>
+</ul>
+<h2 id="三-ref深入"><a href="#三-ref深入" class="headerlink" title="三.ref深入"></a>三.ref深入</h2><p>用ref可以获取到真实的Dom节点,其实ref还有更加高级的用法,他的属性值不仅仅可以是string,也可以是function</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">render()&#123;</span><br><span class="line">  return &lt;View ref=&#123;(e) =&gt; this._view = e&#125;/&gt; //将组件View作为参数赋值给了this._view</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">  this._view.style = &#123;backgroundColor:&apos;red&apos;,width:100,height:200&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ref在RN中左右相当于CSS中的选择器,我们可以任意去拿任何组件,从而获取他的属性和方法做相应的操作.</p>
+<h2 id="四-优化界面切换卡顿"><a href="#四-优化界面切换卡顿" class="headerlink" title="四.优化界面切换卡顿"></a>四.优化界面切换卡顿</h2><p>1.如果使用NavigatorIOS来进行界面切换很流畅,因为动画是在主线程上运行的,但如果使用Navigator有时会卡顿,因为他是跑在js线程上的,切换动画会使JS线程出现严重的掉帧</p>
+<p>2.在RN中有一个InteractionManager组件,其作用让一些js操作在过渡动画完成之后执行,保证了动画的流程性,这是典型的牺牲时间换空间从而保证了帧数的高复用,比如界面的跳转:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dealWithGoView(obj)&#123;</span><br><span class="line">  let detailUrl = obj.detailUrl;</span><br><span class="line">  const &#123;navigator&#125; = this.props;</span><br><span class="line">  InteractionManager.runAfterInterations(() =&gt; &#123;</span><br><span class="line">    navigator.push(&#123;</span><br><span class="line">      component:GoDetailView,</span><br><span class="line">      name:&apos;Login&apos;,</span><br><span class="line">      props:&#123;detailUrl&#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="五-让组件做到局部刷新"><a href="#五-让组件做到局部刷新" class="headerlink" title="五.让组件做到局部刷新"></a>五.让组件做到局部刷新</h2><p>1.利用RN的状态机机制,可以通过<code>this.setState</code>来控制界面刷新,但是一定会触发render方法,那如何保证不调用render方法还能做到局部刷新呢?</p>
+<p>2.那就是通过<code>setNativeProps</code>,不适用state和props,直接修改RN自带的组件,比如View,Text,Image…而且可以做到不触发RN组件生命周期中的方法.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var HomePage = React.creatClass(&#123;</span><br><span class="line">  setNativeProps(nativeProps)&#123;</span><br><span class="line">    this._view.setNativeProps(&#123;</span><br><span class="line">      width:50,</span><br><span class="line">      height:50,</span><br><span class="line">      backgroundColor:&apos;yellow&apos;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">  render()&#123;</span><br><span class="line">    return(</span><br><span class="line">      &lt;View ref=&#123;(e) =&gt; this._view = e&#125;/&gt;</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,390 +229,124 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/React-Native-之-安装配置/" class="archive-article-date">
-  	<time datetime="2016-08-01T15:36:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/React-Native-之-安装配置/">React Native 之 安装配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/01/Weex-和-React-Native/" class="archive-article-date">
-  	<time datetime="2016-08-01T13:35:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/01/Weex-和-React-Native/">Weex 和 React Native</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/20/3DTouch/" class="archive-article-date">
-  	<time datetime="2015-11-20T12:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/20/3DTouch/">3DTouch</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2016/08/20/React-Native学习笔记九/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/20/cocoapods安装/" class="archive-article-date">
-  	<time datetime="2015-09-20T14:53:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2016/08/22/React-Native学习笔记十/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          React Native学习笔记十
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/08/16/React-Native学习笔记八/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React Native学习笔记八</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/20/cocoapods安装/">cocoapods安装</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/09/01/load方法和initialize方法/" class="archive-article-date">
-  	<time datetime="2015-09-01T15:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/09/01/load方法和initialize方法/">load方法和initialize方法</a>
-    </h1>
+  <div id="SOHUCS" sid="React-Native学习笔记九" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/24/JS中面对对象-OOP-继承及原型链/" class="archive-article-date">
-  	<time datetime="2015-08-24T13:38:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/24/JS中面对对象-OOP-继承及原型链/">JS中面对对象(OOP)继承及原型链</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/20/Ajax网络请求与跨越问题/" class="archive-article-date">
-  	<time datetime="2015-08-20T13:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/20/Ajax网络请求与跨越问题/">Ajax网络请求与跨越问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/04/07/处世之道/" class="archive-article-date">
-  	<time datetime="2015-04-07T14:17:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-04-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/04/07/处世之道/">处世之道</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">感悟</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/20/CoreData/" class="archive-article-date">
-  	<time datetime="2015-03-20T13:20:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/20/CoreData/">CoreData</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -601,8 +370,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
