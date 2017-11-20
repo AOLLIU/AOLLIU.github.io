@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据库基本知识 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统">
+  <meta name="description" content="01,数据库简介什么是数据库 数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    iOS中数据的存储方式 plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定">
 <meta name="keywords" content="iOS开发,OC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库基本知识">
 <meta property="og:url" content="http://yoursite.com/2014/12/20/数据库基本知识/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSU">
-<meta property="og:updated_time" content="2017-11-20T03:10:07.000Z">
+<meta property="og:description" content="01,数据库简介什么是数据库 数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    iOS中数据的存储方式 plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSUserDefault">
+<meta property="og:updated_time" content="2017-11-20T03:25:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库基本知识">
-<meta name="twitter:description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSU">
+<meta name="twitter:description" content="01,数据库简介什么是数据库 数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    iOS中数据的存储方式 plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSUserDefault">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -178,9 +178,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#01,数据库简介</p>
-<p>###什么是数据库</p>
-<ul>
+        <h1 id="01-数据库简介"><a href="#01-数据库简介" class="headerlink" title="01,数据库简介"></a>01,数据库简介</h1><h3 id="什么是数据库"><a href="#什么是数据库" class="headerlink" title="什么是数据库"></a>什么是数据库</h3><ul>
 <li>数据库:Database 是按照数据结构来组织,存储和管理数据的仓库</li>
 <li>分为2大种类<ul>
 <li>关系型数据库(主流)<ul>
@@ -192,8 +190,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###iOS中数据的存储方式</p>
-<ul>
+<h3 id="iOS中数据的存储方式"><a href="#iOS中数据的存储方式" class="headerlink" title="iOS中数据的存储方式"></a>iOS中数据的存储方式</h3><ul>
 <li>plist(NSArray/NSDictionary)<ul>
 <li>只能存储系统自带的数据类型,自定义的对象无法储存</li>
 </ul>
@@ -216,14 +213,12 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <a id="more"></a>
-<p>###什么是SQLite</p>
-<ul>
+<h3 id="什么是SQLite"><a href="#什么是SQLite" class="headerlink" title="什么是SQLite"></a>什么是SQLite</h3><ul>
 <li>SQLite是一款轻量级的嵌入式数据库</li>
 <li>占用资源非常低,在嵌入设备中,只需要几百K就行了</li>
 <li>处理速度快</li>
 </ul>
-<p>###如何存储数据到数据库</p>
-<ul>
+<h3 id="如何存储数据到数据库"><a href="#如何存储数据到数据库" class="headerlink" title="如何存储数据到数据库"></a>如何存储数据到数据库</h3><ul>
 <li>数据库的存储结构和excle很像,以表(table)为单位</li>
 <li>数据库存储数据的步骤:<ul>
 <li>新建数据库文件</li>
@@ -233,12 +228,12 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="02-Navicat软件"><a href="#02-Navicat软件" class="headerlink" title="#02.Navicat软件"></a>#02.Navicat软件</h2><ul>
+<h1 id="02-Navicat软件"><a href="#02-Navicat软件" class="headerlink" title="02.Navicat软件"></a>02.Navicat软件</h1><hr>
+<ul>
 <li>是一套适用于MySQL,SQLite等多个数据库系统的图形化数据库管理,报告以及箭筒的工具</li>
 <li>通过软件可以演练创建/删除表,查询/删除/修改记录操作的SQL</li>
 </ul>
-<p>#03.软件的基本使用</p>
-<ul>
+<h1 id="03-软件的基本使用"><a href="#03-软件的基本使用" class="headerlink" title="03.软件的基本使用"></a>03.软件的基本使用</h1><ul>
 <li>表里面应该有个”主键”,能标识唯一的一行</li>
 <li>解决方案:重新编辑表结构,设置主键(自增长)</li>
 <li>理论基础:<ul>
@@ -256,44 +251,33 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>#04.SQL语言简介</p>
-<p>###什么是SQL?</p>
-<ul>
+<h1 id="04-SQL语言简介"><a href="#04-SQL语言简介" class="headerlink" title="04.SQL语言简介"></a>04.SQL语言简介</h1><h3 id="什么是SQL"><a href="#什么是SQL" class="headerlink" title="什么是SQL?"></a>什么是SQL?</h3><ul>
 <li>SQL(structured query language):结构化查询语言</li>
 <li>SQL是一种对关系性数据苦衷的数据进行定义和操作的语言</li>
 </ul>
-<p>###SQL语句</p>
-<ul>
+<h3 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h3><ul>
 <li>使用SQL语言编写出来的句子/代码就是SQL语言</li>
 <li>在程序中如果想要操作(增删改查 CRUD)数据库中的数据,就必须使用SQL语言</li>
 <li>Create ,Retrive,Updata,Delete</li>
 </ul>
-<p>###SQL语句的特点</p>
-<ul>
+<h3 id="SQL语句的特点"><a href="#SQL语句的特点" class="headerlink" title="SQL语句的特点"></a>SQL语句的特点</h3><ul>
 <li>不区分大小写</li>
 <li>每条语句以;结尾</li>
 </ul>
-<p>###SQL中常用的关键字</p>
-<p>###SQL语句的种类</p>
-<p>####1.数据定义语句(DDL : Data Definition Language)</p>
-<ul>
+<h3 id="SQL中常用的关键字"><a href="#SQL中常用的关键字" class="headerlink" title="SQL中常用的关键字"></a>SQL中常用的关键字</h3><h3 id="SQL语句的种类"><a href="#SQL语句的种类" class="headerlink" title="SQL语句的种类"></a>SQL语句的种类</h3><h4 id="1-数据定义语句-DDL-Data-Definition-Language"><a href="#1-数据定义语句-DDL-Data-Definition-Language" class="headerlink" title="1.数据定义语句(DDL : Data Definition Language)"></a>1.数据定义语句(DDL : Data Definition Language)</h4><ul>
 <li>包括create,drop,Alert等操作</li>
 <li>在数据库中创建新表或者删除表(create table 和 drop table)</li>
 </ul>
-<p>####2.数据操作语句(DML : Data Manipulation Language)</p>
-<ul>
+<h4 id="2-数据操作语句-DML-Data-Manipulation-Language"><a href="#2-数据操作语句-DML-Data-Manipulation-Language" class="headerlink" title="2.数据操作语句(DML : Data Manipulation Language)"></a>2.数据操作语句(DML : Data Manipulation Language)</h4><ul>
 <li>包括insert.,delete,updata等操作</li>
 <li>上面的3种操作分别用于添加,修改,删除表中的数据</li>
 </ul>
-<p>####3.数据查询语句(DQL : Data Query Language)</p>
-<ul>
+<h4 id="3-数据查询语句-DQL-Data-Query-Language"><a href="#3-数据查询语句-DQL-Data-Query-Language" class="headerlink" title="3.数据查询语句(DQL : Data Query Language)"></a>3.数据查询语句(DQL : Data Query Language)</h4><ul>
 <li>可以用于查询获得表中的数据</li>
 <li>关键字select是DQL用的最多的操作</li>
 <li>其他DQL常用的关键字where,order by,group by 和 having</li>
 </ul>
-<p>#05.DDL语句</p>
-<p>###创建表</p>
-<ul>
+<h1 id="05-DDL语句"><a href="#05-DDL语句" class="headerlink" title="05.DDL语句"></a>05.DDL语句</h1><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><ul>
 <li>格式: create table 表名 (字段名1 字段类型1 ….);</li>
 <li>示例: create table t_stu(id integer,name text,age integer,score real);</li>
 <li>经验:<ul>
@@ -306,8 +290,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###删除表</p>
-<ul>
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><ul>
 <li>格式: drop table 表名;  drop table if exists 表名;</li>
 <li>示例: drop table t_stu;</li>
 <li>语句优化:最好加个判断,防止语句多次执行发生错误 <ul>
@@ -315,22 +298,18 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###修改表</p>
-<ul>
+<h3 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h3><ul>
 <li>注意: SQLite里面只能实现Alter Table的部分功能,不能删除一列,修改一个已经存在的列名</li>
 <li>修改表名:ALTER TABLE 旧表名 REMANE TO 新表名</li>
 <li>新增属性:ALTER TABLE 表名 ADD COLUMN 列名 数据类型 限定符</li>
 </ul>
-<p>#06.约束</p>
-<p>###简单约束</p>
-<ul>
+<h1 id="06-约束"><a href="#06-约束" class="headerlink" title="06.约束"></a>06.约束</h1><h3 id="简单约束"><a href="#简单约束" class="headerlink" title="简单约束"></a>简单约束</h3><ul>
 <li>不能为空: not null </li>
 <li>不能重复:uinque</li>
 <li>默认值:default</li>
 <li>示例:create table t_stu (id integer ,name text not null unique,age integer not null default 1);</li>
 </ul>
-<p>###主键约束</p>
-<ul>
+<h3 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h3><ul>
 <li>添加主键约束的原因:<ul>
 <li>如果t_stu表中就name和age连个字段,而且有些记录的name和age字段的值一样,没办法区分这些数据,造成数据录的记录不唯一,不方便管理数据,应该保证每条记录的唯一性,所以增加了主键约束</li>
 <li>每张表都必须有一个主键,用来标示记录的唯一性</li>
@@ -339,32 +318,25 @@ var _hmt = _hmt || [];
 <li>主键:Primary Key :用来唯一的标示某一条记录</li>
 <li>示例:creat table t_stu (id integer primary key autoincrement,name text);</li>
 </ul>
-<p>#07.DML语句</p>
-<p>###插入语句:insert</p>
-<ul>
+<h1 id="07-DML语句"><a href="#07-DML语句" class="headerlink" title="07.DML语句"></a>07.DML语句</h1><h3 id="插入语句-insert"><a href="#插入语句-insert" class="headerlink" title="插入语句:insert"></a>插入语句:insert</h3><ul>
 <li>格式:insert into 表名(字段1,字段2…) value(字段1值,字段2值…);</li>
 <li>示例:insert into t_stu(name,age) value(‘liuwei’,19);</li>
 <li>注意:数据库中的字符串内容应该用单引号括住</li>
 </ul>
-<p>###更新语句:update</p>
-<ul>
+<h3 id="更新语句-update"><a href="#更新语句-update" class="headerlink" title="更新语句:update"></a>更新语句:update</h3><ul>
 <li>格式:update 表名 set 字段1 = 字段1的值,字段2 = 字段2的值,…;</li>
 <li>示例:update t_stu set name = ‘wen’,age = 20;</li>
 <li>注意:示例会将t_stu中的所有的记录中的那么都改为wen,age都改为20</li>
 </ul>
-<p>###删除语句:delete</p>
-<ul>
+<h3 id="删除语句-delete"><a href="#删除语句-delete" class="headerlink" title="删除语句:delete"></a>删除语句:delete</h3><ul>
 <li>格式:delete from 表名;</li>
 <li>示例:delete from t_stu;</li>
 <li>注意:示例会将t_stu表中所有的记录都删除</li>
 </ul>
-<p>#08.条件语句</p>
-<p>###作用</p>
-<ul>
+<h1 id="08-条件语句"><a href="#08-条件语句" class="headerlink" title="08.条件语句"></a>08.条件语句</h1><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
 <li>如果只想更新或者删除某些固定的记录,那就必须在DML语句加上一些条件</li>
 </ul>
-<p>###常见格式</p>
-<ul>
+<h3 id="常见格式"><a href="#常见格式" class="headerlink" title="常见格式"></a>常见格式</h3><ul>
 <li>where 字段 = 某个值;//不能使用两个==</li>
 <li>where 字段 is 某个值;//is 相当于 =</li>
 <li>where 字段 != 某个值 ; </li>
@@ -373,8 +345,7 @@ var _hmt = _hmt || [];
 <li>where 字段1 = 某个值 and 字段2 &gt; 某个值 ;  // and相当于C语言中的 &amp;&amp;</li>
 <li>where 字段1 = 某个值 or 字段2 = 某个值 ;  //  or 相当于C语言中的 ||</li>
 </ul>
-<p>###小试牛刀</p>
-<ul>
+<h3 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h3><ul>
 <li>将t_student表中年龄大于10 并且 姓名不等于wex的记录，年龄都改为 5<ul>
 <li>update t_student set age = 5 where age &gt; 10 and name != ‘wex’;</li>
 </ul>
@@ -388,9 +359,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>#09DQL</p>
-<p>###格式</p>
-<ul>
+<h1 id="09DQL"><a href="#09DQL" class="headerlink" title="09DQL"></a>09DQL</h1><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><ul>
 <li>select 字段1,字段2,…from 表名;</li>
 <li>select * from 表名;//查询所有的字段</li>
 <li>示例:<ul>
@@ -400,9 +369,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>#10查询相关语句</p>
-<p>###统计</p>
-<ul>
+<h1 id="10查询相关语句"><a href="#10查询相关语句" class="headerlink" title="10查询相关语句"></a>10查询相关语句</h1><h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><ul>
 <li>count(X)<ul>
 <li>select count(*) from t_student  //计算所有记录个数</li>
 <li>select count(age) from t_student //计算age有值的记录个数(Null不计算在内)</li>
@@ -425,8 +392,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###排序</p>
-<ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
 <li>查询出来的结果可以用order by进行排序<ul>
 <li>select 字段1, 字段2 from 表名 order by 字段 ;</li>
 <li>select * from t_student order by age ;</li>
@@ -443,8 +409,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###limit分页</p>
-<ul>
+<h3 id="limit分页"><a href="#limit分页" class="headerlink" title="limit分页"></a>limit分页</h3><ul>
 <li>使用limit可以精确地控制查询结果的数量，比如每次只查询10条数据</li>
 <li>格式:select * from 表名 limit 数值1, 数值2 ;</li>
 <li>示例:select * from t_student limit 4, 8 ;//可以理解为：跳过最前面4条语句，然后取8条记录</li>
@@ -462,28 +427,22 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>#11多表查询</p>
-<p>###多表查询</p>
-<ul>
+<h1 id="11多表查询"><a href="#11多表查询" class="headerlink" title="11多表查询"></a>11多表查询</h1><h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><ul>
 <li>select 字段1, 字段2, … from 表名1, 表名2 ;</li>
 </ul>
-<p>###别名</p>
-<ul>
+<h3 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h3><ul>
 <li>select<br>别名1.字段1 as 字段别名1,<br>别名2.字段2 as 字段别名2,<br>…<br>from<br>表名1 as 别名1,<br>表名2 as 别名2 ;</li>
 <li>可以给表或者字段单独起别名</li>
 <li>as 可以省略</li>
 </ul>
-<p>###表连接查询</p>
-<ul>
+<h3 id="表连接查询"><a href="#表连接查询" class="headerlink" title="表连接查询"></a>表连接查询</h3><ul>
 <li>select 字段1, 字段2, … from 表名1, 表名2  where 表名1.id = 表名2.id;</li>
 </ul>
-<p>###外键</p>
-<ul>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><ul>
 <li>如果表A的主关键字是表B中的字段,则该字段称为表B的外键</li>
 <li>保持数据一致性，完整性，主要目的是控制存储在外键表中的数据。 使两张表形成关联，外键只能引用外表中的列的值或使用空值。</li>
 </ul>
-<p>#12-代码实现SQLite-DDL</p>
-<ul>
+<h1 id="12-代码实现SQLite-DDL"><a href="#12-代码实现SQLite-DDL" class="headerlink" title="12-代码实现SQLite-DDL"></a>12-代码实现SQLite-DDL</h1><ul>
 <li>导入框架  导入系统框架sqlite3.tbd(sqlite3.dylib)</li>
 <li>建立桥接文件, 导入头文件sqlite3.h</li>
 <li>代码实现:<ul>
@@ -503,15 +462,11 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> SQLiteTool: <span class="built_in">NSObject</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> let shareInstance = SQLiteTool()</span><br><span class="line">    </span><br><span class="line">    var db: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 1. 打开数据库</span></span><br><span class="line">        <span class="comment">// 参数1: 数据库路径</span></span><br><span class="line">        <span class="comment">// 参数2: 一个打开的数据库的指针(后期操作所有的sql语句, 都是使用这个对象)</span></span><br><span class="line">        <span class="comment">// 根据一个路径, 打开一个数据库(如果路径不存在, 则创建一个数据库, 如果存在, 则直接打开)</span></span><br><span class="line">        <span class="comment">// 关于sqlite数据库的后缀名, 没有一个明确的要求, 随便写</span></span><br><span class="line">        <span class="comment">// db, db3, sqlite</span></span><br><span class="line">        let path = <span class="string">"/Users/xiaomage/Desktop/db/demo.sqlite"</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> sqlite3_open(path, &amp;db) != SQLITE_OK &#123;</span><br><span class="line">            print(<span class="string">"打开数据库失败"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"打开数据库成功"</span>)</span><br><span class="line">            createTable()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"> func dropTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 理论基础: 如果想要操作表或者操作记录, 统一都是分两个步骤</span></span><br><span class="line">        <span class="comment">// 步骤1: 创建sql语句(因为我们操作数据库, 都必须使用sql语句才能操作)</span></span><br><span class="line">        <span class="comment">// 步骤2: 执行sql语句</span></span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"drop table if exists t_stu"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"执行成功"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func createTable() -&gt; () &#123;</span><br><span class="line">        <span class="comment">// 1. 写sql语句</span></span><br><span class="line">        let sql = <span class="string">"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real default 60)"</span></span><br><span class="line">        <span class="keyword">if</span> excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"执行成功"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func excuteSql(sql: String) -&gt; Bool &#123;</span><br><span class="line">        <span class="comment">// 2. 执行sql语句</span></span><br><span class="line">        <span class="comment">// 功能, 执行sql字符串</span></span><br><span class="line">        <span class="comment">// 参数1: 一个已经打开的数据库(代表操作的是哪一个数据库)</span></span><br><span class="line">        <span class="comment">// 参数2: sql语句</span></span><br><span class="line">        <span class="comment">// 参数3: 回调函数 nil</span></span><br><span class="line">        <span class="comment">// 参数4: 参数3: 回调函数里面的参数1 nil</span></span><br><span class="line">        <span class="comment">// 参数5: 错误信息 nil</span></span><br><span class="line">        <span class="keyword">return</span> sqlite3_exec(db, sql, <span class="literal">nil</span> , <span class="literal">nil</span> , <span class="literal">nil</span>) == SQLITE_OK</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>#13-代码实现DML语句-Insert</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Student: <span class="built_in">NSObject</span> &#123;</span><br><span class="line">    </span><br><span class="line">    var name : String = <span class="string">""</span></span><br><span class="line">    var age : Int = <span class="number">0</span></span><br><span class="line">    var score : Double = <span class="number">0.0</span></span><br><span class="line">    </span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    init (name : String , age : Int, score : Double)&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.age = age</span><br><span class="line">        <span class="keyword">self</span>.score = score</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">func insertStu() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"insert into t_stu (name ,age ,score) values ('\(name)',\(age),\(score))"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"插入成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"插入失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="keyword">class</span>  func deletStu(name : String) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"delete from t_stu where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"删除成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"删除失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func updateStu (newStu : Student) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"update t_stu set name = '\(newStu.name)',age = \(newStu.age),score = \(newStu.score) where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"更改成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"更改失败"</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-<p>#14-代码实现DML语句-Insert绑定参数</p>
-<p>###准备语句（prepared statement）对象</p>
-<ul>
+<h1 id="13-代码实现DML语句-Insert"><a href="#13-代码实现DML语句-Insert" class="headerlink" title="13-代码实现DML语句-Insert"></a>13-代码实现DML语句-Insert</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Student: <span class="built_in">NSObject</span> &#123;</span><br><span class="line">    </span><br><span class="line">    var name : String = <span class="string">""</span></span><br><span class="line">    var age : Int = <span class="number">0</span></span><br><span class="line">    var score : Double = <span class="number">0.0</span></span><br><span class="line">    </span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    init (name : String , age : Int, score : Double)&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.age = age</span><br><span class="line">        <span class="keyword">self</span>.score = score</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">func insertStu() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"insert into t_stu (name ,age ,score) values ('\(name)',\(age),\(score))"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"插入成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"插入失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="keyword">class</span>  func deletStu(name : String) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"delete from t_stu where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"删除成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"删除失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func updateStu (newStu : Student) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"update t_stu set name = '\(newStu.name)',age = \(newStu.age),score = \(newStu.score) where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"更改成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"更改失败"</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="14-代码实现DML语句-Insert绑定参数"><a href="#14-代码实现DML语句-Insert绑定参数" class="headerlink" title="14-代码实现DML语句-Insert绑定参数"></a>14-代码实现DML语句-Insert绑定参数</h1><h3 id="准备语句（prepared-statement）对象"><a href="#准备语句（prepared-statement）对象" class="headerlink" title="准备语句（prepared statement）对象"></a>准备语句（prepared statement）对象</h3><ul>
 <li>准备语句（prepared statement）对象一个代表一个简单SQL语句对象的实例，这个对象通常被称为“准备语句”或者“编译好的SQL语句”或者就直接称为“语句”。</li>
 </ul>
-<p>###操作历程</p>
-<ul>
+<h3 id="操作历程"><a href="#操作历程" class="headerlink" title="操作历程"></a>操作历程</h3><ul>
 <li><ol>
 <li>使用sqlite3_prepare_v2或相关的函数创建这个对象</li>
 </ol>
@@ -534,8 +489,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">func insertBind() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"insert into t_stu(name, age, score) values (?, ?, ?);"</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 1. 创建"准备语句"</span></span><br><span class="line">    <span class="comment">// 参数1: 一个打开的数据库</span></span><br><span class="line">    <span class="comment">// 参数2: sql字符串</span></span><br><span class="line">    <span class="comment">// 参数3: 取出参数2 的长度 3 -1 代表自动计算</span></span><br><span class="line">    <span class="comment">// 参数4: 指向"准备语句的指针"</span></span><br><span class="line">    <span class="comment">// 参数5: 通过参数3指定的长度, 取出参数2, 字符串之后, 剩余的字符串 nil</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    var stmt: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">if</span> sqlite3_prepare_v2(db, sql, <span class="number">-1</span>, &amp;stmt, <span class="literal">nil</span>) != SQLITE_OK &#123;</span><br><span class="line">        print(<span class="string">"准备语句创建失败"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2. 绑定数据</span></span><br><span class="line">    <span class="comment">// 不同的数据类型, 绑定的方法不一样</span></span><br><span class="line">    <span class="comment">// 绑定姓名- 字符串</span></span><br><span class="line">    <span class="comment">// 参数1: 准备语句</span></span><br><span class="line">    <span class="comment">// 参数2: 绑定的索引 从1开始</span></span><br><span class="line">    <span class="comment">// 参数3: 绑定的值</span></span><br><span class="line">    <span class="comment">// 参数4: 代表, 值取出的长度 -1 自动计算</span></span><br><span class="line">    <span class="comment">// 参数5: 指向函数的指针: 参数的处理方式</span></span><br><span class="line">    <span class="comment">// #define SQLITE_STATIC      处理方式: 不对参数做任何操作(认为参数是一个static)</span></span><br><span class="line">    <span class="comment">// #define SQLITE_TRANSIENT   处理方式: 会对参数, 做一个强引用, 然后, 使用完毕之后, 在合适的时候释放</span></span><br><span class="line">    <span class="comment">// 使用这个函数一定要注意: 需要明确的知道最终的确切类型是什么</span></span><br><span class="line">     let SQLITE_TRANSIENT = unsafeBitCast(<span class="number">-1</span>, sqlite3_destructor_type.self)</span><br><span class="line">    sqlite3_bind_text(stmt, <span class="number">1</span>, <span class="string">"lisi---3"</span>, <span class="number">-1</span>, SQLITE_TRANSIENT)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 绑定年龄 Int</span></span><br><span class="line">    sqlite3_bind_int(stmt, <span class="number">2</span>, <span class="number">18</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 绑定分数 - Double</span></span><br><span class="line">    sqlite3_bind_double(stmt, <span class="number">3</span>, <span class="number">99</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 执行"准备语句"</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> sqlite3_step(stmt) == SQLITE_DONE &#123;</span><br><span class="line">        print(<span class="string">"执行成功"</span>)</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        print(<span class="string">"执行失败"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 重置"准备语句"</span></span><br><span class="line">    sqlite3_reset(stmt)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 5. 释放资源</span></span><br><span class="line">    sqlite3_finalize(stmt)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#15-DML语句-Insert插入数据优化</p>
-<ul>
+<h1 id="15-DML语句-Insert插入数据优化"><a href="#15-DML语句-Insert插入数据优化" class="headerlink" title="15-DML语句-Insert插入数据优化"></a>15-DML语句-Insert插入数据优化</h1><ul>
 <li><p>测试结果分析</p>
 <ul>
 <li>sqlite_exec 直接执行 和 未拆解”准备语句” 执行 执行时间平均差不多</li>
@@ -577,14 +531,11 @@ var _hmt = _hmt || [];
 <li>在重置准备语句后手动关闭事务</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 4. 重置"准备语句"</span></span><br><span class="line">    sqlite3_reset(stmt)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SQLiteTool.shareInstance.commitTransaction()</span><br></pre></td></tr></table></figure>
-<p>#16-代码实现-事务</p>
-<p>###概念</p>
-<ul>
+<h1 id="16-代码实现-事务"><a href="#16-代码实现-事务" class="headerlink" title="16-代码实现-事务"></a>16-代码实现-事务</h1><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
 <li>事务（Transaction）是并发控制的单位，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位。通过事务，可以将逻辑相关的一组操作绑定在一起，保持数据的完整性。</li>
 <li>事务通常是以BEGIN TRANSACTION开始，以COMMIT TRANSACTION或ROLLBACK TRANSACTION结束。</li>
 </ul>
-<p>###小试牛刀</p>
-<ul>
+<h3 id="小试牛刀-1"><a href="#小试牛刀-1" class="headerlink" title="小试牛刀"></a>小试牛刀</h3><ul>
 <li>在工具类方法中添加一个rollbackTransaction的方法</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func rollBackTransaction() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"rollback transaction"</span></span><br><span class="line">    excuteSql(sql)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -596,14 +547,11 @@ var _hmt = _hmt || [];
 <li>在点击屏幕时做操作,当两个操作都完成时才会commit,否则rollback</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">override func touchesBegan(touches: Set&lt;<span class="built_in">UITouch</span>&gt;, withEvent event: <span class="built_in">UIEvent</span>?) &#123;</span><br><span class="line">   </span><br><span class="line">    SQLiteTool.shareInstance.beginTransaction()</span><br><span class="line">    </span><br><span class="line">    let result1 = Student.updateScore(<span class="string">"update t_stu set score = score - 9 where name = 'liuwei'"</span>)</span><br><span class="line">    let result2 = Student.updateScore(<span class="string">"update t_stu set score = score + 9 where name = 'wenxiaoli'"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> result1 &amp;&amp; result2 &#123;</span><br><span class="line">        SQLiteTool.shareInstance.commitTransaction()</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        SQLiteTool.shareInstance.rollbackTransaction()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>#17-代码实现DQL语句</p>
-<p>###方式1: sqlite3_exec</p>
-<ul>
+<h1 id="17-代码实现DQL语句"><a href="#17-代码实现DQL语句" class="headerlink" title="17-代码实现DQL语句"></a>17-代码实现DQL语句</h1><h3 id="方式1-sqlite3-exec"><a href="#方式1-sqlite3-exec" class="headerlink" title="方式1: sqlite3_exec"></a>方式1: sqlite3_exec</h3><ul>
 <li>作用: 可以通过回调来获取结果, 步骤相对来说简单, 结果数据类型没有特定类型(id)</li>
 </ul>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> func queryAll() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">    <span class="comment">// 参数1: 一个已经打开的数据库</span></span><br><span class="line">    <span class="comment">// 参数2: sql字符串</span></span><br><span class="line">    <span class="comment">// 参数3: 回调 (一般存放查询的结果集)</span></span><br><span class="line">            <span class="comment">// 参数1: 参数4的值</span></span><br><span class="line">            <span class="comment">// 参数2: 列的个数</span></span><br><span class="line">            <span class="comment">// 参数3: 值(字符串)的数组</span></span><br><span class="line">            <span class="comment">// 参数4: 列名(字符串)组成的数组</span></span><br><span class="line">            <span class="comment">// 返回值: 0 继续查询, 非零, 终止查询</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 参数4: 参数3的参数1</span></span><br><span class="line">    <span class="comment">// 参数5: 错误信息</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    </span><br><span class="line">    sqlite3_exec(db, sql, &#123; (param, columnCount, values, columnNames) -&gt; Int32 <span class="keyword">in</span></span><br><span class="line">        </span><br><span class="line">        let count = Int(columnCount)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0.</span>.&lt;count &#123;</span><br><span class="line">            </span><br><span class="line">            let columName = columnNames[i]</span><br><span class="line">            let columnNameStr = String(CString: columName, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            </span><br><span class="line">            let value = values[i]</span><br><span class="line">            let valueStr = String(CString: value, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            </span><br><span class="line">            print(columnNameStr, valueStr)</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;, <span class="literal">nil</span>, <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###方式2: 通过”准备语句”</p>
-<ul>
+<h3 id="方式2-通过”准备语句”"><a href="#方式2-通过”准备语句”" class="headerlink" title="方式2: 通过”准备语句”"></a>方式2: 通过”准备语句”</h3><ul>
 <li>作用: 可以处理不同特定类型, 步骤相对来说复杂</li>
 <li><p>步骤:</p>
 <ul>
@@ -631,19 +579,15 @@ var _hmt = _hmt || [];
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> func queryAllStmt() -&gt; () &#123;</span><br><span class="line"></span><br><span class="line">    let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">    <span class="comment">// 准备语句操作流程</span></span><br><span class="line">    <span class="comment">// 1. 创建"准备语句"</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    var stmt: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">if</span> sqlite3_prepare_v2(db, sql, <span class="number">-1</span>, &amp;stmt, <span class="literal">nil</span>) != SQLITE_OK &#123;</span><br><span class="line">        print(<span class="string">"预处理失败"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2. 绑定数据(这一步可以省略)</span></span><br><span class="line">    <span class="comment">// 3. 执行SQLITE_DONE 适用于删除, 或者更新, 或者插入</span></span><br><span class="line">    <span class="comment">// 查询不是使用这个标志</span></span><br><span class="line">    <span class="comment">// 有一个指针, 指向当前的记录, 当没执行一次,这个方法, 都会查询下一条还有没有数据, 如果有, 返回值是SQLITE_ROW, 并且, 把查询的结果放到"准备语句里面", 所以, 如果想要获取一行里面的数据, 应该从"准备语句里面获取"</span></span><br><span class="line">    <span class="keyword">while</span> sqlite3_step(stmt) == SQLITE_ROW &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历一行的每一列</span></span><br><span class="line">        <span class="comment">// 1. 获取总共有多少列</span></span><br><span class="line">        let count = sqlite3_column_count(stmt)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2. 遍历每一列</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0.</span>.&lt;count &#123;</span><br><span class="line">            <span class="comment">// 2.1 获取列的名称</span></span><br><span class="line">            <span class="comment">// 参数1: 准备语句</span></span><br><span class="line">            <span class="comment">// 参数2: 索引</span></span><br><span class="line">            <span class="comment">// UnsafePointer&lt;Int8&gt;</span></span><br><span class="line">            let columnName = sqlite3_column_name(stmt, i)</span><br><span class="line">            let columnNameStr = String(CString: columnName, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            print(columnNameStr)</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 2.2 获取列的数值</span></span><br><span class="line">            <span class="comment">// 不同的数据类型, 应该使用不同的函数进行获取</span></span><br><span class="line">            <span class="comment">// 2.2.1 获取列的类型</span></span><br><span class="line">            let type = sqlite3_column_type(stmt, i)</span><br><span class="line">            <span class="comment">// 2.2.2 根据不同的类型, 使用不同的函数, 进行获取响应的值</span></span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_INTEGER &#123;</span><br><span class="line">                let value = sqlite3_column_int(stmt, i)</span><br><span class="line">                print(value)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_FLOAT &#123;</span><br><span class="line">                let value = sqlite3_column_double(stmt, i)</span><br><span class="line">                print(value)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_TEXT &#123;</span><br><span class="line">                <span class="comment">// UnsafePointer&lt;UInt8&gt;</span></span><br><span class="line">                let value = UnsafePointer&lt;CChar&gt;(sqlite3_column_text(stmt, i))</span><br><span class="line">                <span class="comment">// UnsafePointer&lt;CChar&gt;</span></span><br><span class="line">                let valueStr = String(CString: value, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">                print(valueStr)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 重置(这一步可以省略)</span></span><br><span class="line">    <span class="comment">// 5. 释放资源</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>#18-FMDB基本使用</p>
-<p>###1. 什么是FMDB?</p>
-<ul>
+<h1 id="18-FMDB基本使用"><a href="#18-FMDB基本使用" class="headerlink" title="18-FMDB基本使用"></a>18-FMDB基本使用</h1><h3 id="1-什么是FMDB"><a href="#1-什么是FMDB" class="headerlink" title="1. 什么是FMDB?"></a>1. 什么是FMDB?</h3><ul>
 <li>FMDB是iOS平台的SQLite数据库框架</li>
 <li>FMDB以OC的方式封装了SQLite的C语言API</li>
 </ul>
-<p>###2. FMDB有什么优势?</p>
-<ul>
+<h3 id="2-FMDB有什么优势"><a href="#2-FMDB有什么优势" class="headerlink" title="2. FMDB有什么优势?"></a>2. FMDB有什么优势?</h3><ul>
 <li>使用起来更加面向对象，省去了很多麻烦、冗余的C语言代码</li>
 <li>提供了多线程安全的数据库操作方法，有效地防止数据混乱</li>
 </ul>
-<p>###3. 安装方式</p>
-<ul>
+<h3 id="3-安装方式"><a href="#3-安装方式" class="headerlink" title="3. 安装方式"></a>3. 安装方式</h3><ul>
 <li>Cocoapods</li>
 <li>手动集成(swift)<ul>
 <li><ol>
@@ -661,8 +605,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###核心类</p>
-<ul>
+<h3 id="核心类"><a href="#核心类" class="headerlink" title="核心类"></a>核心类</h3><ul>
 <li><p>FMDatabase</p>
 <ul>
 <li>一个FMDatabase对象就代表一个单独的SQLite数据库</li>
@@ -680,8 +623,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>###使用步骤</p>
-<ul>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><ul>
 <li><ol>
 <li>打开数据库</li>
 </ol>
@@ -756,8 +698,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<p>#19-FMDabaseQueue</p>
-<ul>
+<h1 id="19-FMDabaseQueue"><a href="#19-FMDabaseQueue" class="headerlink" title="19-FMDabaseQueue"></a>19-FMDabaseQueue</h1><ul>
 <li>FMDatabase这个类是线程不安全的，如果在多个线程中同时使用一个FMDatabase实例，会造成数据混乱等问题</li>
 <li>为了保证线程安全，FMDB提供方便快捷的FMDatabaseQueue类</li>
 <li>FMDatabaseQueue的创建:FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:path];</li>
