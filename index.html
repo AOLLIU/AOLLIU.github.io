@@ -275,28 +275,6 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h3 id="iOS中数据的存储方式"><a href="#iOS中数据的存储方式" class="headerlink" title="iOS中数据的存储方式"></a>iOS中数据的存储方式</h3><ul>
-<li>plist(NSArray/NSDictionary)<ul>
-<li>只能存储系统自带的数据类型,自定义的对象无法储存</li>
-</ul>
-</li>
-<li>preference(偏好设置/NSUserDefaults)<ul>
-<li>本质就是一个plist文件</li>
-</ul>
-</li>
-<li>NSCoding(NSKeyedArchiver/NSKeyedUnarchiver)<ul>
-<li>可以存储自己定义的数据类型,但是都是一次性的全数据操作</li>
-</ul>
-</li>
-<li>SQLite3<ul>
-<li>存储一些大批量的数据,排序,统计等操作</li>
-</ul>
-</li>
-<li>Core Data<ul>
-<li>对SQLite3的一层面向对象的包装,本质还是转化为SQL语句去执行</li>
-</ul>
-</li>
-</ul>
         
           <a class="article-more-a" href="/2014/12/20/数据库基本知识/#more">more >></a>
         
