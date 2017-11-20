@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>AOLLIU的博客</title>
+  <title>数据库基本知识 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/assets/demo/border1px.html">
+  <meta name="description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库基本知识">
+<meta property="og:url" content="http://yoursite.com/2014/12/20/数据库基本知识/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockqu">
-<meta property="og:updated_time" content="2017-07-28T03:51:08.000Z">
+<meta property="og:description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSU">
+<meta property="og:updated_time" content="2017-11-20T03:10:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
-<meta name="twitter:description" content="日语50音          /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockqu">
+<meta name="twitter:title" content="数据库基本知识">
+<meta name="twitter:description" content="#01,数据库简介 ###什么是数据库  数据库:Database 是按照数据结构来组织,存储和管理数据的仓库 分为2大种类 关系型数据库(主流) pc端: 嵌入式/移动客户端 : SQLite   对象型数据库    ###iOS中数据的存储方式  plist(NSArray/NSDictionary) 只能存储系统自带的数据类型,自定义的对象无法储存   preference(偏好设置/NSU">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -157,866 +158,612 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-数据库基本知识" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据库基本知识
+    </h1>
+  
+
+        
+        <a href="/2014/12/20/数据库基本知识/" class="archive-article-date">
+  	<time datetime="2014-12-20T11:03:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-12-20</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
-    <title>日语50音</title>
-    <style type="text/css">
-    /*main*/              html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,menu{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}html,body{-webkit-text-size-adjust:none;-webkit-touch-callout:none;vertical-align:middle;font-size:16px;background:#e6e6e6;position:relative;height:100%;font-family:Tahoma,Arial,"Microsoft Yahei",sans-serif}.clearfix:after{content:" ";display:block;clear:both;visibility:hidden;line-height:0;height:0}input::-webkit-input-placeholder{color:#aaa}a,div{-webkit-tap-highlight-color:rgba(0,0,0,0)}a,a:active,a:hover{color:#0057af;text-decoration:none}header,.header{width:215px;height:58px;background:url(http://3.url.cn/qun/create_iphone/img/sprite.png) no-repeat transparent 0 0;color:#fff;line-height:58px;padding-left:64px;font-size:24px;-webkit-transform:scale(0.82) scale(0.82);-webkit-transform-origin:0 50%}.input-group{overflow:hidden;vertical-align:middle;line-height:16px;background-color:#fff;}#main-section{position:relative;height:100%;min-height:370px;overflow:hidden;}.input-group label{width:100px;padding:10px 0 10px 12px;display:inline-block;border-right:0;float:left;color:gray;-webkit-appearance:none;height:24px;line-height:24px;}.input-group .ui-select{margin-left:115px;padding:10px 24px 10px 15px;position:relative;}.input-group .select-btn{width:100%;height:24px;line-height:24px;color:#aaa;}.input-group .select-btn span.ui-text{text-align:right;display:inline-block;width:100%;white-space:nowrap;overflow:inherit;text-overflow:ellipsis;pointer-events:none;}.input-group .select-btn span.ui-icon{display:inline-block;position:absolute;top:50%;margin:-10px 0 0 -3px;width:18px;height:20px;right:7px;}.input-group .select-btn span.ui-icon .arrow{width:18px;height:18px;position:relative;display:inline-block;float:right;background:transparent;margin-right:-5px;margin-top:1px;}.input-group .select-btn span.ui-icon .arrow div{background:#ccc;position:absolute;width:3px;height:12px;}.input-group .select-btn span.ui-icon .arrow div.arrow1{left:19px;top:12px;-webkit-transform:rotate(-45deg) translate(0,-142%);}.input-group .select-btn span.ui-icon .arrow div.arrow2{left:-5px;top:19px;-webkit-transform:rotate(45deg) translate(0,-142%);}.seg-words{color:#6d6d72;height:20px;font-size:1em;text-shadow:0 1px #fff;padding:3px 0 6px 14px;}
-                
-         /*border-1px 部分*/
-         .border-1px{
-              position: relative;
-         }
-        .border-1px:before, .border-1px:after{
-            border-top: 1px solid #c8c7cc;
-            content: ' ';
-            display: block;
-            width: 100%;
-            position: absolute;
-            left: 0;
-        }
-        .border-1px:before{
-            top: 0;
-            display: none;
-        }
-        .border-1px:after{
-            bottom: 0;
-        }
-         @media (-webkit-min-device-pixel-ratio:1.5), (min-device-pixel-ratio: 1.5){
-          .border-1px:after,.border-1px:before{
-              -webkit-transform: scaleY(.7);
-              -webkit-transform-origin: 0 0;
-              transform: scaleY(.7);
-            }
-             .border-1px:after{
-              -webkit-transform-origin: left bottom;
-            }
-        }
+        <p>#01,数据库简介</p>
+<p>###什么是数据库</p>
+<ul>
+<li>数据库:Database 是按照数据结构来组织,存储和管理数据的仓库</li>
+<li>分为2大种类<ul>
+<li>关系型数据库(主流)<ul>
+<li>pc端:</li>
+<li>嵌入式/移动客户端 : SQLite</li>
+</ul>
+</li>
+<li>对象型数据库</li>
+</ul>
+</li>
+</ul>
+<p>###iOS中数据的存储方式</p>
+<ul>
+<li>plist(NSArray/NSDictionary)<ul>
+<li>只能存储系统自带的数据类型,自定义的对象无法储存</li>
+</ul>
+</li>
+<li>preference(偏好设置/NSUserDefaults)<ul>
+<li>本质就是一个plist文件</li>
+</ul>
+</li>
+<li>NSCoding(NSKeyedArchiver/NSKeyedUnarchiver)<ul>
+<li>可以存储自己定义的数据类型,但是都是一次性的全数据操作</li>
+</ul>
+</li>
+<li>SQLite3<ul>
+<li>存储一些大批量的数据,排序,统计等操作</li>
+</ul>
+</li>
+<li>Core Data<ul>
+<li>对SQLite3的一层面向对象的包装,本质还是转化为SQL语句去执行</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<p>###什么是SQLite</p>
+<ul>
+<li>SQLite是一款轻量级的嵌入式数据库</li>
+<li>占用资源非常低,在嵌入设备中,只需要几百K就行了</li>
+<li>处理速度快</li>
+</ul>
+<p>###如何存储数据到数据库</p>
+<ul>
+<li>数据库的存储结构和excle很像,以表(table)为单位</li>
+<li>数据库存储数据的步骤:<ul>
+<li>新建数据库文件</li>
+<li>新建一张表:table</li>
+<li>添加多个字段:column 列 属性</li>
+<li>添加多行记录:row 每行存放多个字段对应的值</li>
+</ul>
+</li>
+</ul>
+<h2 id="02-Navicat软件"><a href="#02-Navicat软件" class="headerlink" title="#02.Navicat软件"></a>#02.Navicat软件</h2><ul>
+<li>是一套适用于MySQL,SQLite等多个数据库系统的图形化数据库管理,报告以及箭筒的工具</li>
+<li>通过软件可以演练创建/删除表,查询/删除/修改记录操作的SQL</li>
+</ul>
+<p>#03.软件的基本使用</p>
+<ul>
+<li>表里面应该有个”主键”,能标识唯一的一行</li>
+<li>解决方案:重新编辑表结构,设置主键(自增长)</li>
+<li>理论基础:<ul>
+<li>1.表格组成:行(记录)和列(属性)”属性” 是用来标识这一列应该存放什么<br>“记录” 是用来存放一条数据</li>
+<li>2.属性类型:</li>
+<li>blob:二进制类型</li>
+<li>integer:整型</li>
+<li>real:浮点型</li>
+<li>text:文本类型</li>
+<li>null:空类型</li>
+<li>3.主键:</li>
+<li>主键(primary key /PK)用来位移标识某一条记录</li>
+<li>主键可以使一个字段或者多个字段:行和列</li>
+<li>设计原则:1&gt;应当对用户没有意义,2&gt;永远也不要更新主键3&gt;主键不应包含动态变化的数据4&gt;主键应当有计算机自动生成</li>
+</ul>
+</li>
+</ul>
+<p>#04.SQL语言简介</p>
+<p>###什么是SQL?</p>
+<ul>
+<li>SQL(structured query language):结构化查询语言</li>
+<li>SQL是一种对关系性数据苦衷的数据进行定义和操作的语言</li>
+</ul>
+<p>###SQL语句</p>
+<ul>
+<li>使用SQL语言编写出来的句子/代码就是SQL语言</li>
+<li>在程序中如果想要操作(增删改查 CRUD)数据库中的数据,就必须使用SQL语言</li>
+<li>Create ,Retrive,Updata,Delete</li>
+</ul>
+<p>###SQL语句的特点</p>
+<ul>
+<li>不区分大小写</li>
+<li>每条语句以;结尾</li>
+</ul>
+<p>###SQL中常用的关键字</p>
+<p>###SQL语句的种类</p>
+<p>####1.数据定义语句(DDL : Data Definition Language)</p>
+<ul>
+<li>包括create,drop,Alert等操作</li>
+<li>在数据库中创建新表或者删除表(create table 和 drop table)</li>
+</ul>
+<p>####2.数据操作语句(DML : Data Manipulation Language)</p>
+<ul>
+<li>包括insert.,delete,updata等操作</li>
+<li>上面的3种操作分别用于添加,修改,删除表中的数据</li>
+</ul>
+<p>####3.数据查询语句(DQL : Data Query Language)</p>
+<ul>
+<li>可以用于查询获得表中的数据</li>
+<li>关键字select是DQL用的最多的操作</li>
+<li>其他DQL常用的关键字where,order by,group by 和 having</li>
+</ul>
+<p>#05.DDL语句</p>
+<p>###创建表</p>
+<ul>
+<li>格式: create table 表名 (字段名1 字段类型1 ….);</li>
+<li>示例: create table t_stu(id integer,name text,age integer,score real);</li>
+<li>经验:<ul>
+<li>实际上SQLite是无类型的</li>
+<li>就算申明为某种类型,但是还是可以存储其他类型的(主键除外)</li>
+<li>但是为了保证编程规范,方便交流,最好加上类型</li>
+<li>语句优化:</li>
+<li>创建表格时,最好加上判断这个表格是否存在,防止语句多次执行发生错误</li>
+<li>create table if not exists 表名(字段名1 字段类型1 ….) </li>
+</ul>
+</li>
+</ul>
+<p>###删除表</p>
+<ul>
+<li>格式: drop table 表名;  drop table if exists 表名;</li>
+<li>示例: drop table t_stu;</li>
+<li>语句优化:最好加个判断,防止语句多次执行发生错误 <ul>
+<li>drop table if exists 表名;</li>
+</ul>
+</li>
+</ul>
+<p>###修改表</p>
+<ul>
+<li>注意: SQLite里面只能实现Alter Table的部分功能,不能删除一列,修改一个已经存在的列名</li>
+<li>修改表名:ALTER TABLE 旧表名 REMANE TO 新表名</li>
+<li>新增属性:ALTER TABLE 表名 ADD COLUMN 列名 数据类型 限定符</li>
+</ul>
+<p>#06.约束</p>
+<p>###简单约束</p>
+<ul>
+<li>不能为空: not null </li>
+<li>不能重复:uinque</li>
+<li>默认值:default</li>
+<li>示例:create table t_stu (id integer ,name text not null unique,age integer not null default 1);</li>
+</ul>
+<p>###主键约束</p>
+<ul>
+<li>添加主键约束的原因:<ul>
+<li>如果t_stu表中就name和age连个字段,而且有些记录的name和age字段的值一样,没办法区分这些数据,造成数据录的记录不唯一,不方便管理数据,应该保证每条记录的唯一性,所以增加了主键约束</li>
+<li>每张表都必须有一个主键,用来标示记录的唯一性</li>
+</ul>
+</li>
+<li>主键:Primary Key :用来唯一的标示某一条记录</li>
+<li>示例:creat table t_stu (id integer primary key autoincrement,name text);</li>
+</ul>
+<p>#07.DML语句</p>
+<p>###插入语句:insert</p>
+<ul>
+<li>格式:insert into 表名(字段1,字段2…) value(字段1值,字段2值…);</li>
+<li>示例:insert into t_stu(name,age) value(‘liuwei’,19);</li>
+<li>注意:数据库中的字符串内容应该用单引号括住</li>
+</ul>
+<p>###更新语句:update</p>
+<ul>
+<li>格式:update 表名 set 字段1 = 字段1的值,字段2 = 字段2的值,…;</li>
+<li>示例:update t_stu set name = ‘wen’,age = 20;</li>
+<li>注意:示例会将t_stu中的所有的记录中的那么都改为wen,age都改为20</li>
+</ul>
+<p>###删除语句:delete</p>
+<ul>
+<li>格式:delete from 表名;</li>
+<li>示例:delete from t_stu;</li>
+<li>注意:示例会将t_stu表中所有的记录都删除</li>
+</ul>
+<p>#08.条件语句</p>
+<p>###作用</p>
+<ul>
+<li>如果只想更新或者删除某些固定的记录,那就必须在DML语句加上一些条件</li>
+</ul>
+<p>###常见格式</p>
+<ul>
+<li>where 字段 = 某个值;//不能使用两个==</li>
+<li>where 字段 is 某个值;//is 相当于 =</li>
+<li>where 字段 != 某个值 ; </li>
+<li>where 字段 is not 某个值 ;   // is not 相当于 != </li>
+<li>where 字段 &gt; 某个值 ; </li>
+<li>where 字段1 = 某个值 and 字段2 &gt; 某个值 ;  // and相当于C语言中的 &amp;&amp;</li>
+<li>where 字段1 = 某个值 or 字段2 = 某个值 ;  //  or 相当于C语言中的 ||</li>
+</ul>
+<p>###小试牛刀</p>
+<ul>
+<li>将t_student表中年龄大于10 并且 姓名不等于wex的记录，年龄都改为 5<ul>
+<li>update t_student set age = 5 where age &gt; 10 and name != ‘wex’;</li>
+</ul>
+</li>
+<li>删除t_student表中年龄小于等于10 或者 年龄大于30的记录<ul>
+<li>delete from t_student where age &lt;= 10 or age &gt; 30;</li>
+</ul>
+</li>
+<li>update t_student set score = age where name = ‘wex’ ;<ul>
+<li>将name = ‘wex’的人的score的值改为age的值</li>
+</ul>
+</li>
+</ul>
+<p>#09DQL</p>
+<p>###格式</p>
+<ul>
+<li>select 字段1,字段2,…from 表名;</li>
+<li>select * from 表名;//查询所有的字段</li>
+<li>示例:<ul>
+<li>select name, age from t_student ;</li>
+<li>select * from t_student ;</li>
+<li>select * from t_student where age &gt; 10 ;  //  条件查询</li>
+</ul>
+</li>
+</ul>
+<p>#10查询相关语句</p>
+<p>###统计</p>
+<ul>
+<li>count(X)<ul>
+<li>select count(*) from t_student  //计算所有记录个数</li>
+<li>select count(age) from t_student //计算age有值的记录个数(Null不计算在内)</li>
+</ul>
+</li>
+<li>avg(X)<ul>
+<li>计算某个字段的平均值</li>
+</ul>
+</li>
+<li>sum(X) <ul>
+<li>计算某个字段的总和</li>
+</ul>
+</li>
+<li>max(X) <ul>
+<li>计算某个字段的最大值</li>
+</ul>
+</li>
+<li>min(X)<ul>
+<li>计算某个字段的最小值</li>
+</ul>
+</li>
+</ul>
+<p>###排序</p>
+<ul>
+<li>查询出来的结果可以用order by进行排序<ul>
+<li>select 字段1, 字段2 from 表名 order by 字段 ;</li>
+<li>select * from t_student order by age ;</li>
+</ul>
+</li>
+<li>默认是按照升序排序（由小到大），也可以变为降序（由大到小）<ul>
+<li>select * from t_student order by age desc ;  //降序</li>
+<li>select * from t_student order by age asc ;   // 升序（默认）</li>
+</ul>
+</li>
+<li>也可以用多个字段进行排序<ul>
+<li>select * from t_student order by age asc, height desc ;</li>
+<li>先按照年龄排序（升序），年龄相等就按照身高排序（降序）</li>
+</ul>
+</li>
+</ul>
+<p>###limit分页</p>
+<ul>
+<li>使用limit可以精确地控制查询结果的数量，比如每次只查询10条数据</li>
+<li>格式:select * from 表名 limit 数值1, 数值2 ;</li>
+<li>示例:select * from t_student limit 4, 8 ;//可以理解为：跳过最前面4条语句，然后取8条记录</li>
+<li>分页:<ul>
+<li>limit常用来做分页查询，比如每页固定显示5条数据，那么应该这样取数据<ul>
+<li>第1页：limit 0, 5 第2页：limit 5, 5 第3页：limit 10, 5 第n页：limit 5*(n-1), 5</li>
+</ul>
+</li>
+<li>特殊案例<ul>
+<li>select * from t_student limit 7 ;</li>
+<li>相当于select * from t_student limit 0, 7 ;</li>
+<li>表示取最前面的7条记录</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>#11多表查询</p>
+<p>###多表查询</p>
+<ul>
+<li>select 字段1, 字段2, … from 表名1, 表名2 ;</li>
+</ul>
+<p>###别名</p>
+<ul>
+<li>select<br>别名1.字段1 as 字段别名1,<br>别名2.字段2 as 字段别名2,<br>…<br>from<br>表名1 as 别名1,<br>表名2 as 别名2 ;</li>
+<li>可以给表或者字段单独起别名</li>
+<li>as 可以省略</li>
+</ul>
+<p>###表连接查询</p>
+<ul>
+<li>select 字段1, 字段2, … from 表名1, 表名2  where 表名1.id = 表名2.id;</li>
+</ul>
+<p>###外键</p>
+<ul>
+<li>如果表A的主关键字是表B中的字段,则该字段称为表B的外键</li>
+<li>保持数据一致性，完整性，主要目的是控制存储在外键表中的数据。 使两张表形成关联，外键只能引用外表中的列的值或使用空值。</li>
+</ul>
+<p>#12-代码实现SQLite-DDL</p>
+<ul>
+<li>导入框架  导入系统框架sqlite3.tbd(sqlite3.dylib)</li>
+<li>建立桥接文件, 导入头文件sqlite3.h</li>
+<li>代码实现:<ul>
+<li><ol>
+<li>打开数据库</li>
+</ol>
+</li>
+<li><ol>
+<li>使用打开的数据库, 执行DDL语句, 创建一个数据库表</li>
+</ol>
+</li>
+<li><ol>
+<li>将数据库操作封装成一个工具类</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> SQLiteTool: <span class="built_in">NSObject</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> let shareInstance = SQLiteTool()</span><br><span class="line">    </span><br><span class="line">    var db: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 1. 打开数据库</span></span><br><span class="line">        <span class="comment">// 参数1: 数据库路径</span></span><br><span class="line">        <span class="comment">// 参数2: 一个打开的数据库的指针(后期操作所有的sql语句, 都是使用这个对象)</span></span><br><span class="line">        <span class="comment">// 根据一个路径, 打开一个数据库(如果路径不存在, 则创建一个数据库, 如果存在, 则直接打开)</span></span><br><span class="line">        <span class="comment">// 关于sqlite数据库的后缀名, 没有一个明确的要求, 随便写</span></span><br><span class="line">        <span class="comment">// db, db3, sqlite</span></span><br><span class="line">        let path = <span class="string">"/Users/xiaomage/Desktop/db/demo.sqlite"</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> sqlite3_open(path, &amp;db) != SQLITE_OK &#123;</span><br><span class="line">            print(<span class="string">"打开数据库失败"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"打开数据库成功"</span>)</span><br><span class="line">            createTable()</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"> func dropTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 理论基础: 如果想要操作表或者操作记录, 统一都是分两个步骤</span></span><br><span class="line">        <span class="comment">// 步骤1: 创建sql语句(因为我们操作数据库, 都必须使用sql语句才能操作)</span></span><br><span class="line">        <span class="comment">// 步骤2: 执行sql语句</span></span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"drop table if exists t_stu"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"执行成功"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func createTable() -&gt; () &#123;</span><br><span class="line">        <span class="comment">// 1. 写sql语句</span></span><br><span class="line">        let sql = <span class="string">"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real default 60)"</span></span><br><span class="line">        <span class="keyword">if</span> excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"执行成功"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func excuteSql(sql: String) -&gt; Bool &#123;</span><br><span class="line">        <span class="comment">// 2. 执行sql语句</span></span><br><span class="line">        <span class="comment">// 功能, 执行sql字符串</span></span><br><span class="line">        <span class="comment">// 参数1: 一个已经打开的数据库(代表操作的是哪一个数据库)</span></span><br><span class="line">        <span class="comment">// 参数2: sql语句</span></span><br><span class="line">        <span class="comment">// 参数3: 回调函数 nil</span></span><br><span class="line">        <span class="comment">// 参数4: 参数3: 回调函数里面的参数1 nil</span></span><br><span class="line">        <span class="comment">// 参数5: 错误信息 nil</span></span><br><span class="line">        <span class="keyword">return</span> sqlite3_exec(db, sql, <span class="literal">nil</span> , <span class="literal">nil</span> , <span class="literal">nil</span>) == SQLITE_OK</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>#13-代码实现DML语句-Insert</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Student: <span class="built_in">NSObject</span> &#123;</span><br><span class="line">    </span><br><span class="line">    var name : String = <span class="string">""</span></span><br><span class="line">    var age : Int = <span class="number">0</span></span><br><span class="line">    var score : Double = <span class="number">0.0</span></span><br><span class="line">    </span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    init (name : String , age : Int, score : Double)&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.age = age</span><br><span class="line">        <span class="keyword">self</span>.score = score</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">func insertStu() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"insert into t_stu (name ,age ,score) values ('\(name)',\(age),\(score))"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"插入成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"插入失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">   <span class="keyword">class</span>  func deletStu(name : String) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"delete from t_stu where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"删除成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"删除失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func updateStu (newStu : Student) -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"update t_stu set name = '\(newStu.name)',age = \(newStu.age),score = \(newStu.score) where name = '\(name)'"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> SQLiteTool.shareInstance.excuteSql(sql) &#123;</span><br><span class="line">            print(<span class="string">"更改成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            print(<span class="string">"更改失败"</span>)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<p>#14-代码实现DML语句-Insert绑定参数</p>
+<p>###准备语句（prepared statement）对象</p>
+<ul>
+<li>准备语句（prepared statement）对象一个代表一个简单SQL语句对象的实例，这个对象通常被称为“准备语句”或者“编译好的SQL语句”或者就直接称为“语句”。</li>
+</ul>
+<p>###操作历程</p>
+<ul>
+<li><ol>
+<li>使用sqlite3_prepare_v2或相关的函数创建这个对象</li>
+</ol>
+</li>
+<li><ol>
+<li>使用sqlite3<em>bind</em>*()给宿主参数（host parameters）绑定值</li>
+</ol>
+</li>
+<li><ol>
+<li>通过调用sqlite3_step() 一次或多次来执行这个sql</li>
+</ol>
+</li>
+<li><ol>
+<li>使用sqlite3_reset()重置这个语句，然后回到第2步，这个过程做0次或多次</li>
+</ol>
+</li>
+<li><ol>
+<li>使用sqlite3_finalize()销毁这个对象, 防止内存泄露</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">func insertBind() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"insert into t_stu(name, age, score) values (?, ?, ?);"</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 1. 创建"准备语句"</span></span><br><span class="line">    <span class="comment">// 参数1: 一个打开的数据库</span></span><br><span class="line">    <span class="comment">// 参数2: sql字符串</span></span><br><span class="line">    <span class="comment">// 参数3: 取出参数2 的长度 3 -1 代表自动计算</span></span><br><span class="line">    <span class="comment">// 参数4: 指向"准备语句的指针"</span></span><br><span class="line">    <span class="comment">// 参数5: 通过参数3指定的长度, 取出参数2, 字符串之后, 剩余的字符串 nil</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    var stmt: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">if</span> sqlite3_prepare_v2(db, sql, <span class="number">-1</span>, &amp;stmt, <span class="literal">nil</span>) != SQLITE_OK &#123;</span><br><span class="line">        print(<span class="string">"准备语句创建失败"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2. 绑定数据</span></span><br><span class="line">    <span class="comment">// 不同的数据类型, 绑定的方法不一样</span></span><br><span class="line">    <span class="comment">// 绑定姓名- 字符串</span></span><br><span class="line">    <span class="comment">// 参数1: 准备语句</span></span><br><span class="line">    <span class="comment">// 参数2: 绑定的索引 从1开始</span></span><br><span class="line">    <span class="comment">// 参数3: 绑定的值</span></span><br><span class="line">    <span class="comment">// 参数4: 代表, 值取出的长度 -1 自动计算</span></span><br><span class="line">    <span class="comment">// 参数5: 指向函数的指针: 参数的处理方式</span></span><br><span class="line">    <span class="comment">// #define SQLITE_STATIC      处理方式: 不对参数做任何操作(认为参数是一个static)</span></span><br><span class="line">    <span class="comment">// #define SQLITE_TRANSIENT   处理方式: 会对参数, 做一个强引用, 然后, 使用完毕之后, 在合适的时候释放</span></span><br><span class="line">    <span class="comment">// 使用这个函数一定要注意: 需要明确的知道最终的确切类型是什么</span></span><br><span class="line">     let SQLITE_TRANSIENT = unsafeBitCast(<span class="number">-1</span>, sqlite3_destructor_type.self)</span><br><span class="line">    sqlite3_bind_text(stmt, <span class="number">1</span>, <span class="string">"lisi---3"</span>, <span class="number">-1</span>, SQLITE_TRANSIENT)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 绑定年龄 Int</span></span><br><span class="line">    sqlite3_bind_int(stmt, <span class="number">2</span>, <span class="number">18</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 绑定分数 - Double</span></span><br><span class="line">    sqlite3_bind_double(stmt, <span class="number">3</span>, <span class="number">99</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 执行"准备语句"</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> sqlite3_step(stmt) == SQLITE_DONE &#123;</span><br><span class="line">        print(<span class="string">"执行成功"</span>)</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        print(<span class="string">"执行失败"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 重置"准备语句"</span></span><br><span class="line">    sqlite3_reset(stmt)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 5. 释放资源</span></span><br><span class="line">    sqlite3_finalize(stmt)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#15-DML语句-Insert插入数据优化</p>
+<ul>
+<li><p>测试结果分析</p>
+<ul>
+<li>sqlite_exec 直接执行 和 未拆解”准备语句” 执行 执行时间平均差不多</li>
+<li>拆解后的”准备语句” 执行, 效率明显高了一些</li>
+<li>虽然按步骤使用”准备语句”, 但是执行效率,依然非常低, 达到了5秒左右, 不可原谅<ul>
+<li>原因分析:每当SQL调用执行方法执行一个语句时, 都会开启一个叫做”事务”的东西, 执行完毕之后再提交”事务”;<br>也就是说, 如果执行了10000次SQL语句, 就打开和提交了10000次”事务”, 所以造成耗时严重</li>
+<li>解决方案:只要在执行多个SQL语句之前, 手动开启事务, 在执行完毕之后, 手动提交事务, 这样 再调用SQL方法执行语句时, 就不会再自动开启和提交事务</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>结论</p>
+<ul>
+<li><ol>
+<li>如果插入大量数据, 请务必手动开启/提交事务</li>
+</ol>
+</li>
+<li><ol>
+<li>根据不同情况, 选择使用sqlite3_exec 或者  “准备语句”</li>
+</ol>
+<ul>
+<li>单条语句, 前者, 因为使用简单</li>
+<li>大批量插入, 选择后者</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 优化方案: </span></span><br><span class="line"><span class="comment">// 如果大批量插入数据</span></span><br><span class="line"><span class="comment">// 方案: sqlite3_step() 准备语句</span></span><br><span class="line"><span class="comment">// 方案: sqlite3_exec() sql字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 优化方案1: sqlite3_step() 准备语句 分解版</span></span><br><span class="line"><span class="comment">// 优化方案2: </span></span><br><span class="line"><span class="comment">// sqlite3_step() sqlite3_exec() 这两个函数执行, 内部都会自动开启一个事务, 然后执行完毕之后, 提交事务 , 开启/提交, 整个过程非常耗费时间</span></span><br><span class="line"><span class="comment">// 只要我们手动的开启事务, 手动的提交事务, 那么在函数内部, 就不会自动开启和提交事务</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>工具类中,添加了两个方法,用来手动开启事务和提交事务</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">func beginTransaction() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"begin transaction"</span></span><br><span class="line">    excuteSql(sql)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func commitTransaction() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"commit transaction"</span></span><br><span class="line">    excuteSql(sql)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在执行绑定数据前手动开启事务</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SQLiteTool.shareInstance.beginTransaction()</span><br><span class="line">       </span><br><span class="line">       <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="number">0.</span>.&lt;<span class="number">10000</span> &#123;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在重置准备语句后手动关闭事务</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// 4. 重置"准备语句"</span></span><br><span class="line">    sqlite3_reset(stmt)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SQLiteTool.shareInstance.commitTransaction()</span><br></pre></td></tr></table></figure>
+<p>#16-代码实现-事务</p>
+<p>###概念</p>
+<ul>
+<li>事务（Transaction）是并发控制的单位，是用户定义的一个操作序列。这些操作要么都做，要么都不做，是一个不可分割的工作单位。通过事务，可以将逻辑相关的一组操作绑定在一起，保持数据的完整性。</li>
+<li>事务通常是以BEGIN TRANSACTION开始，以COMMIT TRANSACTION或ROLLBACK TRANSACTION结束。</li>
+</ul>
+<p>###小试牛刀</p>
+<ul>
+<li>在工具类方法中添加一个rollbackTransaction的方法</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func rollBackTransaction() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"rollback transaction"</span></span><br><span class="line">    excuteSql(sql)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在学生类中增加一个更新分数的方法</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> func updateScore(sql : String) -&gt; Bool &#123;</span><br><span class="line"> </span><br><span class="line">     <span class="keyword">return</span> SQLiteTool.shareInstance.excuteSql(sql)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在点击屏幕时做操作,当两个操作都完成时才会commit,否则rollback</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">override func touchesBegan(touches: Set&lt;<span class="built_in">UITouch</span>&gt;, withEvent event: <span class="built_in">UIEvent</span>?) &#123;</span><br><span class="line">   </span><br><span class="line">    SQLiteTool.shareInstance.beginTransaction()</span><br><span class="line">    </span><br><span class="line">    let result1 = Student.updateScore(<span class="string">"update t_stu set score = score - 9 where name = 'liuwei'"</span>)</span><br><span class="line">    let result2 = Student.updateScore(<span class="string">"update t_stu set score = score + 9 where name = 'wenxiaoli'"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> result1 &amp;&amp; result2 &#123;</span><br><span class="line">        SQLiteTool.shareInstance.commitTransaction()</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        SQLiteTool.shareInstance.rollbackTransaction()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#17-代码实现DQL语句</p>
+<p>###方式1: sqlite3_exec</p>
+<ul>
+<li>作用: 可以通过回调来获取结果, 步骤相对来说简单, 结果数据类型没有特定类型(id)</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> func queryAll() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">    <span class="comment">// 参数1: 一个已经打开的数据库</span></span><br><span class="line">    <span class="comment">// 参数2: sql字符串</span></span><br><span class="line">    <span class="comment">// 参数3: 回调 (一般存放查询的结果集)</span></span><br><span class="line">            <span class="comment">// 参数1: 参数4的值</span></span><br><span class="line">            <span class="comment">// 参数2: 列的个数</span></span><br><span class="line">            <span class="comment">// 参数3: 值(字符串)的数组</span></span><br><span class="line">            <span class="comment">// 参数4: 列名(字符串)组成的数组</span></span><br><span class="line">            <span class="comment">// 返回值: 0 继续查询, 非零, 终止查询</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 参数4: 参数3的参数1</span></span><br><span class="line">    <span class="comment">// 参数5: 错误信息</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    </span><br><span class="line">    sqlite3_exec(db, sql, &#123; (param, columnCount, values, columnNames) -&gt; Int32 <span class="keyword">in</span></span><br><span class="line">        </span><br><span class="line">        let count = Int(columnCount)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0.</span>.&lt;count &#123;</span><br><span class="line">            </span><br><span class="line">            let columName = columnNames[i]</span><br><span class="line">            let columnNameStr = String(CString: columName, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            </span><br><span class="line">            let value = values[i]</span><br><span class="line">            let valueStr = String(CString: value, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            </span><br><span class="line">            print(columnNameStr, valueStr)</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        &#125;, <span class="literal">nil</span>, <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###方式2: 通过”准备语句”</p>
+<ul>
+<li>作用: 可以处理不同特定类型, 步骤相对来说复杂</li>
+<li><p>步骤:</p>
+<ul>
+<li><ol>
+<li>预处理函数 获取”准备语句”</li>
+</ol>
+</li>
+<li><ol>
+<li>不断执行”准备语句”, 直到无结果集</li>
+</ol>
+</li>
+<li><ol>
+<li>获取列的类型</li>
+</ol>
+</li>
+<li><ol>
+<li>根据每列的类型取出不同的值</li>
+</ol>
+</li>
+<li><ol>
+<li>释放资源</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> func queryAllStmt() -&gt; () &#123;</span><br><span class="line"></span><br><span class="line">    let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">    <span class="comment">// 准备语句操作流程</span></span><br><span class="line">    <span class="comment">// 1. 创建"准备语句"</span></span><br><span class="line">    let db = SQLiteTool.shareInstance.db</span><br><span class="line">    var stmt: COpaquePointer = <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">if</span> sqlite3_prepare_v2(db, sql, <span class="number">-1</span>, &amp;stmt, <span class="literal">nil</span>) != SQLITE_OK &#123;</span><br><span class="line">        print(<span class="string">"预处理失败"</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2. 绑定数据(这一步可以省略)</span></span><br><span class="line">    <span class="comment">// 3. 执行SQLITE_DONE 适用于删除, 或者更新, 或者插入</span></span><br><span class="line">    <span class="comment">// 查询不是使用这个标志</span></span><br><span class="line">    <span class="comment">// 有一个指针, 指向当前的记录, 当没执行一次,这个方法, 都会查询下一条还有没有数据, 如果有, 返回值是SQLITE_ROW, 并且, 把查询的结果放到"准备语句里面", 所以, 如果想要获取一行里面的数据, 应该从"准备语句里面获取"</span></span><br><span class="line">    <span class="keyword">while</span> sqlite3_step(stmt) == SQLITE_ROW &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历一行的每一列</span></span><br><span class="line">        <span class="comment">// 1. 获取总共有多少列</span></span><br><span class="line">        let count = sqlite3_column_count(stmt)</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 2. 遍历每一列</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0.</span>.&lt;count &#123;</span><br><span class="line">            <span class="comment">// 2.1 获取列的名称</span></span><br><span class="line">            <span class="comment">// 参数1: 准备语句</span></span><br><span class="line">            <span class="comment">// 参数2: 索引</span></span><br><span class="line">            <span class="comment">// UnsafePointer&lt;Int8&gt;</span></span><br><span class="line">            let columnName = sqlite3_column_name(stmt, i)</span><br><span class="line">            let columnNameStr = String(CString: columnName, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">            print(columnNameStr)</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 2.2 获取列的数值</span></span><br><span class="line">            <span class="comment">// 不同的数据类型, 应该使用不同的函数进行获取</span></span><br><span class="line">            <span class="comment">// 2.2.1 获取列的类型</span></span><br><span class="line">            let type = sqlite3_column_type(stmt, i)</span><br><span class="line">            <span class="comment">// 2.2.2 根据不同的类型, 使用不同的函数, 进行获取响应的值</span></span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_INTEGER &#123;</span><br><span class="line">                let value = sqlite3_column_int(stmt, i)</span><br><span class="line">                print(value)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_FLOAT &#123;</span><br><span class="line">                let value = sqlite3_column_double(stmt, i)</span><br><span class="line">                print(value)</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> type == SQLITE_TEXT &#123;</span><br><span class="line">                <span class="comment">// UnsafePointer&lt;UInt8&gt;</span></span><br><span class="line">                let value = UnsafePointer&lt;CChar&gt;(sqlite3_column_text(stmt, i))</span><br><span class="line">                <span class="comment">// UnsafePointer&lt;CChar&gt;</span></span><br><span class="line">                let valueStr = String(CString: value, encoding: <span class="built_in">NSUTF8StringEncoding</span>)</span><br><span class="line">                print(valueStr)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4. 重置(这一步可以省略)</span></span><br><span class="line">    <span class="comment">// 5. 释放资源</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#18-FMDB基本使用</p>
+<p>###1. 什么是FMDB?</p>
+<ul>
+<li>FMDB是iOS平台的SQLite数据库框架</li>
+<li>FMDB以OC的方式封装了SQLite的C语言API</li>
+</ul>
+<p>###2. FMDB有什么优势?</p>
+<ul>
+<li>使用起来更加面向对象，省去了很多麻烦、冗余的C语言代码</li>
+<li>提供了多线程安全的数据库操作方法，有效地防止数据混乱</li>
+</ul>
+<p>###3. 安装方式</p>
+<ul>
+<li>Cocoapods</li>
+<li>手动集成(swift)<ul>
+<li><ol>
+<li>导入FMDB文件</li>
+</ol>
+</li>
+<li><ol>
+<li>导入系统依赖库sqlite3.0.tbd</li>
+</ol>
+</li>
+<li><ol>
+<li>建立桥接文件, 并导入需要的头文件</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p>###核心类</p>
+<ul>
+<li><p>FMDatabase</p>
+<ul>
+<li>一个FMDatabase对象就代表一个单独的SQLite数据库</li>
+<li>用来执行SQL语句</li>
+</ul>
+</li>
+<li><p>FMResultSet</p>
+<ul>
+<li>使用FMDatabase执行查询后的结果集</li>
+</ul>
+</li>
+<li><p>FMDatabaseQueue</p>
+<ul>
+<li>用于在多线程中执行多个查询或更新，它是线程安全的</li>
+</ul>
+</li>
+</ul>
+<p>###使用步骤</p>
+<ul>
+<li><ol>
+<li>打开数据库</li>
+</ol>
+<ul>
+<li>通过指定SQLite数据库文件路径来创建FMDatabase对象</li>
+<li>文件路径有三种情况<ul>
+<li>具体文件路径:如果不存在会自动创建</li>
+<li>空字符串@””:会在临时目录创建一个空的数据库,当FMDatabase连接关闭时，数据库文件也被删除</li>
+<li>nil:会创建一个内存中临时数据库，当FMDatabase连接关闭时，数据库会被销毁</li>
+</ul>
+</li>
+<li>FMDatabase *db = [FMDatabase databaseWithPath:path];</li>
+<li>if ([db open])  { NSLog(@”打开成功!”); }</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">static</span> let shareInstance = FMDBTool()</span><br><span class="line"></span><br><span class="line">lazy var db: FMDatabase = &#123;</span><br><span class="line">    <span class="comment">// 1. 创建或者打开一个数据库</span></span><br><span class="line">    let path = <span class="string">"/Users/xiaomage/Desktop/fmdb/demo.sqlite"</span></span><br><span class="line">    let db = FMDatabase(path: path)</span><br><span class="line">    <span class="keyword">return</span> db</span><br><span class="line">&#125;()</span><br><span class="line"></span><br><span class="line">override init() &#123;</span><br><span class="line">    <span class="keyword">super</span>.init()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> db.open() &#123;</span><br><span class="line">        print(<span class="string">"数据库打开成功"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><ol>
+<li>执行更新</li>
+</ol>
+<ul>
+<li>在FMDB中，除查询以外的所有操作，都称为“更新”:create、drop、insert、update、delete等</li>
+<li>使用executeUpdate:方法执行更新:<ul>
+<li><ul>
+<li>(BOOL)executeUpdate:(NSString*)sql, …</li>
+</ul>
+</li>
+<li><ul>
+<li>(BOOL)executeUpdateWithFormat:(NSString*)format, …</li>
+</ul>
+</li>
+<li><ul>
+<li>(BOOL)executeUpdate:(NSString<em>)sql withArgumentsInArray:(NSArray </em>)arguments</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>示例:[db executeUpdate:@”UPDATE t_student SET age = ? WHERE name = ?;”, @20, @”Jack”]</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">func createTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real default 60)"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">            print(<span class="string">"创建表成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func dropTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"drop table if exists t_stu"</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">            print(<span class="string">"成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func insertStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"insert into t_stu(name, age, score) values ('zhangsan', 18, 99)"</span></span><br><span class="line">        <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">            print(<span class="string">"成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func deleteStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"delete from t_stu where name = 'zhangsan'"</span></span><br><span class="line">        <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">            print(<span class="string">"成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func updateStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"update t_stu set age = 999 where name = 'zhangsan'"</span></span><br><span class="line">        <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">            print(<span class="string">"成功"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            print(<span class="string">"失败"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><ol>
+<li>执行查询</li>
+</ol>
+<ul>
+<li>查询方法:<ul>
+<li><ul>
+<li>(FMResultSet <em>)executeQuery:(NSString</em>)sql, …</li>
+</ul>
+</li>
+<li><ul>
+<li>(FMResultSet <em>)executeQueryWithFormat:(NSString</em>)format, …</li>
+</ul>
+</li>
+<li><ul>
+<li>(FMResultSet <em>)executeQuery:(NSString </em>)sql withArgumentsInArray:(NSArray *)arguments</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">func queryAll() -&gt; () &#123;</span><br><span class="line">    let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">    let resultSet = db.executeQuery(sql, withArgumentsInArray: <span class="literal">nil</span>)</span><br><span class="line">    <span class="keyword">while</span> resultSet.next() &#123;</span><br><span class="line">        let age = resultSet.intForColumn(<span class="string">"age"</span>)</span><br><span class="line">        let name = resultSet.stringForColumn(<span class="string">"name"</span>)</span><br><span class="line">        let score = resultSet.doubleForColumn(<span class="string">"score"</span>)</span><br><span class="line">        print(age, name, score)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><ol>
+<li>关闭数据库</li>
+</ol>
+<ul>
+<li>database.close()</li>
+</ul>
+</li>
+</ul>
+<p>#19-FMDabaseQueue</p>
+<ul>
+<li>FMDatabase这个类是线程不安全的，如果在多个线程中同时使用一个FMDatabase实例，会造成数据混乱等问题</li>
+<li>为了保证线程安全，FMDB提供方便快捷的FMDatabaseQueue类</li>
+<li>FMDatabaseQueue的创建:FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:path];</li>
+</ul>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">static</span> let shareInstance = FMDBTool()</span><br><span class="line">    </span><br><span class="line">    lazy var queue: FMDatabaseQueue = &#123;</span><br><span class="line">        let path = <span class="string">"/Users/xiaomage/Desktop/fmdb/demo.sqlite"</span></span><br><span class="line">        let queue = FMDatabaseQueue(path: path)</span><br><span class="line">        <span class="keyword">return</span> queue</span><br><span class="line">        </span><br><span class="line">    &#125;()</span><br><span class="line">    </span><br><span class="line"><span class="comment">//    lazy var db: FMDatabase = &#123;</span></span><br><span class="line"><span class="comment">//        // 1. 创建或者打开一个数据库</span></span><br><span class="line"><span class="comment">//        let path = "/Users/xiaomage/Desktop/fmdb/demo.sqlite"</span></span><br><span class="line"><span class="comment">//        let db = FMDatabase(path: path)</span></span><br><span class="line"><span class="comment">//        return db</span></span><br><span class="line"><span class="comment">//    &#125;()</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">    override init() &#123;</span><br><span class="line">        <span class="keyword">super</span>.init()</span><br><span class="line"></span><br><span class="line"><span class="comment">//        if db.open() &#123;</span></span><br><span class="line"><span class="comment">//            print("数据库打开成功")</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func createTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"create table if not exists t_stu(id integer primary key autoincrement, name text not null, age integer, score real default 60)"</span></span><br><span class="line">        </span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">                print(<span class="string">"创建表成功"</span>)</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                print(<span class="string">"失败"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func dropTable() -&gt; () &#123;</span><br><span class="line">        </span><br><span class="line">        let sql = <span class="string">"drop table if exists t_stu"</span></span><br><span class="line">        </span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">                print(<span class="string">"成功"</span>)</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                print(<span class="string">"失败"</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func insertStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"insert into t_stu(name, age, score) values ('zhangsan', 18, 99)"</span></span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">                print(<span class="string">"成功"</span>)</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                print(<span class="string">"失败"</span>)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func deleteStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"delete from t_stu where name = 'zhangsan'"</span></span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">                print(<span class="string">"成功"</span>)</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                print(<span class="string">"失败"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func updateStu() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"update t_stu set age = 999 where name = 'zhangsan'"</span></span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">if</span> db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>) &#123;</span><br><span class="line">                print(<span class="string">"成功"</span>)</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                print(<span class="string">"失败"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func queryAll() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"select * from t_stu"</span></span><br><span class="line">        queue.inDatabase &#123; (db: FMDatabase!) <span class="keyword">in</span></span><br><span class="line">        let resultSet = db.executeQuery(sql, withArgumentsInArray: <span class="literal">nil</span>)</span><br><span class="line">        <span class="keyword">while</span> resultSet.next() &#123;</span><br><span class="line">            let age = resultSet.intForColumn(<span class="string">"age"</span>)</span><br><span class="line">            let name = resultSet.stringForColumn(<span class="string">"name"</span>)</span><br><span class="line">            let score = resultSet.doubleForColumn(<span class="string">"score"</span>)</span><br><span class="line">            print(age, name, score)</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    func transactionTest() -&gt; () &#123;</span><br><span class="line">        queue.inTransaction &#123; (db: FMDatabase!, rollback) <span class="keyword">in</span></span><br><span class="line">            </span><br><span class="line">            let sql = <span class="string">"update t_stu set score = score + 10 where name = 'zhangsan'"</span></span><br><span class="line">            let sql2 = <span class="string">"update t_stu set score2 = score - 10 where name = 'lisi'"</span></span><br><span class="line">            let result1 = db.executeUpdate(sql, withArgumentsInArray: <span class="literal">nil</span>)</span><br><span class="line">            let result2 = db.executeUpdate(sql2, withArgumentsInArray: <span class="literal">nil</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> result1 &amp;&amp; result2 &#123;</span><br><span class="line">                </span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// 回滚 *rollback = rollback.memory</span></span><br><span class="line">                rollback.memory = <span class="literal">true</span></span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    func stamentsTest() -&gt; () &#123;</span><br><span class="line">        let sql = <span class="string">"insert into t_stu(name, age, score) values ('zhangsan3', 18, 99);insert into t_stu(name, age, score) values ('zhangsan2', 18, 99);"</span></span><br><span class="line">        queue.inDatabase &#123; (db) <span class="keyword">in</span></span><br><span class="line">            db.executeStatements(sql)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-        @media (-webkit-min-device-pixel-ratio:2), (min-device-pixel-ratio: 2){
-          .border-1px:after,.border-1px:before{
-              -webkit-transform: scaleY(.5);
-              transform: scaleY(.5);
-          }
-        }
-    </style>
-</head>
-
-<body>
-    <div id="main">
-        <div id="main-section">
-            <p class="seg-words">あ行</p>
-            <!-- あ行 -->
-            <div class="input-group border-1px">
-                <label for="group-class">あ ア</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(a)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px border-1px">
-                <label for="group-class">い イ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(i)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">う ウ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(u)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">え エ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(e)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">お オ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(o)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <!-- か行 -->
-            <p class="seg-words">か行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">か カ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ka)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">き キ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ki)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">く ク</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ku)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">け ケ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ke)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">こ コ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ko)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- さ行 -->
-            <p class="seg-words">さ行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">さ サ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(sa)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">し シ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(shi)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">す ス</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(su)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">せ セ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(se)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">そ ソ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(so)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- た行 -->
-            <p class="seg-words">た行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">た タ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ta)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ち チ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(chi)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">つ ツ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(tsu)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">て テ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(te)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">と ト</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(to)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- な行 -->
-            <p class="seg-words">な行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">な ナ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(na)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">に ニ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ni)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ぬ ヌ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(nu)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ね ネ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ne)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">の ノ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(no)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- は行 -->
-            <p class="seg-words">は行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">は ハ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ha)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ひ ヒ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(hi)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ふ フ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(fu)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">へ ヘ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(he)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ほ ホ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ho)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- ま行 -->
-            <p class="seg-words">ま行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">ま マ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ma)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">み ミ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(mi)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">む ム</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(mu)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">め メ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(me)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">も モ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(mo)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- や行 -->
-            <p class="seg-words">や行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">や ヤ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ya)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">い イ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(i)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ゆ ユ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(yu)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">え エ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(e)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">よ ヨ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(yo)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- ら行 -->
-            <p class="seg-words">ら行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">ら ラ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ra)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">り リ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ri)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">る ル</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ru)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">れ レ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(re)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">ろ ロ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(ro)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- わ行 -->
-            <p class="seg-words">わ行</p>
-            <div class="input-group border-1px">
-                <label for="group-class">わ ワ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(wa)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">い イ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(i)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">う ウ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(u)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">え エ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(e)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-            <div class="input-group border-1px">
-                <label for="group-class">を ヲ</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(wo)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-
-            <!-- ン行 -->
-            <p class="seg-words">ん</p>
-            <div class="input-group border-1px">
-                <label for="group-class">ん ン</label>
-                <div class="ui-select">
-                    <div class="select-btn">
-                        <span class="ui-text">(n)</span>
-                        <span class="ui-icon">
-                            <div class="arrow">
-                                <div class="arrow1"></div>
-                                <div class="arrow2"></div>
-                            </div>
-                        </span>
-                    </div>
-                    <div id="group-class" class="ui-select-holder" data-catalog="0"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
       
 
       
@@ -1024,6 +771,21 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -1074,7 +836,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/assets/demo/border1px.html" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2014/12/20/数据库基本知识/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -1086,6 +848,25 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2015/01/05/内存5大区/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          内存5大区
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/22/UIButton/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UIButton</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1110,7 +891,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="" ></div> 
+  <div id="SOHUCS" sid="数据库基本知识" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -1146,7 +927,7 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
