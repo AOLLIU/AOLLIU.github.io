@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: web开发 | AOLLIU的博客</title>
+  <title>load方法和initialize方法 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/tags/web开发/index.html">
+  <meta name="description" content="有时候我们希望类先执行某些一次性的初始化操作再使用,NSObject根类中有两个可以实现这种初始化操作的方法,这就是+Load和+initailze方法 +Load调用时机对于加入运行期系统的每个类以及它的分类来说,必定会调用此方法,而且只会被调用一次,通常是在应用程序启动的时候,执行时机在main函数之前!并且先调用">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="load方法和initialize方法">
+<meta property="og:url" content="http://yoursite.com/2015/09/01/load方法和initialize方法/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="有时候我们希望类先执行某些一次性的初始化操作再使用,NSObject根类中有两个可以实现这种初始化操作的方法,这就是+Load和+initailze方法 +Load调用时机对于加入运行期系统的每个类以及它的分类来说,必定会调用此方法,而且只会被调用一次,通常是在应用程序启动的时候,执行时机在main函数之前!并且先调用父类的+load再调用子类的. 123456789101112131415@im">
+<meta property="og:updated_time" content="2017-11-20T06:51:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="load方法和initialize方法">
+<meta name="twitter:description" content="有时候我们希望类先执行某些一次性的初始化操作再使用,NSObject根类中有两个可以实现这种初始化操作的方法,这就是+Load和+initailze方法 +Load调用时机对于加入运行期系统的每个类以及它的分类来说,必定会调用此方法,而且只会被调用一次,通常是在应用程序启动的时候,执行时机在main函数之前!并且先调用父类的+load再调用子类的. 123456789101112131415@im">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,98 +158,200 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-load方法和initialize方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/24/JS中面对对象-OOP-继承及原型链/" class="archive-article-date">
-  	<time datetime="2015-08-24T13:38:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/24/JS中面对对象-OOP-继承及原型链/">JS中面对对象(OOP)继承及原型链</a>
+    <h1 class="article-title" itemprop="name">
+      load方法和initialize方法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2015/09/01/load方法和initialize方法/" class="archive-article-date">
+  	<time datetime="2015-09-01T15:54:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有时候我们希望类先执行某些一次性的初始化操作再使用,NSObject根类中有两个可以实现这种初始化操作的方法,这就是+Load和+initailze方法</p>
+<h3 id="Load"><a href="#Load" class="headerlink" title="+Load"></a>+Load</h3><h4 id="调用时机"><a href="#调用时机" class="headerlink" title="调用时机"></a>调用时机</h4><p>对于加入运行期系统的每个类以及它的分类来说,必定会调用此方法,而且只会被调用一次,通常是在应用程序启动的时候,执行时机在main函数之前!并且先调用父类的+load再调用子类的.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@implementation FatherClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">    NSLog(@&quot;%s&quot;,__func__);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@interface SonClass : FatherClass</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">    NSLog(@&quot;%s&quot;,__func__);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">//输出台:</span><br><span class="line">+[FatherClass load]</span><br><span class="line">+[SonClass load]</span><br></pre></td></tr></table></figure>
+<p>如果分类中也实现了该方法,那么先调用本类的再调用分类的</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@implementation FatherClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation FatherClass (category)</span><br><span class="line">+(void)load &#123;</span><br><span class="line">    NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">输出台:</span><br><span class="line">//+[FatherClass load],FatherClass</span><br><span class="line">//+[FatherClass(category) load],FatherClass</span><br></pre></td></tr></table></figure>
+<p>如果两个没有继承关系的类都实现了+load方法,那么它的调用顺序取决于谁先被加到运行期环境中</p>
+<p>上图中的AnyObject类与FatherClass类都继承自NSObject,但是FatherClass先被加入进运行期环境,所以它的+load方法会先被执行.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输出台:</span><br><span class="line">+[FatherClass load]</span><br><span class="line">+[SonClass load]</span><br><span class="line">+[AnyObject load]</span><br></pre></td></tr></table></figure>
+<p><strong>使用注意点:</strong></p>
+<ul>
+<li>在+load的调用时机,系统还处于”脆弱”状态,虽然系统的库已经被加载进运行期系统,但是我们自己编写的类,或者引用的其他的类库中的类不一定已经可以使用,所以在+load中要尽量避免初始化其他的对象. 比如下面的代码就是不安全的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@implementation FatherClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">    NSLog(@&quot;%s&quot;,__func__);</span><br><span class="line">    AnyObject *anyObject = [AnyObject new];</span><br><span class="line">//    use anyObject...</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>当然AnyObject这个类使我们自己写的,我们可能通过Complie Sources知道它加载的顺序(这不是一个好办法),但是是用其他类库我们就不得而知.如果恰好在AnyObject中使用了+load方法来进行某些初始化操作来赋予这个类某些特性,并且这个类被载入的晚,那么这就有问题了.</p>
+<ul>
+<li>+load方法不像普通的方法那样遵循继承规则,如果一个类本身没有实现+load方法,那么无论其各级超类是否实现此方法系统都不会调动.这句话应该这样理解:正常我们给一个对象或者类发消息,如果这个对象(或类)本身没有实现该方法,那么系统会通过isa指针找到父类的实现.但是+load方法不同,子类如果没有实现该方法那么也不会去父类中找.也就是说你实现了系统就调用,你没实现就算了.但是如果在+load中显式的调用[super load];那么就会去调用父类方法了.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">//普通方法,子类实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">- (void)eat &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">- (void)eat &#123;</span><br><span class="line">  NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">SonClass *son = [SonClass new];</span><br><span class="line">[son eat];</span><br><span class="line">输出台:</span><br><span class="line">//-[SonClass eat],&lt;SonClass: 0x600000017970&gt;</span><br><span class="line">//子类未实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">- (void)eat &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@en</span><br><span class="line">@implementation SonClass</span><br><span class="line">@end</span><br><span class="line">SonClass *son = [SonClass new];</span><br><span class="line">[son eat];</span><br><span class="line">输出台:</span><br><span class="line">//-[FatherClass eat],&lt;SonClass: 0x600000001600&gt;</span><br><span class="line">//+load方法,子类实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">    NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">@end</span><br><span class="line">输出台:</span><br><span class="line">//+[FatherClass load],FatherClass</span><br><span class="line">//+[SonClass load],SonClass</span><br><span class="line">//子类未实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">+(void)load &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">@end</span><br><span class="line">输出台:</span><br><span class="line">//+[FatherClass load],FatherClass</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在+load方法中的实现务必精简,尽量减少里面所执行的操作,因为整个应用在执行+load方法时都会阻塞,如果在+load中进行繁杂的代码,那么应用程序在执行期间就会变得无响应,不要调用可能会加锁的方法.实际上但凡是通过+load方法实现的某些任务,基本上都做得不对,真正的用途仅在于调试程序,比如可以再分类中实现+load来看该分类是否已经正确载入系统中.<h4 id="initialize"><a href="#initialize" class="headerlink" title="+initialize"></a>+initialize</h4><h5 id="调用时机-1"><a href="#调用时机-1" class="headerlink" title="调用时机"></a>调用时机</h5>对于每个类来说,该方法会在程序第一次使用该类或者该类的子类时被调用,并且只会调用一次.如果子类没有实现,那么会调用父类的该方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//子类实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">+ (void)initialize &#123;</span><br><span class="line">    NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">- (void)eat &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">+ (void)initialize &#123;</span><br><span class="line">    NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">SonClass *son = [SonClass new];</span><br><span class="line">[son eat];</span><br><span class="line">输出台:</span><br><span class="line">//+[FatherClass initialize],FatherClass</span><br><span class="line">//+[SonClass initialize],SonClass</span><br><span class="line">//子类不实现</span><br><span class="line">@implementation FatherClass</span><br><span class="line">+ (void)initialize &#123;</span><br><span class="line">    NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">- (void)eat &#123;</span><br><span class="line">     NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">@implementation SonClass</span><br><span class="line">@end</span><br><span class="line">SonClass *son = [SonClass new];</span><br><span class="line">[son eat];</span><br><span class="line">输出台:</span><br><span class="line">//+[FatherClass initialize],FatherClass</span><br><span class="line">//+[FatherClass initialize],SonClass</span><br></pre></td></tr></table></figure>
+<p>我们发现子类如果实现了就走子类的方法,子类没有实现就走父类的方法.这与普通的方法是相同的,都遵循集成规则,这个与+load不同.<br>那我们如果不想因为子类而调用到父类的方法该怎么办呢?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@implementation FatherClass</span><br><span class="line">+ (void)initialize &#123;</span><br><span class="line">    if (self == [FatherClass class]) &#123;</span><br><span class="line">        NSLog(@&quot;%s,%@&quot;,__func__,self);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">输出台</span><br><span class="line">//+[FatherClass initialize],FatherClass</span><br></pre></td></tr></table></figure>
+<h4 id="load与-initalize方法的区别"><a href="#load与-initalize方法的区别" class="headerlink" title="+load与+initalize方法的区别"></a>+load与+initalize方法的区别</h4><ul>
+<li>+initalize 是惰性调用,只有当给该类或者该类的派生类被使用时才会被调用.</li>
+<li>+load方法,应用会阻塞并等待所有类的+load执行完才会继续执行.</li>
+<li>+initalize方法是线程安全的.所以不用担心对该类第一次发消息的线程问题.</li>
+<li>+load不遵循继承规则</li>
+<li>+load方法运行环境不是安全的,但是+initalize方法运行时可以调用任何类的任何方法;</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/08/20/Ajax网络请求与跨越问题/" class="archive-article-date">
-  	<time datetime="2015-08-20T13:47:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-08-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/08/20/Ajax网络请求与跨越问题/">Ajax网络请求与跨越问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2015/09/01/load方法和initialize方法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2015/11/20/3DTouch/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          3DTouch
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2015/08/24/JS中面对对象-OOP-继承及原型链/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS中面对对象(OOP)继承及原型链</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="load方法和initialize方法" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
+  
+
+  
+
+  
 
 
           </div>
@@ -267,9 +374,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SDWebImage学习 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SDWebImage的简单介绍:  优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍: 首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体:  一个负责下载网络图片,SDWebImageDownlo">
+  <meta name="description" content="SDWebImage的简单介绍: 优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍:首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体: 一个负责下载网络图片,SDWebImageDownloade">
 <meta name="keywords" content="iOS开发,OC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SDWebImage学习">
 <meta property="og:url" content="http://yoursite.com/2015/03/10/SDWebImage学习/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="SDWebImage的简单介绍:  优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍: 首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体:  一个负责下载网络图片,SDWebImageDownloader 一个处理缓存的类SDImageCache   SDWebImage提供">
+<meta property="og:description" content="SDWebImage的简单介绍: 优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍:首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体: 一个负责下载网络图片,SDWebImageDownloader 一个处理缓存的类SDImageCache">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-603db80825b5c6f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-41f2b5a726ec7dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-20T04:14:36.000Z">
+<meta property="og:updated_time" content="2017-11-20T05:17:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SDWebImage学习">
-<meta name="twitter:description" content="SDWebImage的简单介绍:  优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍: 首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体:  一个负责下载网络图片,SDWebImageDownloader 一个处理缓存的类SDImageCache   SDWebImage提供">
+<meta name="twitter:description" content="SDWebImage的简单介绍: 优秀的图片缓存,下载框架,没有警告  SDWebImage的详细介绍:首先SDWebImage的实现原理 SDWebImager核心是SDWebImageManger类 SDWebImageManger  是两个类的集合体: 一个负责下载网络图片,SDWebImageDownloader 一个处理缓存的类SDImageCache">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1494773-603db80825b5c6f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
@@ -181,30 +181,27 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="SDWebImage的简单介绍"><a href="#SDWebImage的简单介绍" class="headerlink" title="SDWebImage的简单介绍:"></a>SDWebImage的简单介绍:</h2><hr>
-<ul>
+        <h2 id="SDWebImage的简单介绍"><a href="#SDWebImage的简单介绍" class="headerlink" title="SDWebImage的简单介绍:"></a>SDWebImage的简单介绍:</h2><ul>
 <li>优秀的图片缓存,下载框架,没有警告</li>
 </ul>
-<h2 id="SDWebImage的详细介绍"><a href="#SDWebImage的详细介绍" class="headerlink" title="SDWebImage的详细介绍:"></a>SDWebImage的详细介绍:</h2><hr>
-<h3 id="首先SDWebImage的实现原理"><a href="#首先SDWebImage的实现原理" class="headerlink" title="首先SDWebImage的实现原理"></a>首先SDWebImage的实现原理</h3><ul>
+<h2 id="SDWebImage的详细介绍"><a href="#SDWebImage的详细介绍" class="headerlink" title="SDWebImage的详细介绍:"></a>SDWebImage的详细介绍:</h2><h3 id="首先SDWebImage的实现原理"><a href="#首先SDWebImage的实现原理" class="headerlink" title="首先SDWebImage的实现原理"></a>首先SDWebImage的实现原理</h3><ul>
 <li>SDWebImager核心是SDWebImageManger类</li>
-<li><p>SDWebImageManger  是两个类的集合体:</p>
-<ul>
+<li>SDWebImageManger  是两个类的集合体:<ul>
 <li>一个负责下载网络图片,SDWebImageDownloader</li>
 <li>一个处理缓存的类SDImageCache</li>
 </ul>
 </li>
-<li><p>SDWebImage提供了如下三个category来进行缓存。</p>
+</ul>
+<a id="more"></a>
 <ul>
+<li>SDWebImage提供了如下三个category来进行缓存。<ul>
 <li>MKAnnotationView + WebCache            地图大头针</li>
 <li>UIButton + WebCache                         给按钮设置图片</li>
 <li>UIImageView + WebCache                     imageView的图片</li>
 </ul>
 </li>
 </ul>
-<a id="more"></a>
-<h3 id="SDWebImage的常用方法介绍"><a href="#SDWebImage的常用方法介绍" class="headerlink" title="SDWebImage的常用方法介绍"></a>SDWebImage的常用方法介绍</h3><hr>
-<ul>
+<h3 id="SDWebImage的常用方法介绍"><a href="#SDWebImage的常用方法介绍" class="headerlink" title="SDWebImage的常用方法介绍"></a>SDWebImage的常用方法介绍</h3><ul>
 <li>在给tableView设置图片时可以用到SDWebImage中UIImageView + WebCache分类中下面一个重要的方法<br><code>- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completedBlock;</code></li>
 <li><p>这个方法在以前是没有sd_前缀的,这个方法里面的参数很容易理解,这里重点介绍一下options这个参数:<br>这个参数是SDWebImageOptions类型的枚举类型,里面有10个选项,下面一一进行介绍</p>
 <ul>
@@ -258,16 +255,14 @@ var _hmt = _hmt || [];
 <li><p>SDWebImage在cleanMemary(清除缓存)时的运行原理<br><img src="http://upload-images.jianshu.io/upload_images/1494773-41f2b5a726ec7dd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20160529_3.png"></p>
 </li>
 </ul>
-<h3 id="SDWebImage可以做的事情"><a href="#SDWebImage可以做的事情" class="headerlink" title="SDWebImage可以做的事情:"></a>SDWebImage可以做的事情:</h3><hr>
-<ul>
+<h3 id="SDWebImage可以做的事情"><a href="#SDWebImage可以做的事情" class="headerlink" title="SDWebImage可以做的事情:"></a>SDWebImage可以做的事情:</h3><ul>
 <li>1,给imageView设置图片</li>
 <li>2,单独下载图片,可以监听下载进度</li>
 <li>3,管理图片缓存</li>
 <li>4,设置gif图片</li>
 <li>5,判断图片是什么类型的</li>
 </ul>
-<h2 id="细节"><a href="#细节" class="headerlink" title="细节:"></a>细节:</h2><hr>
-<ul>
+<h2 id="细节"><a href="#细节" class="headerlink" title="细节:"></a>细节:</h2><ul>
 <li>1.clear和clean的区别<ul>
 <li>clear:直接把之前的缓存文件删除,然后重新创建一个空的</li>
 <li>clean:删除过期的缓存,然后计算剩余的缓存大小,和设置的最大缓存大小比较,如果发现超过那么就会继续删除,按照文件的 创建时间来删除(由远到近)</li>
