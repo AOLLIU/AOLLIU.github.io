@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2014/08/22/UIButton/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
 <meta property="og:description" content="说说UIButton的几种常见的状态:高亮状态(UIControlStateHighlighted): 就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;  如何知道按钮是不是高亮状态?  其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设">
-<meta property="og:updated_time" content="2017-11-20T03:17:31.000Z">
+<meta property="og:updated_time" content="2017-11-20T03:19:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIButton">
 <meta name="twitter:description" content="说说UIButton的几种常见的状态:高亮状态(UIControlStateHighlighted): 就是用户长按住按钮不松开,或者在代码中设置了按钮的属性highlighted = YES;  如何知道按钮是不是高亮状态?  其实本质是一个方法-(BOOL)isHighlighted这个方法是本质,看他返回什么,如果你自定义button,重写了这个方法设置了返回时YES,一定是高亮状态,如果设">
@@ -188,10 +188,8 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <p><strong>在开发中有时候我们需要取消按钮的高亮状态,可以通过两个方法来实现:</strong></p>
 <ul>
-<li><p>1.重写set highlight方法 ,在这个方法中什么也不做,覆盖系统的做法</p>
-</li>
-<li><p>2,重写is highlight方法返回NO</p>
-</li>
+<li>1.重写set highlight方法 ,在这个方法中什么也不做,覆盖系统的做法</li>
+<li>2,重写is highlight方法返回NO</li>
 </ul>
 <h4 id="不可用-UIControlStateDisabled"><a href="#不可用-UIControlStateDisabled" class="headerlink" title="不可用(UIControlStateDisabled ):"></a>不可用(UIControlStateDisabled ):</h4><ul>
 <li>设置按钮属性enable = NO; 按钮不会接受点击的事件<br>enabled = NO; 状态变为disabled<br>userinteractionEnabled = NO;按钮不能点击了 但是不会改变按钮的状态</li>
@@ -289,11 +287,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2014/12/20/数据库基本知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/09/04/UITableView的几个重要属性/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          数据库基本知识
+          UITableView的几个重要属性
         
       </div>
     </a>

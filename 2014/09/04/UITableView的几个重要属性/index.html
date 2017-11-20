@@ -6,14 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: iOS开发 | AOLLIU的博客</title>
+  <title>UITableView的几个重要属性 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="http://yoursite.com/tags/iOS开发/index.html">
+  <meta name="description" content="一.什么是tableView的内容(content)?     内容包括以下3个部分:除这三个之外都不是tableview的内容,例如给tableview添加个子控件UIView,这个view就不是tableview的内容  1.Cell 2.tableHeaderView\tableFooterView 3.sect">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UITableView的几个重要属性">
+<meta property="og:url" content="http://yoursite.com/2014/09/04/UITableView的几个重要属性/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
+<meta property="og:description" content="一.什么是tableView的内容(content)?     内容包括以下3个部分:除这三个之外都不是tableview的内容,例如给tableview添加个子控件UIView,这个view就不是tableview的内容  1.Cell 2.tableHeaderView\tableFooterView 3.sectionHeader\sectionFooter  二.contentSize.h">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-5338aa63d22bbe09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-22742912fcd6edfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-a127382cd07f4c57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-7d7f53548169090a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-5426fffe8715b584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-424cabf47c4a7d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-dc6f66d042070eb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-163ca951b3829cc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-c1de373d25dd8537.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-20T03:21:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
+<meta name="twitter:title" content="UITableView的几个重要属性">
+<meta name="twitter:description" content="一.什么是tableView的内容(content)?     内容包括以下3个部分:除这三个之外都不是tableview的内容,例如给tableview添加个子控件UIView,这个view就不是tableview的内容  1.Cell 2.tableHeaderView\tableFooterView 3.sectionHeader\sectionFooter  二.contentSize.h">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1494773-5338aa63d22bbe09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -153,130 +168,67 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-UITableView的几个重要属性" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/01/05/内存5大区/" class="archive-article-date">
-  	<time datetime="2015-01-05T13:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/01/05/内存5大区/">内存5大区</a>
+    <h1 class="article-title" itemprop="name">
+      UITableView的几个重要属性
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/12/20/数据库基本知识/" class="archive-article-date">
-  	<time datetime="2014-12-20T11:03:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-12-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/20/数据库基本知识/">数据库基本知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/09/04/UITableView的几个重要属性/" class="archive-article-date">
+        
+        <a href="/2014/09/04/UITableView的几个重要属性/" class="archive-article-date">
   	<time datetime="2014-09-04T02:56:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/04/UITableView的几个重要属性/">UITableView的几个重要属性</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>一.什么是tableView的内容(content)?</strong><br>     内容包括以下3个部分:除这三个之外都不是tableview的内容,例如给tableview添加个子控件UIView,这个view就不是tableview的内容</p>
+<ul>
+<li>1.Cell</li>
+<li>2.tableHeaderView\tableFooterView</li>
+<li>3.sectionHeader\sectionFooter</li>
+</ul>
+<p><strong>二.contentSize.height</strong><br> 内容的高度</p>
+<a id="more"></a>
+<p><strong>三.contentOffset.y</strong><br> 内容的偏移量(frame的顶部 - content的顶部)</p>
+<p><strong>四.contentInset</strong><br> 内容周围的间距(内边距)<br><em>注意</em>:是内容四周的间距</p>
+<p><strong>五.Frame</strong></p>
+<ul>
+<li>1.frame.size.height :  矩形框的高度</li>
+<li>2.frame : 以父控件内容的左上角为坐标原点<br>注意:子控件添加都是添加到父控件的内容上</li>
+</ul>
+<p><strong>具体情况分析如下:</strong></p>
+<ul>
+<li>什么也没有的情况<br><img src="http://upload-images.jianshu.io/upload_images/1494773-5338aa63d22bbe09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>只有headerView和footerView的情况<br><img src="http://upload-images.jianshu.io/upload_images/1494773-22742912fcd6edfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>只有cell的情况<br><img src="http://upload-images.jianshu.io/upload_images/1494773-a127382cd07f4c57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>有cell和contentinset的情况<br><img src="http://upload-images.jianshu.io/upload_images/1494773-7d7f53548169090a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>有cell和headerView和footerView情况<br><img src="http://upload-images.jianshu.io/upload_images/1494773-5426fffe8715b584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>有cell和headerView和footerView也有contentinset<br><img src="http://upload-images.jianshu.io/upload_images/1494773-424cabf47c4a7d92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+<p><strong><em>下面将会引入子控件,注意子控件是相对于父控件的内容来添加的</em></strong></p>
+<ul>
+<li><p>有cell,有content inset,有子控件<br><img src="http://upload-images.jianshu.io/upload_images/1494773-dc6f66d042070eb9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>有cell,有footerView/headerview,有子控件<br><img src="http://upload-images.jianshu.io/upload_images/1494773-163ca951b3829cc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>有cell,有footerView/headview,有contentinset,有子控件<br><img src="http://upload-images.jianshu.io/upload_images/1494773-c1de373d25dd8537.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -292,61 +244,125 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2014/09/04/UITableView的几个重要属性/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/08/22/UIButton/" class="archive-article-date">
-  	<time datetime="2014-08-22T11:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-22</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2014/12/20/数据库基本知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数据库基本知识
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/08/22/UIButton/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UIButton</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/08/22/UIButton/">UIButton</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+  <div id="SOHUCS" sid="UITableView的几个重要属性" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -369,9 +385,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
