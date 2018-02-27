@@ -6,18 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//aolliu.win">
-  <title>Archives: 2016/8 | AOLLIU的博客</title>
+  <title>iOS Widget开发 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="河北理工大学10级,现就职于好奇心日报.">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,OC,Objective-C,swift,ReactNative,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="//aolliu.win/archives/2016/08/index.html">
+  <meta name="description" content="widget的尺寸: 1.widget有两种状态:折叠和展开,不同状态下最大宽高不同1234typedef NS_ENUM(NSInteger, NCWidgetDisplayMode) &amp;#123;    NCWidgetDisplayModeCompact, // Fixed height    NCWid">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Widget开发">
+<meta property="og:url" content="//aolliu.win/2018/02/27/iOS-Widget开发/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="河北理工大学10级,现就职于好奇心日报.">
+<meta property="og:description" content="widget的尺寸: 1.widget有两种状态:折叠和展开,不同状态下最大宽高不同1234typedef NS_ENUM(NSInteger, NCWidgetDisplayMode) &amp;#123;    NCWidgetDisplayModeCompact, // Fixed height    NCWidgetDisplayModeExpanded, // Variable height&amp;#">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-0961cfb78dcf035f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-1d669b7a932cb93f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-9c848db28319f4e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-2363ebbe5d2466c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-22a11ae35f276abe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1494773-92bd10d578e1135d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-02-27T08:12:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
-<meta name="twitter:description" content="河北理工大学10级,现就职于好奇心日报.">
+<meta name="twitter:title" content="iOS Widget开发">
+<meta name="twitter:description" content="widget的尺寸: 1.widget有两种状态:折叠和展开,不同状态下最大宽高不同1234typedef NS_ENUM(NSInteger, NCWidgetDisplayMode) &amp;#123;    NCWidgetDisplayModeCompact, // Fixed height    NCWidgetDisplayModeExpanded, // Variable height&amp;#">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1494773-0961cfb78dcf035f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -157,405 +165,214 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-iOS-Widget开发" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      iOS Widget开发
+    </h1>
+  
+
+        
+        <a href="/2018/02/27/iOS-Widget开发/" class="archive-article-date">
+  	<time datetime="2018-02-27T07:50:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="widget的尺寸"><a href="#widget的尺寸" class="headerlink" title="widget的尺寸:"></a>widget的尺寸:</h2><ul>
+<li>1.widget有两种状态:折叠和展开,不同状态下最大宽高不同<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">typedef NS_ENUM(NSInteger, NCWidgetDisplayMode) &#123;</span><br><span class="line">    NCWidgetDisplayModeCompact, // Fixed height</span><br><span class="line">    NCWidgetDisplayModeExpanded, // Variable height</span><br><span class="line">&#125; NS_ENUM_AVAILABLE_IOS(10_0);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>2.如果你想改widget的高度，都是在下面这个方法中这么写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize &#123;</span><br><span class="line">    //这个意思就是折叠状态110pt，展开状态300pt。如果你折叠状态就算写120，也一样是110的高度。展开状态下，当然要取比maxSize.height小的一个值。那么maxSize这个值是多少？</span><br><span class="line">    if (activeDisplayMode == NCWidgetDisplayModeCompact) &#123;</span><br><span class="line">        self.preferredContentSize = CGSizeMake(maxSize.width, 110);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        self.preferredContentSize = CGSizeMake(maxSize.width, 300);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>3.maxSize的大小不是一个固定值,影响因素主要有:设备,系统,系统字体大小,plus上海域横屏竖屏有关.</p>
+<ul>
+<li>备注:<ul>
+<li>1.系统字体可以在设置→通用→辅助功能→更大字体中选择,如果不开启辅助功能中的更大字体,系统字体大小一共有7档(见图统计)。如果开启辅助功能中的更大字体系统字体大小一共有11档,折叠的高度分别是这11档次(没有统计,如果需要自己另行统计)</li>
+<li>2.系统默认字体为第4档</li>
+<li>3.下图中所有单位为pt</li>
+<li>4.所有app的widget都有或多或少的展示问题.(一方面是设计问题没有考虑所有情况,另一方面苹果这个模块做的真是…)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/1494773-0961cfb78dcf035f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/1494773-1d669b7a932cb93f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="设计分析"><a href="#设计分析" class="headerlink" title="设计分析"></a>设计分析</h2><h2 id="好奇心-常规"><a href="#好奇心-常规" class="headerlink" title="好奇心(常规)"></a>好奇心(常规)</h2><ul>
+<li><strong>未展开状态</strong>显示内容为[最新指定一篇 + 发布时间更新],文章显示形式为列表式.</li>
+<li><strong>展开状态</strong>显示3篇内容<ul>
+<li>“看图:过去24小时发生了什么”为特殊文章.<ul>
+<li>未展开状态显示内容为主标题和文章内容前3张新闻图</li>
+<li>展开状态重排版以模拟”banner”的形式展现,”banner”显示”你需要知道的”第一条新闻内容中的配图以及小标题.并且显示图片数量与当前页码(如果”你需要知道的”新闻总数量为5条,则图片数量显示5)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>底部3个按钮为了方便用户进入app设置的3个快速入口</li>
+</ul>
+<p><strong>普通折叠和展开</strong><br><img src="http://upload-images.jianshu.io/upload_images/1494773-9c848db28319f4e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="普通折叠和展开"></p>
+<p><strong>看图折叠和展</strong><br><img src="http://upload-images.jianshu.io/upload_images/1494773-2363ebbe5d2466c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="看图折叠和展开"></p>
+<h2 id="好奇心研究所"><a href="#好奇心研究所" class="headerlink" title="好奇心研究所:"></a>好奇心研究所:</h2><ul>
+<li><p><strong>未展开状态</strong>: 显示研究所最新更新的文章标题,以及显示参与人数或者最新文章标识</p>
+<ul>
+<li>研究所最新文章标题数大于20个中文字符(超出一行),不显示剩余字符.</li>
+<li>研究所更新频率为每天两篇,上下午各一篇</li>
+</ul>
+</li>
+<li><p><strong>展开状态重新排版</strong></p>
+<ul>
+<li>根据研究所两种互动方式进行排版<ul>
+<li>第一种[我说],显示热门评论用户头像及内容,显示数量为3条.底部两个按钮:换一批,说点什么</li>
+<li>第二种[投票],显示选项配图,标题内容,和投票最多的选项内容及gif图.底部两个按钮:投它一票,其他选项</li>
+</ul>
+</li>
+<li>交互: 底部两个按钮,无论点击哪一个都跳转app内的详情页.</li>
+</ul>
+</li>
+</ul>
+<p><strong>我说折叠和展开</strong><br><img src="http://upload-images.jianshu.io/upload_images/1494773-22a11ae35f276abe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="我说折叠和展开"></p>
+<p><strong>投票折叠和展开</strong><br><img src="http://upload-images.jianshu.io/upload_images/1494773-92bd10d578e1135d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="投票折叠和展开"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/24/React-Native集成到现有项目问题/" class="archive-article-date">
-  	<time datetime="2016-08-24T13:39:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/24/React-Native集成到现有项目问题/">React Native集成到现有项目问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/22/React-Native学习笔记十/" class="archive-article-date">
-  	<time datetime="2016-08-22T13:08:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/22/React-Native学习笔记十/">React Native学习笔记十</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2018/02/27/iOS-Widget开发/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/20/React-Native学习笔记九/" class="archive-article-date">
-  	<time datetime="2016-08-20T07:38:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/12/18/好奇心日报适配方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">好奇心日报适配方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/20/React-Native学习笔记九/">React Native学习笔记九</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/16/React-Native学习笔记八/" class="archive-article-date">
-  	<time datetime="2016-08-16T12:58:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/16/React-Native学习笔记八/">React Native学习笔记八</a>
-    </h1>
+  <div id="SOHUCS" sid="iOS-Widget开发" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/15/React-Native学习笔记七/" class="archive-article-date">
-  	<time datetime="2016-08-15T12:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/15/React-Native学习笔记七/">React Native学习笔记七</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/12/React-Native学习笔记六/" class="archive-article-date">
-  	<time datetime="2016-08-12T13:48:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/12/React-Native学习笔记六/">React Native学习笔记六</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/10/React-Native学习笔记五/" class="archive-article-date">
-  	<time datetime="2016-08-10T12:18:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/10/React-Native学习笔记五/">React Native学习笔记五</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/06/React-Native学习笔记四/" class="archive-article-date">
-  	<time datetime="2016-08-06T13:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/06/React-Native学习笔记四/">React Native学习笔记四</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/05/React-Native学习笔记三/" class="archive-article-date">
-  	<time datetime="2016-08-05T12:27:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/05/React-Native学习笔记三/">React Native学习笔记三</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/03/React-Native学习笔记二/" class="archive-article-date">
-  	<time datetime="2016-08-03T14:17:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/03/React-Native学习笔记二/">React Native学习笔记二</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2016/08/page/2/">2</a><a class="extend next" rel="next" href="/archives/2016/08/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -579,8 +396,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
