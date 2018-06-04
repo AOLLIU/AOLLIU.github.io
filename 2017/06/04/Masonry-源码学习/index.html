@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//aolliu.win">
-  <title>VPN | AOLLIU的博客</title>
+  <title>Masonry 源码学习 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="VPN简介 VPN的英文全称是“Virtual Private Network”，翻译过来就是“虚拟专用网络”。VPN是通过特殊的加密的通讯协议在连接在互联网上的位于不同地方的两个或多个内部网之间建立一条专有的通讯线路，通常的VPN都是企业内部使用或者商业收费的，其价格相对于SSH来说较高一些，但也有免费的VPN可以使">
-<meta name="keywords" content="Quote">
+  <meta name="description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(">
+<meta name="keywords" content="iOS开发,OC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VPN">
-<meta property="og:url" content="//aolliu.win/2014/08/19/VPN/index.html">
+<meta property="og:title" content="Masonry 源码学习">
+<meta property="og:url" content="//aolliu.win/2017/06/04/Masonry-源码学习/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="VPN简介 VPN的英文全称是“Virtual Private Network”，翻译过来就是“虚拟专用网络”。VPN是通过特殊的加密的通讯协议在连接在互联网上的位于不同地方的两个或多个内部网之间建立一条专有的通讯线路，通常的VPN都是企业内部使用或者商业收费的，其价格相对于SSH来说较高一些，但也有免费的VPN可以使用。  VPN可以在公用的互联网建立一个安全的连接，达到安全使用互联网的目的，V">
-<meta property="og:updated_time" content="2017-11-17T11:32:41.000Z">
+<meta property="og:description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@1">
+<meta property="og:updated_time" content="2018-06-04T09:08:44.128Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VPN">
-<meta name="twitter:description" content="VPN简介 VPN的英文全称是“Virtual Private Network”，翻译过来就是“虚拟专用网络”。VPN是通过特殊的加密的通讯协议在连接在互联网上的位于不同地方的两个或多个内部网之间建立一条专有的通讯线路，通常的VPN都是企业内部使用或者商业收费的，其价格相对于SSH来说较高一些，但也有免费的VPN可以使用。  VPN可以在公用的互联网建立一个安全的连接，达到安全使用互联网的目的，V">
+<meta name="twitter:title" content="Masonry 源码学习">
+<meta name="twitter:description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@1">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -158,59 +158,124 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-VPN" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Masonry-源码学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      VPN
+      Masonry 源码学习
     </h1>
   
 
         
-        <a href="/2014/08/19/VPN/" class="archive-article-date">
-  	<time datetime="2014-08-19T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-19</time>
+        <a href="/2017/06/04/Masonry-源码学习/" class="archive-article-date">
+  	<time datetime="2017-06-04T08:37:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="VPN简介"><a href="#VPN简介" class="headerlink" title="VPN简介"></a>VPN简介</h3><ul>
-<li><p>VPN的英文全称是“Virtual Private Network”，翻译过来就是“虚拟专用网络”。VPN是通过特殊的加密的通讯协议在连接在互联网上的位于不同地方的两个或多个内部网之间建立一条专有的通讯线路，通常的VPN都是企业内部使用或者商业收费的，其价格相对于SSH来说较高一些，但也有免费的VPN可以使用。</p>
-</li>
-<li><p>VPN可以在公用的互联网建立一个安全的连接，达到安全使用互联网的目的，VPN（虚拟专用网）可以帮助远程用户、公司分支机构、商业伙伴及供应商同公司的内部网建立可信的安全连接，并保证数据的安全传输，在大型企业（尤其是外资企业）中应用非常广泛。</p>
-</li>
-</ul>
+        <p>##1.介绍:</p>
+<p>masonry 是用于自动布局的第三方框架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.centerX.equalTo(self.view);</span><br><span class="line">	make.top.equalTo(self.view).offset(20);</span><br><span class="line">	make.width.equalTo(@150);</span><br><span class="line">	make.height.equalTo(@150);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>##2.源码解析:</p>
+<h3 id="1-mas-makeConstraints"><a href="#1-mas-makeConstraints" class="headerlink" title="1.)mas_makeConstraints:"></a>1.)<code>mas_makeConstraints:</code></h3><pre><code>masonry使用分类的方式为 UIKit 添加一个方法`mas_makeConstraint`, 这个方法接受了一个 block, 这个 block 有一个`MASConstraintMaker`类型的参数,
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//添加约束</span><br><span class="line">- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *make))block;</span><br><span class="line">//更新约束</span><br><span class="line">- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *make))block;</span><br><span class="line">//重置约束</span><br><span class="line">- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="VPN设置使用方法"><a href="#VPN设置使用方法" class="headerlink" title="VPN设置使用方法"></a>VPN设置使用方法</h3><ul>
-<li><p>在“网上邻居”属性中，点“新建连接向导”，选择“连接到我的工作场所的网络”，下一步选择“虚拟专用网络连接（VPN）”，公司名随便写，下一步“不拨初始连接”，接下来的主机名(地址)，输入主机地址后完成VPN创建，用户、密码选择为自己的帐号密码，例如：主机 m.erights.net，用户 mpuff，密码 mpuff。</p>
-</li>
-<li><p>在“网络连接”里双击这个VPN，此时会弹出一个连接VPN的用户登录窗口，输入你的VPN帐号和密码，并点击“连接”。连接成功后会在屏幕右下角的任务栏会有一个VPN连接的图标，这时就可以用VPN连接来上网了。</p>
-</li>
-<li><p>需要注意的是，VPN的主机如果被封了之后，用户将无法通过原有VPN上网，需要修改新的主机、用户名、密码才能继续使用VPN，本文将长期更新，列出可访问的VPN地址和帐号，如果以上帐号无法使用，请试用以下的VPN帐号。</p>
-</li>
-<li><p>对于有一定技术能力的用户来说，还可以购买一个VPS（Virtual Private Server 虚拟专用服务器），然后手动在上面安装pptp或l2tp等协议，就可以手动建立多个VPN帐号，这样对于用户来说，既可以自己上网用，还可以在上面做网站挣钱，一举两得。</p>
+<h3 id="2-Constraint-Maker-Block"><a href="#2-Constraint-Maker-Block" class="headerlink" title="2.)Constraint Maker Block"></a>2.)Constraint Maker Block</h3><p>以<code>mas_makeConstraints</code>为例分析Masonry内部是如何为视图添加约束的,方法的实现如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *))block &#123;</span><br><span class="line">    self.translatesAutoresizingMaskIntoConstraints = NO;</span><br><span class="line">    MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];</span><br><span class="line">    block(constraintMaker);</span><br><span class="line">    return [constraintMaker install];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###分析:</p>
+<ul>
+<li>1.Masonry 是封装的苹果的 AutoLayout 框架, 我们要在为视图添加约束前将<code>translatesAutoresizingMaskIntoConstraints</code>设置为NO. 如果这个属性没有设置为NO, 那么约束不会被成功添加.</li>
+<li>2.初始化一个MASConstraintMaker</li>
+<li>3.将maker传入block作为属性</li>
+<li>4.调用maker的install方法为视图添加约束</li>
+</ul>
+<p>##3.) MASConstraintMaker</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (id)initWithView:(MAS_VIEW *)view &#123;</span><br><span class="line">    self = [super init];</span><br><span class="line">    if (!self) return nil;</span><br><span class="line">    </span><br><span class="line">    self.view = view;</span><br><span class="line">    self.constraints = NSMutableArray.new;</span><br><span class="line">    </span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>####分析:</p>
+<ul>
+<li>1.在初始化<code>MASConstraintMaker</code>的实例时, 它会持有一个对应 view 的弱引用, 并初始化一个<code>constraints</code>的空可变数组用来保存之后配置属性时持有所有的约束.</li>
+<li><ol>
+<li>maker持有一个空可变数组用来之后配置属性时持有所有的约束,maker提供了工厂方法创建MASConstraint.所有的约束(MASConstraint)都会被保存到约束数组中,最后install时将约束添加到视图上.</li>
+</ol>
 </li>
 </ul>
-<h3 id="iOS手机VPN设置"><a href="#iOS手机VPN设置" class="headerlink" title="iOS手机VPN设置"></a>iOS手机VPN设置</h3><ul>
-<li><p>1，点击手机中的设置-通用-VPN-添加VPN设置；</p>
+<p>##4.) Setup MASConstraintMaker</p>
+<p>调用<code>block(constraintMaker)</code>时, 是对<code>constraintMaker</code>进行配置.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make.centerX.equalTo(self.view);</span><br><span class="line">make.top.equalTo(self.view).offset(20);</span><br><span class="line">make.width.equalTo(@150);</span><br><span class="line">make.height.equalTo(@150);</span><br></pre></td></tr></table></figure>
+<p>###make.left</p>
+<p>访问make的left,right,width,height等属性时, 会调用<code>constraint:addConstraintWithLayoutAttribute:</code>方法.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)left &#123;</span><br><span class="line">    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeLeft];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute &#123;</span><br><span class="line">    return [self constraint:nil addConstraintWithLayoutAttribute:layoutAttribute];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute &#123;</span><br><span class="line">    MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];</span><br><span class="line">    MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];</span><br><span class="line">    if ([constraint isKindOfClass:MASViewConstraint.class]) &#123; ... &#125;</span><br><span class="line">    if (!constraint) &#123;</span><br><span class="line">        newConstraint.delegate = self;</span><br><span class="line">        [self.constraints addObject:newConstraint];</span><br><span class="line">    &#125;</span><br><span class="line">    return newConstraint;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>####分析:</p>
+<ul>
+<li>上列方法最终会到<code>constraint:addConstraintWithLayoutAttribute:</code>这一方法,因为在这个类中传入该方法的第一个参数一直为nil,所以省略的代码不会执行.这部分代码会先以布局属性 left 和视图本身初始化一个 MASViewAttribute 的实例,之后使用 MASViewAttribute 的实例初始化一个 constraint 并设置它的代理,加入数组,然后返回.这是我们输入 make.left 进行的全部工作, 它会返回一个 MASConstraint, 用于之后的继续配置.</li>
+</ul>
+<p>###make.left.equalTo(@20)</p>
+<p>在 make.left 返回 MASConstraint 之后, 我们会继续在这个链式的语法中调用下一个方法来指定约束的关系.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (MASConstraint * (^)(id attr))equalTo;</span><br><span class="line">- (MASConstraint * (^)(id attr))greaterThanOrEqualTo;</span><br><span class="line">- (MASConstraint * (^)(id attr))lessThanOrEqualTo;</span><br></pre></td></tr></table></figure>
+<p>###分析:</p>
+<ul>
+<li>这三个方法是在 MASViewConstraint 的父类, MASConstraint 中定义的.MASConstraint 是一个抽象类, 很多的方法都必须在子类中覆写的. Masonry 中有两个 MASConstraint 的子类,分别是 MASViewConstraint 和 MASCompositeConstraint. 后者是一些约束的集合. </li>
+</ul>
+<p>先来看一下这三个方法是怎么实现的:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// MASConstraint.m</span><br><span class="line"></span><br><span class="line">- (MASConstraint * (^)(id))equalTo &#123;</span><br><span class="line">    return ^id(id attribute) &#123;</span><br><span class="line">        return self.equalToWithRelation(attribute, NSLayoutRelationEqual);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>该方法会执行`self.equalToWithRelation`, 这个方法是定义在子类中的, 父类没有提供这个方法的具体实现.
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (MASConstraint * (^)(id, NSLayoutRelation))equalToWithRelation &#123; MASMethodNotImplemented(); &#125;</span><br></pre></td></tr></table></figure>
+<p>因为我们为 equalTo 提供了参数 attribute 和布局关系 NSLayoutRelationEqual, 这两个参数会传递到 equalToWithRelation中,设置 constraint 的布局关系和 secondViewAttribute 属性, 为 maker 的 install 做准备.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">- (MASConstraint * (^)(id, NSLayoutRelation))equalToWithRelation &#123;</span><br><span class="line">    return ^id(id attribute, NSLayoutRelation relation) &#123;</span><br><span class="line">        if ([attribute isKindOfClass:NSArray.class]) &#123; ... &#125; </span><br><span class="line">        else &#123;</span><br><span class="line">            ...</span><br><span class="line">            self.layoutRelation = relation;</span><br><span class="line">            self.secondViewAttribute = attribute;</span><br><span class="line">            return self;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>注意:`setSecondViewAttribute:`方法, 它并不只是一个简单的 setter 方法, 它会根据你传入的值的种类赋值
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// MASConstraintMaker.m</span><br><span class="line"></span><br><span class="line">- (void)setSecondViewAttribute:(id)secondViewAttribute &#123;</span><br><span class="line">    if ([secondViewAttribute isKindOfClass:NSValue.class]) &#123;</span><br><span class="line">        [self setLayoutConstantWithValue:secondViewAttribute];</span><br><span class="line">    &#125; else if ([secondViewAttribute isKindOfClass:MAS_VIEW.class]) &#123;</span><br><span class="line">        _secondViewAttribute = [[MASViewAttribute alloc] initWithView:secondViewAttribute layoutAttribute:self.firstViewAttribute.layoutAttribute];</span><br><span class="line">    &#125; else if ([secondViewAttribute isKindOfClass:MASViewAttribute.class]) &#123;</span><br><span class="line">        _secondViewAttribute = secondViewAttribute;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        NSAssert(NO, @&quot;attempting to add unsupported attribute: %@&quot;, secondViewAttribute);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>第一种情况对应的就是:<br>  <code>make.left.equalTo(@40);</code>传入 NSValue 的时,会直接设置 constraint 的 offset, centerOffset, sizeOffset, 或者 insets</p>
 </li>
-<li><p>2，添加VPN地址、VPN帐号和VPN密码；</p>
+<li><p>第二种情况一般会直接传入一个视图:<br>  <code>make.left.equalTo(view);</code>这时,就会初始化一个 layoutAttribute 属性与 firstViewArribute 相同的 MASViewAttribute, 上面的代码就会使视图与 view 左对齐.</p>
 </li>
-<li><p>3，点击存储，打开VPN开关，看到手机顶部显示有VPN字样就代表连上啦。</p>
+<li><p>第三种情况会传入一个视图的MASViewAttribute:<br>  <code>make.left.equalTo(view.mas_right);</code>使用这种方法时,一般是因为约束的方向不同,这行代码会使视图的左侧与view的右侧对其</p>
+<p>  上面我们完成了对一个约束的配置,然后可以使用相同的语法完成对一个视图上所有约束进行配置, 最后到了install方法</p>
 </li>
 </ul>
-<h3 id="Android手机VPN设置"><a href="#Android手机VPN设置" class="headerlink" title="Android手机VPN设置"></a>Android手机VPN设置</h3><ul>
-<li><p>1，点击设置-更多；</p>
+<p>###5.)Install MASConstraintMaker</p>
+<p>在<code>mas_makeConstraints:</code>方法的最后会调用<code>[constraintMaker install]</code>方法设置所有存储在 self.constraints 数组中的所有约束.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)install &#123;</span><br><span class="line">    if (self.removeExisting) &#123;</span><br><span class="line">        NSArray *installedConstraints = [MASViewConstraint installedConstraintsForView:self.view];</span><br><span class="line">        for (MASConstraint *constraint in installedConstraints) &#123;</span><br><span class="line">            [constraint uninstall];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NSArray *constraints = self.constraints.copy;</span><br><span class="line">    for (MASConstraint *constraint in constraints) &#123;</span><br><span class="line">        constraint.updateExisting = self.updateExisting;</span><br><span class="line">        [constraint install];</span><br><span class="line">    &#125;</span><br><span class="line">    [self.constraints removeAllObjects];</span><br><span class="line">    return constraints;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法会先判断当前的视图的约束是否应该要被 uninstall,如果我们调用 mas_remakeConstraints: 方法, 视图中原啦的约束就会全部被 uninstall.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block &#123;</span><br><span class="line">    self.translatesAutoresizingMaskIntoConstraints = NO;</span><br><span class="line">    MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];</span><br><span class="line">    constraintMaker.removeExisting = YES;</span><br><span class="line">    block(constraintMaker);</span><br><span class="line">    return [constraintMaker install];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后遍历 constraints 数组, 调用 install 方法.</p>
+<h3 id="MASViewConstraint-install"><a href="#MASViewConstraint-install" class="headerlink" title="MASViewConstraint install"></a>MASViewConstraint install</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">- (void)install &#123;</span><br><span class="line">    if (self.hasBeenInstalled) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    MAS_VIEW *firstLayoutItem = self.firstViewAttribute.item;</span><br><span class="line">    NSLayoutAttribute firstLayoutAttribute = self.firstViewAttribute.layoutAttribute;</span><br><span class="line">    MAS_VIEW *secondLayoutItem = self.secondViewAttribute.item;</span><br><span class="line">    NSLayoutAttribute secondLayoutAttribute = self.secondViewAttribute.layoutAttribute;</span><br><span class="line"></span><br><span class="line">    // alignment attributes must have a secondViewAttribute</span><br><span class="line">    // therefore we assume that is refering to superview</span><br><span class="line">    // eg make.left.equalTo(@10)</span><br><span class="line">    if (!self.firstViewAttribute.isSizeAttribute &amp;&amp; !self.secondViewAttribute) &#123;</span><br><span class="line">        secondLayoutItem = self.firstViewAttribute.view.superview;</span><br><span class="line">        secondLayoutAttribute = firstLayoutAttribute;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    MASLayoutConstraint *layoutConstraint</span><br><span class="line">        = [MASLayoutConstraint constraintWithItem:firstLayoutItem</span><br><span class="line">                                        attribute:firstLayoutAttribute</span><br><span class="line">                                        relatedBy:self.layoutRelation</span><br><span class="line">                                           toItem:secondLayoutItem</span><br><span class="line">                                        attribute:secondLayoutAttribute</span><br><span class="line">                                       multiplier:self.layoutMultiplier</span><br><span class="line">                                         constant:self.layoutConstant];</span><br><span class="line">    </span><br><span class="line">    layoutConstraint.priority = self.layoutPriority;</span><br><span class="line">    layoutConstraint.mas_key = self.mas_key;</span><br><span class="line">    </span><br><span class="line">    if (self.secondViewAttribute.view) &#123;</span><br><span class="line">        MAS_VIEW *closestCommonSuperview = [self.firstViewAttribute.view mas_closestCommonSuperview:self.secondViewAttribute.view];</span><br><span class="line">        NSAssert(closestCommonSuperview,</span><br><span class="line">                 @&quot;couldn&apos;t find a common superview for %@ and %@&quot;,</span><br><span class="line">                 self.firstViewAttribute.view, self.secondViewAttribute.view);</span><br><span class="line">        self.installedView = closestCommonSuperview;</span><br><span class="line">    &#125; else if (self.firstViewAttribute.isSizeAttribute) &#123;</span><br><span class="line">        self.installedView = self.firstViewAttribute.view;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        self.installedView = self.firstViewAttribute.view.superview;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    MASLayoutConstraint *existingConstraint = nil;</span><br><span class="line">    if (self.updateExisting) &#123;</span><br><span class="line">        existingConstraint = [self layoutConstraintSimilarTo:layoutConstraint];</span><br><span class="line">    &#125;</span><br><span class="line">    if (existingConstraint) &#123;</span><br><span class="line">        // just update the constant</span><br><span class="line">        existingConstraint.constant = layoutConstraint.constant;</span><br><span class="line">        self.layoutConstraint = existingConstraint;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        [self.installedView addConstraint:layoutConstraint];</span><br><span class="line">        self.layoutConstraint = layoutConstraint;</span><br><span class="line">        [firstLayoutItem.mas_installedConstraints addObject:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>方法分析:</strong></p>
+<p>MASViewConstraint 的 install 方法是最后为当前视图添加约束方法,首先这个方法会先获取即将用于初始化 NSLayoutConstraint 的子类的几个属性.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line">	// 这里的item == view</span><br><span class="line">    MAS_VIEW *firstLayoutItem = self.firstViewAttribute.item;</span><br><span class="line">    NSLayoutAttribute firstLayoutAttribute = self.firstViewAttribute.layoutAttribute;</span><br><span class="line">    MAS_VIEW *secondLayoutItem = self.secondViewAttribute.item;</span><br><span class="line">    NSLayoutAttribute secondLayoutAttribute = self.secondViewAttribute.layoutAttribute;</span><br></pre></td></tr></table></figure>
+<p>Masonry 之后会判断当前即将添加的约束是否是 size 类型的约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">if (!self.firstViewAttribute.isSizeAttribute &amp;&amp; !self.secondViewAttribute) &#123;</span><br><span class="line">   secondLayoutItem = firstLayoutItem.superview;</span><br><span class="line">   secondLayoutAttribute = firstLayoutAttribute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不是 size 类型并且没有提供第二个 viewAttribute,会自动将约束添加到 superview 上.<br><code>make.left.equalTo(@10);</code>等价于<code>make.left.equalTo(superView.mas_left).with.offset(10);</code></p>
+<pre><code>然后就会初始化 NSLayoutConstraint 的子类 MASLayoutConstraint:
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">MASLayoutConstraint *layoutConstraint</span><br><span class="line">   = [MASLayoutConstraint constraintWithItem:firstLayoutItem</span><br><span class="line">                                   attribute:firstLayoutAttribute</span><br><span class="line">                                   relatedBy:self.layoutRelation</span><br><span class="line">                                      toItem:secondLayoutItem</span><br><span class="line">                                   attribute:secondLayoutAttribute</span><br><span class="line">                                  multiplier:self.layoutMultiplier</span><br><span class="line">                                    constant:self.layoutConstant];</span><br><span class="line">layoutConstraint.priority = self.layoutPriority;</span><br></pre></td></tr></table></figure>
+<p>然后会寻找 firstLayoutItem 和 secondLayoutItem 两个视图的公共 superview</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// View+MASAdditions.m</span><br><span class="line"></span><br><span class="line">- (instancetype)mas_closestCommonSuperview:(MAS_VIEW *)view &#123;</span><br><span class="line">    MAS_VIEW *closestCommonSuperview = nil;</span><br><span class="line"></span><br><span class="line">    MAS_VIEW *secondViewSuperview = view;</span><br><span class="line">    while (!closestCommonSuperview &amp;&amp; secondViewSuperview) &#123;</span><br><span class="line">        MAS_VIEW *firstViewSuperview = self;</span><br><span class="line">        while (!closestCommonSuperview &amp;&amp; firstViewSuperview) &#123;</span><br><span class="line">            if (secondViewSuperview == firstViewSuperview) &#123;</span><br><span class="line">                closestCommonSuperview = secondViewSuperview;</span><br><span class="line">            &#125;</span><br><span class="line">            firstViewSuperview = firstViewSuperview.superview;</span><br><span class="line">        &#125;</span><br><span class="line">        secondViewSuperview = secondViewSuperview.superview;</span><br><span class="line">    &#125;</span><br><span class="line">    return closestCommonSuperview;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果update当前的约束就会找到原来的约束,替换为新的约束.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *))block &#123;</span><br><span class="line">    self.translatesAutoresizingMaskIntoConstraints = NO;</span><br><span class="line">    MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];</span><br><span class="line">    constraintMaker.updateExisting = YES;</span><br><span class="line">    block(constraintMaker);</span><br><span class="line">    return [constraintMaker install];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">MASLayoutConstraint *existingConstraint = nil;</span><br><span class="line">if (self.updateExisting) &#123;</span><br><span class="line">   existingConstraint = [self layoutConstraintSimilarTo:layoutConstraint];</span><br><span class="line">&#125;</span><br><span class="line">if (existingConstraint) &#123;</span><br><span class="line">   // just update the constant</span><br><span class="line">   existingConstraint.constant = layoutConstraint.constant;</span><br><span class="line">   self.layoutConstraint = existingConstraint;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">   [self.installedView addConstraint:layoutConstraint];</span><br><span class="line">   self.layoutConstraint = layoutConstraint;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">[firstLayoutItem.mas_installedConstraints addObject:self];</span><br></pre></td></tr></table></figure>
+<p>如果原来的 view 中不存在可以update的约束,或者没有调用 mas_updateConstraint: 方法, 那么就会在上一步寻找到的 installedView (公共父view)上面添加约束.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[self.installedView addConstraint:layoutConstraint];</span><br></pre></td></tr></table></figure>
+<h3 id="6-其他"><a href="#6-其他" class="headerlink" title="6.)其他"></a>6.)其他</h3><p>make.left.equal(view).with.offset(30)</p>
+<p>有时候为了使代码更加的易懂.会使与 with , and等连接语句,这两个方法都会直接返回 MASConstraint, 方法本身不做任何的修改.</p>
+<p>而 offset 方法其实是修改 layoutConstraint 中的常量, self.layoutConstant 在初始化时会被设置为 0, 我们可以通过修改 offset 属性来改变它.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">- (void)setOffset:(CGFloat)offset &#123;</span><br><span class="line">    self.layoutConstant = offset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="MASCompositeConstraint"><a href="#MASCompositeConstraint" class="headerlink" title="MASCompositeConstraint"></a>MASCompositeConstraint</h2><p>MASCompositeConstraint 是一些 MASConstraint 的集合,它可以同时为一个视图来添加多个约束.通过 make 直接调用 edges size center 时,会产生一个 MASCompositeConstraint 的实例, 这个实例会初始化所有对应的单独的约束.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// MASConstraintMaker.m</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)edges &#123;</span><br><span class="line">    return [self addConstraintWithAttributes:MASAttributeTop | MASAttributeLeft | MASAttributeRight | MASAttributeBottom];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)size &#123;</span><br><span class="line">    return [self addConstraintWithAttributes:MASAttributeWidth | MASAttributeHeight];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)center &#123;</span><br><span class="line">    return [self addConstraintWithAttributes:MASAttributeCenterX | MASAttributeCenterY];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这些属性都会调用 addConstraintWithAttributes: 方法,生成多个属于 MASCompositeConstraint 的实例.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// MASConstraintMaker.m</span><br><span class="line"></span><br><span class="line">NSMutableArray *children = [NSMutableArray arrayWithCapacity:attributes.count];</span><br><span class="line">    </span><br><span class="line">for (MASViewAttribute *a in attributes) &#123;</span><br><span class="line">   [children addObject:[[MASViewConstraint alloc] initWithFirstViewAttribute:a]];</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">MASCompositeConstraint *constraint = [[MASCompositeConstraint alloc] initWithChildren:children];</span><br><span class="line">constraint.delegate = self;</span><br><span class="line">[self.constraints addObject:constraint];</span><br><span class="line">return constraint;</span><br></pre></td></tr></table></figure>
+<h2 id="mas-equalTo"><a href="#mas-equalTo" class="headerlink" title="mas_equalTo"></a>mas_equalTo</h2><p>这个宏将 C 和 Objective-C语言中的一些基本数据结构比如说 double CGPointCGSize 这些值用 NSValue 进行包装.</p>
+<p>##总结:<br>Masonry 是如何为视图添加约束的?</p>
+<ul>
+<li><p>Masonry使用分类的方式为 UIKit 添加一个方法 mas_makeConstraint,这个方法接受了一个 block, 这个 block 有一个 MASConstraintMaker 类型的参数,这个maker会持有一个约束的数组, 这里保存着所有将被加入到视图中的约束.</p>
 </li>
-<li><p>2，点击VPN，选择右上角的加号添加VPN；</p>
+<li><p>我们通过链式的语法配置 maker, 设置它的 left right 等属性, 比如说 make.left.equalTo(view),其实这个 left equalTo还有像 with offset 之类的方法都会返回一个 MASConstraint 的实例, 所以在这里才可以用链式的语法.</p>
 </li>
-<li><p>3，添加VPN地址、VPN帐号和VPN密码；名称随便填，服务器地址就是在VPN所找到的服务器主机名或者IP地址，填好后点保存；点击刚刚保存的VPN，弹出菜单，填写用户名和密码，勾选保存账户信息，点击连接；</p>
-</li>
-<li><p>4，左上角出现一个钥匙标记也表明vpn连接成功了，点击刚刚的vpn账号可以随时断开连接，长按则可以修改刚刚的设置。</p>
+<li><p>在配置结束后, 首先会调用 maker 的 install 方法, 而这个 maker的 install 方法会遍历其持有的约束数组, 对其中的每一个约束发送 install 消息. 在这里就会使用到在上一步中配置的属性,初始化 NSLayoutConstraint 的子类 MASLayoutConstraint并添加到合适的视图上.</p>
 </li>
 </ul>
 
@@ -226,7 +291,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Quote</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
         		</li>
       		
 		</ul>
@@ -282,7 +351,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2014/08/19/VPN/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2017/06/04/Masonry-源码学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,15 +365,20 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2014/08/22/UIButton/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/20/项目优化/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          UIButton
+          项目优化
         
       </div>
     </a>
   
+  
+    <a href="/2016/08/24/React-Native集成到现有项目问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">React Native集成到现有项目问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -332,7 +406,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="VPN" ></div> 
+  <div id="SOHUCS" sid="Masonry-源码学习" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
