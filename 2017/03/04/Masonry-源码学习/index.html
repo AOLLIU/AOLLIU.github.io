@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="//aolliu.win">
   <title>Masonry 源码学习 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(">
+  <meta name="description" content="1.介绍:masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(sel">
 <meta name="keywords" content="iOS开发,OC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Masonry 源码学习">
 <meta property="og:url" content="//aolliu.win/2017/03/04/Masonry-源码学习/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@1">
-<meta property="og:updated_time" content="2018-06-04T09:10:50.593Z">
+<meta property="og:description" content="1.介绍:masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@150)">
+<meta property="og:updated_time" content="2018-06-04T09:13:29.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Masonry 源码学习">
-<meta name="twitter:description" content="##1.介绍: masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@1">
+<meta name="twitter:description" content="1.介绍:masonry 是用于自动布局的第三方框架 123456[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &amp;#123;    make.centerX.equalTo(self.view);	make.top.equalTo(self.view).offset(20);	make.width.equalTo(@150)">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -178,47 +178,37 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##1.介绍:</p>
-<p>masonry 是用于自动布局的第三方框架</p>
+        <h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍:"></a>1.介绍:</h2><p>masonry 是用于自动布局的第三方框架</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[_imageView mas_makeConstraints:^(MASConstraintMaker *make) &#123;</span><br><span class="line">    make.centerX.equalTo(self.view);</span><br><span class="line">	make.top.equalTo(self.view).offset(20);</span><br><span class="line">	make.width.equalTo(@150);</span><br><span class="line">	make.height.equalTo(@150);</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
-<p>##2.源码解析:</p>
-<h3 id="1-mas-makeConstraints"><a href="#1-mas-makeConstraints" class="headerlink" title="1.)mas_makeConstraints:"></a>1.)<code>mas_makeConstraints:</code></h3><pre><code>masonry使用分类的方式为 UIKit 添加一个方法`mas_makeConstraint`, 这个方法接受了一个 block, 这个 block 有一个`MASConstraintMaker`类型的参数,
+<h2 id="2-源码解析"><a href="#2-源码解析" class="headerlink" title="2.源码解析:"></a>2.源码解析:</h2><h3 id="1-mas-makeConstraints"><a href="#1-mas-makeConstraints" class="headerlink" title="1.)mas_makeConstraints:"></a>1.)<code>mas_makeConstraints:</code></h3><pre><code>masonry使用分类的方式为 UIKit 添加一个方法`mas_makeConstraint`, 这个方法接受了一个 block, 这个 block 有一个`MASConstraintMaker`类型的参数,
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//添加约束</span><br><span class="line">- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *make))block;</span><br><span class="line">//更新约束</span><br><span class="line">- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *make))block;</span><br><span class="line">//重置约束</span><br><span class="line">- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="2-Constraint-Maker-Block"><a href="#2-Constraint-Maker-Block" class="headerlink" title="2.)Constraint Maker Block"></a>2.)Constraint Maker Block</h3><p>以<code>mas_makeConstraints</code>为例分析Masonry内部是如何为视图添加约束的,方法的实现如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *))block &#123;</span><br><span class="line">    self.translatesAutoresizingMaskIntoConstraints = NO;</span><br><span class="line">    MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];</span><br><span class="line">    block(constraintMaker);</span><br><span class="line">    return [constraintMaker install];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###分析:</p>
-<ul>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析:"></a>分析:</h3><ul>
 <li>1.Masonry 是封装的苹果的 AutoLayout 框架, 我们要在为视图添加约束前将<code>translatesAutoresizingMaskIntoConstraints</code>设置为NO. 如果这个属性没有设置为NO, 那么约束不会被成功添加.</li>
 <li>2.初始化一个MASConstraintMaker</li>
 <li>3.将maker传入block作为属性</li>
 <li>4.调用maker的install方法为视图添加约束</li>
 </ul>
-<p>##3.) MASConstraintMaker</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (id)initWithView:(MAS_VIEW *)view &#123;</span><br><span class="line">    self = [super init];</span><br><span class="line">    if (!self) return nil;</span><br><span class="line">    </span><br><span class="line">    self.view = view;</span><br><span class="line">    self.constraints = NSMutableArray.new;</span><br><span class="line">    </span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>####分析:</p>
-<ul>
+<h2 id="3-MASConstraintMaker"><a href="#3-MASConstraintMaker" class="headerlink" title="3.) MASConstraintMaker"></a>3.) MASConstraintMaker</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (id)initWithView:(MAS_VIEW *)view &#123;</span><br><span class="line">    self = [super init];</span><br><span class="line">    if (!self) return nil;</span><br><span class="line">    </span><br><span class="line">    self.view = view;</span><br><span class="line">    self.constraints = NSMutableArray.new;</span><br><span class="line">    </span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="分析-1"><a href="#分析-1" class="headerlink" title="分析:"></a>分析:</h4><ul>
 <li>1.在初始化<code>MASConstraintMaker</code>的实例时, 它会持有一个对应 view 的弱引用, 并初始化一个<code>constraints</code>的空可变数组用来保存之后配置属性时持有所有的约束.</li>
 <li><ol>
 <li>maker持有一个空可变数组用来之后配置属性时持有所有的约束,maker提供了工厂方法创建MASConstraint.所有的约束(MASConstraint)都会被保存到约束数组中,最后install时将约束添加到视图上.</li>
 </ol>
 </li>
 </ul>
-<p>##4.) Setup MASConstraintMaker</p>
-<p>调用<code>block(constraintMaker)</code>时, 是对<code>constraintMaker</code>进行配置.</p>
+<h2 id="4-Setup-MASConstraintMaker"><a href="#4-Setup-MASConstraintMaker" class="headerlink" title="4.) Setup MASConstraintMaker"></a>4.) Setup MASConstraintMaker</h2><p>调用<code>block(constraintMaker)</code>时, 是对<code>constraintMaker</code>进行配置.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">make.centerX.equalTo(self.view);</span><br><span class="line">make.top.equalTo(self.view).offset(20);</span><br><span class="line">make.width.equalTo(@150);</span><br><span class="line">make.height.equalTo(@150);</span><br></pre></td></tr></table></figure>
-<p>###make.left</p>
-<p>访问make的left,right,width,height等属性时, 会调用<code>constraint:addConstraintWithLayoutAttribute:</code>方法.</p>
+<h3 id="make-left"><a href="#make-left" class="headerlink" title="make.left"></a>make.left</h3><p>访问make的left,right,width,height等属性时, 会调用<code>constraint:addConstraintWithLayoutAttribute:</code>方法.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">// MASViewConstraint.m</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)left &#123;</span><br><span class="line">    return [self addConstraintWithLayoutAttribute:NSLayoutAttributeLeft];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute &#123;</span><br><span class="line">    return [self constraint:nil addConstraintWithLayoutAttribute:layoutAttribute];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (MASConstraint *)constraint:(MASConstraint *)constraint addConstraintWithLayoutAttribute:(NSLayoutAttribute)layoutAttribute &#123;</span><br><span class="line">    MASViewAttribute *viewAttribute = [[MASViewAttribute alloc] initWithView:self.view layoutAttribute:layoutAttribute];</span><br><span class="line">    MASViewConstraint *newConstraint = [[MASViewConstraint alloc] initWithFirstViewAttribute:viewAttribute];</span><br><span class="line">    if ([constraint isKindOfClass:MASViewConstraint.class]) &#123; ... &#125;</span><br><span class="line">    if (!constraint) &#123;</span><br><span class="line">        newConstraint.delegate = self;</span><br><span class="line">        [self.constraints addObject:newConstraint];</span><br><span class="line">    &#125;</span><br><span class="line">    return newConstraint;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>####分析:</p>
-<ul>
+<h4 id="分析-2"><a href="#分析-2" class="headerlink" title="分析:"></a>分析:</h4><ul>
 <li>上列方法最终会到<code>constraint:addConstraintWithLayoutAttribute:</code>这一方法,因为在这个类中传入该方法的第一个参数一直为nil,所以省略的代码不会执行.这部分代码会先以布局属性 left 和视图本身初始化一个 MASViewAttribute 的实例,之后使用 MASViewAttribute 的实例初始化一个 constraint 并设置它的代理,加入数组,然后返回.这是我们输入 make.left 进行的全部工作, 它会返回一个 MASConstraint, 用于之后的继续配置.</li>
 </ul>
-<p>###make.left.equalTo(@20)</p>
-<p>在 make.left 返回 MASConstraint 之后, 我们会继续在这个链式的语法中调用下一个方法来指定约束的关系.</p>
+<h3 id="make-left-equalTo-20"><a href="#make-left-equalTo-20" class="headerlink" title="make.left.equalTo(@20)"></a>make.left.equalTo(@20)</h3><p>在 make.left 返回 MASConstraint 之后, 我们会继续在这个链式的语法中调用下一个方法来指定约束的关系.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (MASConstraint * (^)(id attr))equalTo;</span><br><span class="line">- (MASConstraint * (^)(id attr))greaterThanOrEqualTo;</span><br><span class="line">- (MASConstraint * (^)(id attr))lessThanOrEqualTo;</span><br></pre></td></tr></table></figure>
-<p>###分析:</p>
-<ul>
+<h3 id="分析-3"><a href="#分析-3" class="headerlink" title="分析:"></a>分析:</h3><ul>
 <li>这三个方法是在 MASViewConstraint 的父类, MASConstraint 中定义的.MASConstraint 是一个抽象类, 很多的方法都必须在子类中覆写的. Masonry 中有两个 MASConstraint 的子类,分别是 MASViewConstraint 和 MASCompositeConstraint. 后者是一些约束的集合. </li>
 </ul>
 <p>先来看一下这三个方法是怎么实现的:</p>
@@ -238,8 +228,7 @@ var _hmt = _hmt || [];
 <p>  上面我们完成了对一个约束的配置,然后可以使用相同的语法完成对一个视图上所有约束进行配置, 最后到了install方法</p>
 </li>
 </ul>
-<p>###5.)Install MASConstraintMaker</p>
-<p>在<code>mas_makeConstraints:</code>方法的最后会调用<code>[constraintMaker install]</code>方法设置所有存储在 self.constraints 数组中的所有约束.</p>
+<h3 id="5-Install-MASConstraintMaker"><a href="#5-Install-MASConstraintMaker" class="headerlink" title="5.)Install MASConstraintMaker"></a>5.)Install MASConstraintMaker</h3><p>在<code>mas_makeConstraints:</code>方法的最后会调用<code>[constraintMaker install]</code>方法设置所有存储在 self.constraints 数组中的所有约束.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)install &#123;</span><br><span class="line">    if (self.removeExisting) &#123;</span><br><span class="line">        NSArray *installedConstraints = [MASViewConstraint installedConstraintsForView:self.view];</span><br><span class="line">        for (MASConstraint *constraint in installedConstraints) &#123;</span><br><span class="line">            [constraint uninstall];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    NSArray *constraints = self.constraints.copy;</span><br><span class="line">    for (MASConstraint *constraint in constraints) &#123;</span><br><span class="line">        constraint.updateExisting = self.updateExisting;</span><br><span class="line">        [constraint install];</span><br><span class="line">    &#125;</span><br><span class="line">    [self.constraints removeAllObjects];</span><br><span class="line">    return constraints;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这个方法会先判断当前的视图的约束是否应该要被 uninstall,如果我们调用 mas_remakeConstraints: 方法, 视图中原啦的约束就会全部被 uninstall.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block &#123;</span><br><span class="line">    self.translatesAutoresizingMaskIntoConstraints = NO;</span><br><span class="line">    MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];</span><br><span class="line">    constraintMaker.removeExisting = YES;</span><br><span class="line">    block(constraintMaker);</span><br><span class="line">    return [constraintMaker install];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -269,7 +258,7 @@ var _hmt = _hmt || [];
 <p>这些属性都会调用 addConstraintWithAttributes: 方法,生成多个属于 MASCompositeConstraint 的实例.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// MASConstraintMaker.m</span><br><span class="line"></span><br><span class="line">NSMutableArray *children = [NSMutableArray arrayWithCapacity:attributes.count];</span><br><span class="line">    </span><br><span class="line">for (MASViewAttribute *a in attributes) &#123;</span><br><span class="line">   [children addObject:[[MASViewConstraint alloc] initWithFirstViewAttribute:a]];</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">MASCompositeConstraint *constraint = [[MASCompositeConstraint alloc] initWithChildren:children];</span><br><span class="line">constraint.delegate = self;</span><br><span class="line">[self.constraints addObject:constraint];</span><br><span class="line">return constraint;</span><br></pre></td></tr></table></figure>
 <h2 id="mas-equalTo"><a href="#mas-equalTo" class="headerlink" title="mas_equalTo"></a>mas_equalTo</h2><p>这个宏将 C 和 Objective-C语言中的一些基本数据结构比如说 double CGPointCGSize 这些值用 NSValue 进行包装.</p>
-<p>##总结:<br>Masonry 是如何为视图添加约束的?</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h2><p>Masonry 是如何为视图添加约束的?</p>
 <ul>
 <li><p>Masonry使用分类的方式为 UIKit 添加一个方法 mas_makeConstraint,这个方法接受了一个 block, 这个 block 有一个 MASConstraintMaker 类型的参数,这个maker会持有一个约束的数组, 这里保存着所有将被加入到视图中的约束.</p>
 </li>
@@ -528,11 +517,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
+                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">感悟</a>
+                <a href="javascript:void(0)" class="js-tag color4">iOS</a>
               </li>
             
             <div class="clearfix"></div>
