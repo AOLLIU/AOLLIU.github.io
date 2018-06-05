@@ -15,15 +15,15 @@
 <meta property="og:url" content="//aolliu.win/2016/04/15/深入Runtime/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
 <meta property="og:description" content="1.简介 runtime 是一个运行时库，主要使用C和汇编写的库，为C添加了面向对象的能力并创造了Objective-C，并且拥有消息分发，消息转发等功能。开发者在编码过程中，可以给任意一个对象发送消息，在编译阶段只是确定了要向接收者发送这条消息，而接受者将要如何响应和处理这条消息，那就要看运行时来决定了。  C语言中，在编译期，函数的调用就会决定调用哪个函数。而OC的函数，属于动态调用过程，在编">
-<meta property="og:image" content="//aolliu.win/2016/04/15/深入Runtime/quiver-image-url/9B5D11C3B8BDDCB30B500863CA83C433.png%20=690x671">
-<meta property="og:image" content="//aolliu.win/2016/04/15/深入Runtime/quiver-image-url/6E3218A0F3E630CA3E3F98C4431C1E70.png%20=649x236">
-<meta property="og:image" content="//aolliu.win/2016/04/15/深入Runtime/quiver-image-url/109D6F7E6F9B8B334DC642B526A3F166.png%20=656x236">
-<meta property="og:image" content="//aolliu.win/2016/04/15/深入Runtime/quiver-image-url/1BEB7E92D67B4F812A171C55F5E792EA.png%20=670x242">
-<meta property="og:updated_time" content="2018-06-05T11:10:24.686Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1494773-1dfa3b3b1d8d200b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1494773-c1a302bc1ad030ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1494773-0836d46e6097ca1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1494773-f0f19db342090f54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-05T11:18:05.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入Runtime">
 <meta name="twitter:description" content="1.简介 runtime 是一个运行时库，主要使用C和汇编写的库，为C添加了面向对象的能力并创造了Objective-C，并且拥有消息分发，消息转发等功能。开发者在编码过程中，可以给任意一个对象发送消息，在编译阶段只是确定了要向接收者发送这条消息，而接受者将要如何响应和处理这条消息，那就要看运行时来决定了。  C语言中，在编译期，函数的调用就会决定调用哪个函数。而OC的函数，属于动态调用过程，在编">
-<meta name="twitter:image" content="//aolliu.win/2016/04/15/深入Runtime/quiver-image-url/9B5D11C3B8BDDCB30B500863CA83C433.png%20=690x671">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1494773-1dfa3b3b1d8d200b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -212,7 +212,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p><strong>下图描述了对象,类,元类的关系</strong></p>
-<p><img src="quiver-image-url/9B5D11C3B8BDDCB30B500863CA83C433.png =690x671" alt="Snip20180524_2.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1494773-1dfa3b3b1d8d200b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20180524_2.png"></p>
 <p><strong>分析:</strong></p>
 <ul>
 <li>1.Root class (class)其实就是NSObject，NSObject是没有超类的，所以Root class(class)的superclass指向nil。</li>
@@ -312,8 +312,7 @@ var _hmt = _hmt || [];
 <li><p><strong>注意</strong>:<br>Swizzling应该总在+load中执行,Objective-C在运行时会自动调用类的两个方法+load和+initialize。+load会在类初始加载时调用， +initialize方法是以懒加载的方式被调用的，如果程序一直没有给某个类或它的子类发送消息，那么这个类的 +initialize方法是永远不会被调用的。所以Swizzling要是写在+initialize方法中，是有可能永远都不被执行。更多关于load,initialize可以看<a href="http://aolliu.win/2015/09/01/load%E6%96%B9%E6%B3%95%E5%92%8Cinitialize%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">这里</a></p>
 </li>
 </ul>
-<p>####Method Swizzling使用场景</p>
-<ul>
+<h4 id="Method-Swizzling使用场景"><a href="#Method-Swizzling使用场景" class="headerlink" title="Method Swizzling使用场景"></a>Method Swizzling使用场景</h4><ul>
 <li>1.实现AOP</li>
 <li>2.实现埋点统计</li>
 <li>3.实现异常保护</li>
@@ -335,15 +334,15 @@ var _hmt = _hmt || [];
 <li>4.对象需要创建一个NSInvocation对象，把消息调用的全部细节封装进去，包括selector, target, arguments 等参数，还能够对返回结果进行处理。</li>
 </ul>
 <p><strong>2,)AOP原理</strong><br>AOP的多数操作就是在forwardInvocation中完成的。一般会分为2个阶段，一个是Intercepter注册阶段，一个是Intercepter执行阶段。</p>
-<h4 id="2-1-Intercepter注册阶段"><a href="#2-1-Intercepter注册阶段" class="headerlink" title="2-1). Intercepter注册阶段"></a>2-1). Intercepter注册阶段</h4><p><img src="quiver-image-url/6E3218A0F3E630CA3E3F98C4431C1E70.png =649x236" alt="Snip20180605_6.png"></p>
+<h4 id="2-1-Intercepter注册阶段"><a href="#2-1-Intercepter注册阶段" class="headerlink" title="2-1). Intercepter注册阶段"></a>2-1). Intercepter注册阶段</h4><p><img src="https://upload-images.jianshu.io/upload_images/1494773-c1a302bc1ad030ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20180605_6.png"></p>
 <ul>
 <li>首先会把类里面的某个要切片的方法的IMP加入到Aspect中，类方法里面如果有forwardingTargetForSelector:的IMP，也要加入到Aspect中。</li>
 </ul>
-<p><img src="quiver-image-url/109D6F7E6F9B8B334DC642B526A3F166.png =656x236" alt="Snip20180605_7.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1494773-0836d46e6097ca1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20180605_7.png"></p>
 <ul>
 <li>然后对类的切片方法和forwardingTargetForSelector:的IMP进行替换。两者的IMP相应的替换为objc_msgForward()方法和hook过的forwardingTargetForSelector:。这样主要的Intercepter注册就完成了。</li>
 </ul>
-<h4 id="2-2-Intercepter执行"><a href="#2-2-Intercepter执行" class="headerlink" title="2-2).Intercepter执行"></a>2-2).Intercepter执行</h4><p><img src="quiver-image-url/1BEB7E92D67B4F812A171C55F5E792EA.png =670x242" alt="Snip20180605_8.png"></p>
+<h4 id="2-2-Intercepter执行"><a href="#2-2-Intercepter执行" class="headerlink" title="2-2).Intercepter执行"></a>2-2).Intercepter执行</h4><p><img src="https://upload-images.jianshu.io/upload_images/1494773-f0f19db342090f54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Snip20180605_8.png"></p>
 <ul>
 <li><p>当执行func()方法的时候，会去查找它的IMP，现在它的IMP已经被我们替换为了objc_msgForward()方法，于是开始查找备援转发对象。</p>
 </li>
@@ -610,15 +609,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">web开发</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iOS开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">OC</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">web开发</a>
               </li>
              
               <li class="article-tag-list-item">
