@@ -809,6 +809,93 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-深入Runtime" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/15/深入Runtime/">深入Runtime</a>
+    </h1>
+  
+
+        
+        <a href="/2016/04/15/深入Runtime/" class="archive-article-date">
+  	<time datetime="2016-04-15T11:07:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h2><ul>
+<li><p>runtime 是一个运行时库，主要使用C和汇编写的库，为C添加了面向对象的能力并创造了Objective-C，并且拥有消息分发，消息转发等功能。开发者在编码过程中，可以给任意一个对象发送消息，在编译阶段只是确定了要向接收者发送这条消息，而接受者将要如何响应和处理这条消息，那就要看运行时来决定了。</p>
+</li>
+<li><p>C语言中，在编译期，函数的调用就会决定调用哪个函数。而OC的函数，属于动态调用过程，在编译期并不能决定真正调用哪个函数，只有在真正运行时才会根据函数的名称找到对应的函数来调用。</p>
+</li>
+<li><p>开发者只需要编写 OC 代码即可，Runtime系统自动在幕后把我们写的源代码在编译阶段转换成运行时代码，在运行时确定对应的数据结构和调用具体哪个方法</p>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2016/04/15/深入Runtime/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/04/15/深入Runtime/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-3DTouch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -876,106 +963,6 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/11/20/3DTouch/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-cocoapods安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/20/cocoapods安装/">cocoapods安装</a>
-    </h1>
-  
-
-        
-        <a href="/2015/09/20/cocoapods安装/" class="archive-article-date">
-  	<time datetime="2015-09-20T14:53:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-09-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git的安装"><a href="#git的安装" class="headerlink" title="git的安装"></a>git的安装</h1><p>安装cocoapods总会遇见问题,如何能够正确安装呢,请一步一步执行,就好了</p>
-<ul>
-<li><p>1.先升级Gem</p>
-<ul>
-<li>sudo gem update –system</li>
-</ul>
-</li>
-<li><p>2.切换cocoapods的数据源【先删除，再添加，查看】</p>
-<ul>
-<li>gem sources – remove <a href="https://rubygems.org/" target="_blank" rel="noopener">https://rubygems.org/</a></li>
-<li>gem sources -a <a href="https://ruby.taobao.org/" target="_blank" rel="noopener">https://ruby.taobao.org/</a></li>
-<li>gem sources -l</li>
-</ul>
-</li>
-<li><p>3.安装cocoapods</p>
-<ul>
-<li>sudo gem install cocoapods</li>
-<li>或者（如10.11系统）sudo gem install -n /usr/local/bin cocoapods</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2015/09/20/cocoapods安装/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/09/20/cocoapods安装/">展开全文 >></a>
         </p>
       
 
