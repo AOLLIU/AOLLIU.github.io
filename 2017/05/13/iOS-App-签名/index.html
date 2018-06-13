@@ -6,18 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//aolliu.win">
-  <title>Tag: iOS开发 | AOLLIU的博客</title>
+  <title>iOS App 签名 | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="河北理工大学10级,现就职于好奇心日报.">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,OC,Objective-C,swift,ReactNative,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AOLLIU的博客">
-<meta property="og:url" content="//aolliu.win/tags/iOS开发/page/2/index.html">
+  <meta name="description" content="简介:App签名其实是保证app是经过苹果允许的,并且避免被滥用的一套安装机制.苹果主要通过三个方面来做到对app的可控:   1.经过苹果允许才可以安装; 2.苹果后台注册过的设备才可以安装; 3.限制签名只能针对某一个具体的app;">
+<meta name="keywords" content="iOS开发,OC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS App 签名">
+<meta property="og:url" content="//aolliu.win/2017/05/13/iOS-App-签名/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="河北理工大学10级,现就职于好奇心日报.">
+<meta property="og:description" content="简介:App签名其实是保证app是经过苹果允许的,并且避免被滥用的一套安装机制.苹果主要通过三个方面来做到对app的可控:   1.经过苹果允许才可以安装; 2.苹果后台注册过的设备才可以安装; 3.限制签名只能针对某一个具体的app;">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1494773-253c098dedc860c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-06-13T09:04:49.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOLLIU的博客">
-<meta name="twitter:description" content="河北理工大学10级,现就职于好奇心日报.">
+<meta name="twitter:title" content="iOS App 签名">
+<meta name="twitter:description" content="简介:App签名其实是保证app是经过苹果允许的,并且避免被滥用的一套安装机制.苹果主要通过三个方面来做到对app的可控:   1.经过苹果允许才可以安装; 2.苹果后台注册过的设备才可以安装; 3.限制签名只能针对某一个具体的app;">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1494773-253c098dedc860c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -157,36 +160,51 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-iOS-App-签名" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/03/09/Webviewjavascript/" class="archive-article-date">
-  	<time datetime="2015-03-09T14:36:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-03-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/03/09/Webviewjavascript/">Webviewjavascript</a>
+    <h1 class="article-title" itemprop="name">
+      iOS App 签名
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/05/13/iOS-App-签名/" class="archive-article-date">
+  	<time datetime="2017-05-13T08:59:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介:"></a>简介:</h2><p>App签名其实是保证app是经过苹果允许的,并且避免被滥用的一套安装机制.苹果主要通过三个方面来做到对app的可控: </p>
+<ul>
+<li>1.经过苹果允许才可以安装;</li>
+<li>2.苹果后台注册过的设备才可以安装;</li>
+<li>3.限制签名只能针对某一个具体的app;</li>
+</ul>
+<a id="more"></a>
+<h2 id="图解"><a href="#图解" class="headerlink" title="图解:"></a>图解:</h2><p><img src="https://upload-images.jianshu.io/upload_images/1494773-253c098dedc860c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="签名"></p>
+<h2 id="原理解析及具体步骤"><a href="#原理解析及具体步骤" class="headerlink" title="原理解析及具体步骤:"></a>原理解析及具体步骤:</h2><ul>
+<li>1.在你的MAC开发机器上生成一对公私钥,这里称为公钥L,私钥L;具体的操作是在keychain里的’从证书颁发机构申请证书’,这里就生成了一对公私钥,保存的CertificatesigningRequest就是公钥,私钥保存在电脑里;</li>
+<li>2.苹果有自己固定的一对公私钥,私钥在苹果后台,公钥在每个iOS设备上,这里称为公钥A,私钥A;</li>
+<li>3.把公钥L传入到苹果后台,用苹果的私钥A去签名公钥L,得到一份数据包含公钥L及其签名,把这份数据称之为证书;具体的操作是把第一步保存的CertificatesigningRequest传入到苹果后台生成证书,并下载到本地,这是本地的第二个证书,第一个是第一步生成,第二个是这里下载,keychain会把这两个证书关联起来,因为他们的公私钥是对应的,在xcode选择下载回来的证书时,实际上会找到keychain里面对应的私钥L去签名,这里私钥L只有生成他的mac有,如果其他mac也要编译签名这个app怎么办?答案是把私钥L导出给其他mac用,在keychain里导出私钥L,就会生成.p12文件,其他mac打开就导入了这个私钥;</li>
+<li>4.在苹果后台申请AppID,配置好设备ID列表和APP可使用的权限,再加上第三步生成的证书,组成的数据使用私钥A签名,把数据和签名一起组成一个ProvisioningProfile文件,下载到本地MAC开发机;</li>
+<li>5.在开发时,编译完一个app后,用本地的私钥L对这个app进行签名,同时把第4步生成的Provisioning Profile文件打包进app里,文件名为embedded.mobileprovision,把App安装到手机上;这一步Xcode会通过第三步下载回来的证书(存着公钥L),在本地找到对应的私钥L(第一步生成的),用本地的私钥L去签名APP,并把Provisioning Profile文件命名为embedded.mobileprovison一起打包进去,这里对APP的签名数据保存为两部分,Mach-o可执行文件会把签名直接写入这个文件里,其他资源文件则保存在_codeSignature目录下;</li>
+<li>6.在安装时,iOS系统获得证书,通过系统内置的公钥A,去验证embedded.mobileprovison的数字签名是否正确,里面的证书签名也会再验证一遍;</li>
+<li>7.确保了embeeded.mobileprovison里面的数据都是苹果授权以后,就可以导出里面的数据,做各种验证,包括用公钥L验证APP签名,验证设备ID是否在ID列表上,APPID是否对应的上,权限开关是否和APP里面的entitlements对应等;</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,200 +220,124 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/01/05/内存5大区/" class="archive-article-date">
-  	<time datetime="2015-01-05T13:12:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/01/05/内存5大区/">内存5大区</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/12/20/数据库基本知识/" class="archive-article-date">
-  	<time datetime="2014-12-20T11:03:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-12-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/12/20/数据库基本知识/">数据库基本知识</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2017/05/13/iOS-App-签名/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/09/04/UITableView的几个重要属性/" class="archive-article-date">
-  	<time datetime="2014-09-04T02:56:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-04</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2017/07/20/项目优化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          项目优化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/04/Masonry-源码学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Masonry 源码学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/04/UITableView的几个重要属性/">UITableView的几个重要属性</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/08/22/UIButton/" class="archive-article-date">
-  	<time datetime="2014-08-22T11:35:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-08-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/08/22/UIButton/">UIButton</a>
-    </h1>
+  <div id="SOHUCS" sid="iOS-App-签名" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyt4xOYWD",
+        conf: "1a85383d13c05d83bfe247d265df0a1f"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/iOS开发/">&laquo; Prev</a><a class="page-number" href="/tags/iOS开发/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -419,9 +361,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
