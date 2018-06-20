@@ -488,6 +488,90 @@ var _hmt = _hmt || [];
 
 
   
+    <article id="post-Autorelease-Pool" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/15/Autorelease-Pool/">Autorelease Pool</a>
+    </h1>
+  
+
+        
+        <a href="/2017/04/15/Autorelease-Pool/" class="archive-article-date">
+  	<time datetime="2017-04-15T06:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Autorelase Pool 提供了一种可以允许你向一个对象延迟发送release消息的机制。当你想放弃一个对象的所有权，同时又不希望这个对象立即被释放掉（例如在一个方法中返回一个对象时），Autorelease Pool 的作用就显现出来了。</p>
+<p>所谓的延迟发送release消息指的是，当我们把一个对象标记为autorelease时:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString* str = [[[NSString alloc] initWithString:@&quot;hello&quot;] autorelease];</span><br></pre></td></tr></table></figure>
+<p>这个对象的 retainCount 会+1，但是并不会发生 release。当这段语句所处的 autoreleasepool 进行 drain 操作时，所有标记了 autorelease 的对象的 retainCount 会被 -1。即 release 消息的发送被延迟到 pool 释放的时候了。</p>
+<p>在 ARC 环境下，苹果引入了 <code>@autoreleasepool</code> 语法，不再需要手动调用 autorelease 和 drain 等方法。</p>
+        
+          <a class="article-more-a" href="/2017/04/15/Autorelease-Pool/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/04/15/Autorelease-Pool/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Masonry-源码学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -890,88 +974,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-React-Native学习笔记八" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/16/React-Native学习笔记八/">React Native学习笔记八</a>
-    </h1>
-  
-
-        
-        <a href="/2016/08/16/React-Native学习笔记八/" class="archive-article-date">
-  	<time datetime="2016-08-16T12:58:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在开发中TabBar应用及其广泛,那么在React Native中如何做呢,使用TabBarIOS,可以看到是iOS的,Android是不可以用的,随后封装一个既可以在iOS上运行,又能在安卓上运行的TabBar</p>
-<h2 id="一-TabBarIOS常见的属性"><a href="#一-TabBarIOS常见的属性" class="headerlink" title="一.TabBarIOS常见的属性"></a>一.TabBarIOS常见的属性</h2><ul>
-<li>1.View所有的属性都被继承</li>
-<li>2.<code>barTinColor</code> color 设置tabBar的背景颜色</li>
-<li>3.<code>tintColor</code> color 设置tabBar上被选中图标的颜色</li>
-<li>4.<code>translucent</code> bool 设置tabBar栏是不是半透明的效果</li>
-</ul>
-        
-          <a class="article-more-a" href="/2016/08/16/React-Native学习笔记八/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">跨平台开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/08/16/React-Native学习笔记八/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1065,15 +1067,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">web开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">iOS开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">OC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">web开发</a>
               </li>
              
               <li class="article-tag-list-item">

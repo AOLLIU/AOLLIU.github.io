@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//aolliu.win">
-  <title>好奇心日报适配方案 | AOLLIU的博客</title>
+  <title>Autorelease Pool | AOLLIU的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在项目中经常需要设置控件的大小,控件直接的间距,不可避免的要用到很多数字,数字多了项目就显得格外混乱,好奇心日报为了避免这类情况的发生,并方便多个多种机型的适配,我们在facebook开源出来的react Native中找到了其中的css解析文件，做了一些适应性修改，拿来用的.可以从好奇心日报iPad版的分屏(spli">
-<meta name="keywords" content="OC,iOS">
+  <meta name="description" content="Autorelase Pool 提供了一种可以允许你向一个对象延迟发送release消息的机制。当你想放弃一个对象的所有权，同时又不希望这个对象立即被释放掉（例如在一个方法中返回一个对象时），Autorelease Pool 的作用就显现出来了。 所谓的延迟发送release消息指的是，当我们把一个对象标记为autor">
+<meta name="keywords" content="iOS开发,OC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="好奇心日报适配方案">
-<meta property="og:url" content="//aolliu.win/2017/12/18/好奇心日报适配方案/index.html">
+<meta property="og:title" content="Autorelease Pool">
+<meta property="og:url" content="//aolliu.win/2017/04/15/Autorelease-Pool/index.html">
 <meta property="og:site_name" content="AOLLIU的博客">
-<meta property="og:description" content="在项目中经常需要设置控件的大小,控件直接的间距,不可避免的要用到很多数字,数字多了项目就显得格外混乱,好奇心日报为了避免这类情况的发生,并方便多个多种机型的适配,我们在facebook开源出来的react Native中找到了其中的css解析文件，做了一些适应性修改，拿来用的.可以从好奇心日报iPad版的分屏(split view &amp;amp; split over)适配实现中找到对应的信息. 在好">
-<meta property="og:updated_time" content="2017-12-18T08:39:52.000Z">
+<meta property="og:description" content="Autorelase Pool 提供了一种可以允许你向一个对象延迟发送release消息的机制。当你想放弃一个对象的所有权，同时又不希望这个对象立即被释放掉（例如在一个方法中返回一个对象时），Autorelease Pool 的作用就显现出来了。 所谓的延迟发送release消息指的是，当我们把一个对象标记为autorelease时: 1NSString* str = [[[NSString al">
+<meta property="og:updated_time" content="2018-06-20T06:47:48.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="好奇心日报适配方案">
-<meta name="twitter:description" content="在项目中经常需要设置控件的大小,控件直接的间距,不可避免的要用到很多数字,数字多了项目就显得格外混乱,好奇心日报为了避免这类情况的发生,并方便多个多种机型的适配,我们在facebook开源出来的react Native中找到了其中的css解析文件，做了一些适应性修改，拿来用的.可以从好奇心日报iPad版的分屏(split view &amp;amp; split over)适配实现中找到对应的信息. 在好">
+<meta name="twitter:title" content="Autorelease Pool">
+<meta name="twitter:description" content="Autorelase Pool 提供了一种可以允许你向一个对象延迟发送release消息的机制。当你想放弃一个对象的所有权，同时又不希望这个对象立即被释放掉（例如在一个方法中返回一个对象时），Autorelease Pool 的作用就显现出来了。 所谓的延迟发送release消息指的是，当我们把一个对象标记为autorelease时: 1NSString* str = [[[NSString al">
   
     <link rel="alternative" href="/atom.xml" title="AOLLIU的博客" type="application/atom+xml">
   
@@ -158,29 +158,53 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-好奇心日报适配方案" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Autorelease-Pool" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      好奇心日报适配方案
+      Autorelease Pool
     </h1>
   
 
         
-        <a href="/2017/12/18/好奇心日报适配方案/" class="archive-article-date">
-  	<time datetime="2017-12-18T08:38:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-18</time>
+        <a href="/2017/04/15/Autorelease-Pool/" class="archive-article-date">
+  	<time datetime="2017-04-15T06:45:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在项目中经常需要设置控件的大小,控件直接的间距,不可避免的要用到很多数字,数字多了项目就显得格外混乱,好奇心日报为了避免这类情况的发生,并方便多个多种机型的适配,我们在facebook开源出来的react Native中找到了其中的css解析文件，做了一些适应性修改，拿来用的.可以从<a href="http://www.jianshu.com/p/fabb235a9c0e" target="_blank" rel="noopener">好奇心日报iPad版的分屏(split view &amp; split over)适配实现</a>中找到对应的信息.</p>
-<p>在<a href="http://www.jianshu.com/p/fabb235a9c0e" target="_blank" rel="noopener">好奇心日报iPad版的分屏(split view &amp; split over)适配实现</a>的基础上我将这部分代码剥离出来,供大家参考.</p>
-<p>代码地址:<a href="https://github.com/AOLLIU/CSSParserDemo/tree/master" target="_blank" rel="noopener">CSSParserDemo</a></p>
+        <p>Autorelase Pool 提供了一种可以允许你向一个对象延迟发送release消息的机制。当你想放弃一个对象的所有权，同时又不希望这个对象立即被释放掉（例如在一个方法中返回一个对象时），Autorelease Pool 的作用就显现出来了。</p>
+<p>所谓的延迟发送release消息指的是，当我们把一个对象标记为autorelease时:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString* str = [[[NSString alloc] initWithString:@&quot;hello&quot;] autorelease];</span><br></pre></td></tr></table></figure>
+<p>这个对象的 retainCount 会+1，但是并不会发生 release。当这段语句所处的 autoreleasepool 进行 drain 操作时，所有标记了 autorelease 的对象的 retainCount 会被 -1。即 release 消息的发送被延迟到 pool 释放的时候了。</p>
+<p>在 ARC 环境下，苹果引入了 <code>@autoreleasepool</code> 语法，不再需要手动调用 autorelease 和 drain 等方法。</p>
+<a id="more"></a>
+<h2 id="Autorelease-Pool-的用处"><a href="#Autorelease-Pool-的用处" class="headerlink" title="Autorelease Pool 的用处"></a>Autorelease Pool 的用处</h2><p>在 ARC 下，我们并不需要手动调用 autorelease 有关的方法，甚至可以完全不知道 autorelease 的存在，就可以正确管理好内存。因为 Cocoa Touch 的 Runloop 中，每个 runloop circle 中系统都自动加入了 Autorelease Pool 的创建和释放。</p>
+<p>当我们需要创建和销毁大量的对象时，使用手动创建的 autoreleasepool 可以有效的避免内存峰值的出现。因为如果不手动创建的话，外层系统创建的 pool 会在整个 runloop circle 结束之后才进行 drain，手动创建的话，会在 block 结束之后就进行 drain 操作。一个普遍被使用的例子如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for (int i = 0; i &lt; 100000000; i++)</span><br><span class="line">&#123;</span><br><span class="line">    @autoreleasepool</span><br><span class="line">    &#123;</span><br><span class="line">        NSString* string = @&quot;ab c&quot;;</span><br><span class="line">        NSArray* array = [string componentsSeparatedByString:string];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果不使用 autoreleasepool ，需要在循环结束之后释放 100000000 个字符串，如果 使用的话，则会在每次循环结束的时候都进行 release 操作。</p>
+<h2 id="Autorelease-Pool-进行-Drain-的时机"><a href="#Autorelease-Pool-进行-Drain-的时机" class="headerlink" title="Autorelease Pool 进行 Drain 的时机"></a>Autorelease Pool 进行 Drain 的时机</h2><p>如上面所说，系统在 runloop 中创建的 autoreleaspool 会在 runloop 一个 event 结束时进行释放操作。我们手动创建的 autoreleasepool 会在 block 执行完成之后进行 drain 操作。需要注意的是：</p>
+<ul>
+<li>当 block 以异常（exception）结束时，pool 不会被 drain</li>
+<li>Pool 的 drain 操作会把所有标记为 autorelease 的对象的引用计数减一，但是并不意味着这个对象一定会被释放掉，我们可以在 autorelease pool 中手动 retain 对象，以延长它的生命周期（在 MRC 中）。</li>
+</ul>
+<h2 id="main-m-中-Autorelease-Pool-的解释"><a href="#main-m-中-Autorelease-Pool-的解释" class="headerlink" title="main.m 中 Autorelease Pool 的解释"></a>main.m 中 Autorelease Pool 的解释</h2><p>iOS 程序的 main.m 文件中有类似这样的语句：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int main(int argc, char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的 pool 有什么作用，能不能去掉之类。在这里我们分析一下。</p>
+<p>根据苹果官方文档， UIApplicationMain 函数是整个 app 的入口，用来创建 application 对象（单例）和 application delegate。尽管这个函数有返回值，但是实际上却永远不会返回，当按下 Home 键时，app 只是被切换到了后台状态。</p>
+<p>同时参考苹果关于 Lifecycle 的官方文档，UIApplication 自己会创建一个 main run loop，我们大致可以得到下面的结论：</p>
+<ul>
+<li>1,main.m 中的 UIApplicationMain 永远不会返回，只有在系统 kill 掉整个 app 时，系统会把应用占用的内存全部释放出来。</li>
+<li>2,因为(1)， UIApplicationMain 永远不会返回，这里的 autorelease pool 也就永远不会进入到释放那个阶段</li>
+<li>3,在 (2) 的基础上，假设有些变量真的进入了 main.m 里面这个 pool（没有被更内层的 pool 捕获），那么这些变量实际上就是被泄露的。这个 autorelease pool 等于是把这种泄露情况给隐藏起来了。</li>
+<li>4,UIApplication 自己会创建 main run loop，在 Cocoa 的 runloop 中实际上也是自动包含 autorelease pool 的，因此 main.m 当中的 pool 可以认为是没有必要的。</li>
+</ul>
+<p>在基于 AppKit 框架的 Mac OS 开发中， main.m 当中就是不存在 autorelease pool 的，也进一步验证了我们得到的结论。不过因为我们看不到更底层的代码，加上苹果的文档中不建议修改 main.m ，所以我们也没有理由就直接把它删掉（删掉之后不影响 App 运行，用 Instruments 也看不到泄露）。</p>
 
       
 
@@ -194,11 +218,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">iOS开发</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">OC</a>
         		</li>
       		
 		</ul>
@@ -254,7 +278,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2017/12/18/好奇心日报适配方案/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://aolliu.win/2017/04/15/Autorelease-Pool/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,18 +292,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/02/27/iOS-Widget开发/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/13/iOS-App-签名/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          iOS Widget开发
+          iOS App 签名
         
       </div>
     </a>
   
   
-    <a href="/2017/07/20/项目优化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">项目优化</div>
+    <a href="/2017/03/04/Masonry-源码学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Masonry 源码学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -309,7 +333,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="好奇心日报适配方案" ></div> 
+  <div id="SOHUCS" sid="Autorelease-Pool" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
